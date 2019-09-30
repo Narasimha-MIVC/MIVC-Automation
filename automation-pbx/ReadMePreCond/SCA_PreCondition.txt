@@ -1,0 +1,11 @@
+5 Phones required.
+
+Phone01 : SCA Enabled.
+1)	BCA2 for Stack 2
+2)	Hotline to Phone02
+
+Phone02 : 
+1)	BCA1 for Stack 1
+2)	TM for Phone01
+3)	Hotline to Phone01
+4)	BCA2 for Stack2

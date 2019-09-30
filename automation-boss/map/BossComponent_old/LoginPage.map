@@ -1,0 +1,6 @@
+LoginUserName==input#id#UserName#0
+LoginPassword==input#id#Password#0
+LoginSubmit==button#xpath#//*[@id='m5-logon-form']/form/div/fieldset/div[5]/button/span[2]
+LoginUserNameSTD2==input#xpath#//*[@id="user_session_login_name"]
+LoginPasswordSTD2==input#xpath#//*[@id="user_session_login_password"]
+LoginSubmitSTD2==button#xpath#//*[@id="main_login_button"]

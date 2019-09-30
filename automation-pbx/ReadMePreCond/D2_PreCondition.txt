@@ -1,0 +1,286 @@
+1) Add this in : C:\ATF_ROBOT\Framework\utils\D2API.py
+
+#Lavanya <start>
+    def fetch_im_switch_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_ims/ucb_status_list'
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+        # print d['data']['aaData']
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4])]
+            sInfo.append(tmpList)
+        return sInfo
+
+    def fetch_ip_phone_info(self, phonemac):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_ip_phones/ip_phones_status_list'
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+        print d
+
+        sInfo = []
+        for device in d['data']['aaData']:
+            phonemac1=re.sub('[^0-9A-F]+','',str(device[3]))
+            if phonemac1 == phonemac:
+                tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4]), str(device[5]),
+                           str(device[6]), str(device[7]), str(device[8]), str(device[9])]
+                sInfo.append(tmpList)
+        # import pdb
+        # pdb.Pdb(stdout=sys.__stdout__).set_trace()
+        return sInfo
+
+    def fetch_audio_web_switch_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_audio_web_confs/ucb_status_list'
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+
+        sInfo = []
+        for device in d['data']['aaData']:
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4])]
+            sInfo.append(tmpList)
+
+        return sInfo
+
+    def fetch_calls_info(self):
+
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = r'http://' +self.ip+':'+self.pno+'/dm/call_quality_reports/call_quality_data'
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+
+        sInfo = []
+        for device in d['data']['aaData']:
+            tmpList = [str(device[1]), str(device[2]), str(device[6]), str(device[11])]
+            sInfo.append(tmpList)
+
+        return sInfo
+
+    def fetch_call_details(self, call_id):
+
+        """
+        """
+        # self.create_connection(ip, username, password)
+        import pdb
+        pdb.Pdb(stdout=sys.__stdout__).set_trace()
+        LIST_SWITCH_URL = 'http://' +self.ip+':'+self.pno+'/dm/call_quality_reports/stream_details?call_guid=' + call_id
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d1 = json.loads(swresult.text)
+
+        sInfo = []
+        for device in d1['data']['aaData']:
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4])]
+            sInfo.append(tmpList)
+
+        return sInfo
+
+    def fetch_switch_specific_call_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = r'http://' +self.ip+':'+self.pno+'/dm/status_audio_web_confs/ucb_calls_list'
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+        # print d['data']['aaData']
+        # import pdb
+        # pdb.Pdb(stdout=sys.__stdout__).set_trace()
+
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4]), str(device[5]), str(device[6]),
+                       str(device[7]), str(device[8]), str(device[9])]
+            sInfo.append(tmpList)
+        return sInfo
+
+    def fetch_ip_phone_specific_call_info(self, phonemac):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = r'http://' +self.ip+':'+self.pno+'/dm/status_ip_phones/ip_phone_calls_list?mac_address=' + phonemac + r''
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+        # print d['data']['aaData']
+
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[4]), str(device[5]), str(device[6]),
+                       str(device[7]), str(device[8]), str(device[9])]
+            sInfo.append(tmpList)
+        return sInfo
+#Lavanya <end>
+
+#Maha <Start>
+
+    def add_did_ranges(self,trunkgrpid, basephno, nophonenum):
+        ADD_URL='http://'+self.ip+':'+self.pno+'/director/did_ranges.json'
+        JSON_DATA={ "did_range":{"NumPhoneNumbers":nophonenum,"TrunkGroupID":trunkgrpid,"base_phone_number_input_formatted":basephno,"site_id":1,"num_of_digits_from_co":12}}
+
+        result = self.client.post(ADD_URL,json=JSON_DATA)
+        d = json.loads(result.text)
+        return d
+
+    def get_did_ranges(self):
+        GET_URL='http://'+self.ip+':'+self.pno+'/director/did_ranges/list'
+
+        result = self.client.get(GET_URL)
+        d = json.loads(result.text)
+        return d
+
+    def delete_did_ranges(self,didrangeid):
+        DELETE_URL='http://'+self.ip+':'+self.pno+'/director/did_ranges/'+didrangeid+'.json'
+
+        result = self.client.delete(DELETE_URL)
+        d = json.loads(result.text)
+        return d
+
+    def add_trunk_groups(self,trunkgrpname, destinationdn):
+        ADD_URL='http://'+self.ip+':'+self.pno+'/director/trunk_groups.json'
+        JSON_DATA={"collections":{"countries":[]},"trunk_group":{"AccessCode":"T","AreaCode":"408","TenantID":1,"TrunkGroupName":trunkgrpname,"TrunkTypeID":6,"SiteID":1,"TS911":"true","num_digits_from_co":"12","destination_dn_formatted":destinationdn,"Outgoing":"true"},"new_tg":"false","$resolved":"true","new_record":"true"}
+
+        result = self.client.post(ADD_URL,json=JSON_DATA)
+        d = json.loads(result.text)
+        return d
+
+    def get_trunk_groups(self):
+        GET_URL='http://'+self.ip+':'+self.pno+'/director/trunk_groups/list'
+
+        result = self.client.get(GET_URL)
+        d = json.loads(result.text)
+        return d
+
+    def delete_trunk_groups(self,trunkgrpid):
+        DELETE_URL='http://'+self.ip+':'+self.pno+'/director/trunk_groups/'+trunkgrpid+'.json'
+
+        result = self.client.delete(DELETE_URL)
+        d = json.loads(result.text)
+        return d
+
+#Maha <End>
+
+#Neeraj <Start>
+    def fetch_site_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+        LIST_SITE_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_sites/site_status_list'
+        siteresult = self.client.get(LIST_SITE_URL)
+        d = json.loads(siteresult.text)
+        # print d['data']['aaData']
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[4]), str(device[12])]
+            sInfo.append(tmpList)
+        return sInfo
+
+    def fetch_server_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+        LIST_SERVER_URL = 'http://' +self.ip+':'+self.pno+'/dm//status_servers/server_status_list'
+        srresult = self.client.get(LIST_SERVER_URL)
+        d = json.loads(srresult.text)
+        # print d['data']['aaData']
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[2]), str(device[3]), str(device[5]), str(device[6]), str(device[7])]
+            sInfo.append(tmpList)
+        return sInfo
+
+    def fetch_ipphone_info(self):
+        """
+        """
+        # self.create_connection(ip, username, password)
+        LIST_IPPHONE_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_ip_phones/ip_phones_status_list'
+        ipphoneresult = self.client.get(LIST_IPPHONE_URL)
+        d = json.loads(ipphoneresult.text)
+        print d
+        # print d['data']['aaData']
+        sInfo = []
+        for device in d['data']['aaData']:
+            # print device
+            tmpList = [str(device[1]), str(device[5]), str(device[6]), str(device[8]), str(device[9]), str(device[11]),
+                       str(device[12]), str(device[20])]
+            sInfo.append(tmpList)
+        return sInfo
+
+    def fetch_voicemail_server_info(self):
+        VOICEMAIL_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_voice_mail_servers/vm_server_status_list'
+        result = self.client.get(VOICEMAIL_URL)
+        json_result = json.loads(result.text)
+        vm_server_info = []
+        for vm_row in json_result['data']['aaData']:
+            tmpList = [str(i) for i in vm_row]
+            vm_server_info.append(tmpList)
+        return vm_server_info
+
+    def fetch_trunk_group_info(self):
+        Trunk_Groups_URL = 'http://' +self.ip+':'+self.pno+'/dm/status_trunk_groups/trunk_groups_status_list'
+        result = self.client.get(Trunk_Groups_URL)
+        json_result = json.loads(result.text)
+        trunk_group_list = []
+        for tg_row in json_result['data']['aaData']:
+            tmpList = [str(i) for i in tg_row]
+            trunk_group_list.append(tmpList)
+        return trunk_group_list
+
+    def fetch_make_me_conf_info(self):
+        make_me_conf_url = 'http://' +self.ip+':'+self.pno+'/dm/status_site_confs/conf_switch_status_list'
+        result = self.client.get(make_me_conf_url)
+        json_result = json.loads(result.text)
+        conf_switch_info = []
+        for conf_row in json_result['data']['aaData']:
+            tmpList = [str(i) for i in conf_row]
+            conf_switch_info.append(tmpList)
+        return conf_switch_info
+#Neeraj <End>
+
+    def fetch_user_info(self, tenantid):
+        """
+        """
+        # self.create_connection(ip, username, password)
+        LIST_SERVER_URL = 'http://' +self.ip+':'+self.pno+'/director/users/list?_filter_tenant_id='+tenantid
+        srresult = self.client.get(LIST_SERVER_URL)
+        d = json.loads(srresult.text)
+        # print d
+        user_List=[]
+        for userData in d['rows']:
+            user_List.append(userData['cell'])
+        return  user_List
+
+    def fetch_user_phone_info(self, tenantid):
+        """
+        """
+        # self.create_connection(ip, username, password)
+
+        LIST_SWITCH_URL = 'http://' +self.ip+':'+self.pno+'/director/ip_phones/list?_filter_tenant_id='+tenantid
+        swresult = self.client.get(LIST_SWITCH_URL)
+        d = json.loads(swresult.text)
+
+        user_List=[]
+        for userData in d['rows']:
+            user_List.append(userData['cell'])
+        return  user_List
+
+
+   

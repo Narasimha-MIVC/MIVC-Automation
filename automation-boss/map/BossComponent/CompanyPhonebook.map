@@ -1,0 +1,12 @@
+company_phonebook_link==link#xpath#//a[contains(text(),'Company Phonebook')]
+company_phonebook_menu==link#xpath#//div[@id='main']//a[contains(text(),'Company Phonebook')]
+
+company_phonebook_search_first_name_input==input#xpath#//*[@id="headerRow_FirstName"]
+company_phonebook_search_last_name_input==input#xpath#//*[@id="headerRow_LastName"]
+company_phonebook_search_did_phone_input==input#xpath#//*[@id="headerRow_DID"]
+company_phonebook_search_ext_input==input#xpath#//*[@id="headerRow_Ext"]
+company_phonebook_search_home_input==input#xpath#//*[@id="headerRow_Home"]
+company_phonebook_search_work_input==input#xpath#//*[@id="headerRow_Work"]
+company_phonebook_search_cell_input==input#xpath#//*[@id="headerRow_Cell"]
+company_phonebook_entry_list==div#xpath#//div[@id='datagrid_companyDirectoryCosmoDataGrid']
+

@@ -1,0 +1,52 @@
+{
+	"add_ok": {
+		"BGroupID": "text|Favorite",
+		"FirstName": "First {rand_str|8}",
+		"LastName": "LastName",
+		"CompanyName": "{rand_str|20}",
+		"DepartmentName": "{rand_all}",
+		"WorkPhone": "1{rand_int|10}",
+		"CellPhone": "1{rand_int|10}",
+		"PagerPhone": "1414555{rand_int|4}",
+		"HomePhone": "1{rand_int|10}",
+		"FaxPhone": "1{rand_int|10}",
+		"PrimaryPhoneContactFieldID": "position|1",
+		"EmailAddress": "{rand_all|15}@there.com",
+		"IMUri": "IMUri"
+	},
+	"add_fail": {
+		"FirstName": ""
+	},
+	"edit_ok": {
+		"BGroupID": "position|3",
+		"LastName": "LastName",
+		"CompanyName": "Company {rand_str|8}",
+		"PrimaryPhoneContactFieldID": "value|5",
+		"EmailAddress": "{rand_all|15}@there.com",
+		"IMUri": "www.there.com"
+	},
+	"edit_fail": {
+		"FirstName": ""
+	},
+	"addgroup_ok": {
+		"Name": "Name"
+	},
+	"addgroup_fail": {
+		"Name": ""
+	},
+	"testValues": {
+		"BGroupID": "BGroupID",
+		"FirstName": "FirstName",
+		"LastName": "LastName",
+		"CompanyName": "CompanyName",
+		"DepartmentName": "DepartmentName",
+		"WorkPhone": "WorkPhone",
+		"CellPhone": "CellPhone",
+		"PagerPhone": "PagerPhone",
+		"HomePhone": "HomePhone",
+		"FaxPhone": "FaxPhone",
+		"PrimaryPhoneContactFieldID": "PrimaryPhoneContactFieldID",
+		"EmailAddress": "{rand_all|15}@there.com",
+		"IMUri": "IMUri"
+	}
+}

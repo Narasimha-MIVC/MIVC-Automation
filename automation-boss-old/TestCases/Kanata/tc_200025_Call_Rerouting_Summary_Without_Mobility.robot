@@ -1,0 +1,34 @@
+*** Settings ***
+Documentation    Suite description
+
+#Suite Teardown
+Suite Teardown    Close The Browsers
+
+#Keywords Definition file
+Resource          ../../RobotKeywords/BOSSKeywords.robot
+
+#Variable files
+Resource          ../../Variables/EnvVariables.robot
+Resource          ../Kanata/Variables/global_variables.robot
+
+#BOSS ComponentTestCas
+Library           ../../lib/BossComponent.py
+
+*** Test Cases ***
+
+Testing Call Rerouting - Summary Page Without Mobility
+    [Tags]    REGRESSION
+    Given I login to ${URL} with ${bossUsername} and ${bossPassword}
+    and I switch to "switch_account" page
+    and I switch to account ${AutomationNew} with ${AccWithoutLogin} option
+    When I open Call Routing for user auser1@shoretel.com
+    then I verify "incoming_calls_routed" contains "${IncomingCalls}"
+    and I verify "default_availability_routing" contains "${NoOtherPhones}"
+    and I verify "callRoutingSummary" contains "${3Rings}"
+    and I verify "callRoutingSummary" contains "${ForwardToVMail}"
+    and I verify "findMeEnabled" contains "${FindMeEnabled}"
+    and I verify "noVmGreetingRecorded" contains "${NoVMGreetings}"
+    and I verify "callersCanLeaveVm" contains "${AllowedVM}"
+    and I verify "forwardingToOperator" contains "${ForwardToOp}"
+
+

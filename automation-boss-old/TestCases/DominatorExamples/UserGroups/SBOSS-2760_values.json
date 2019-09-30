@@ -1,0 +1,21 @@
+{
+  "properties_ok": {
+    "Name": "Name{rand_str}"
+  },
+  "properties_managed_ok": {
+    "Name": "Name{rand_str}",
+    "ProfileTypeId": "text|Managed"
+  },
+  "properties_courtesy_ok": {
+    "Name": "Name{rand_str}",
+    "ProfileTypeId": "text|Courtesy"
+  },
+  "properties_telephony_ok": {
+    "Name": "Name{rand_str}",
+    "ProfileTypeId": "text|TelephonyOnly"
+  },
+  "properties_voicemail_ok": {
+    "Name": "Name{rand_str}",
+    "ProfileTypeId": "text|Voicemail"
+  }
+}

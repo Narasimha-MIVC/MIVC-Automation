@@ -1,0 +1,15 @@
+# maps for the Phone System Phones page
+Phones_location_selector==dropdown#xpath#//span[@class="location-selector"]/select
+Phones_import_phones_button==button#id#phonesDataGridImportPhonesButton
+
+# import phones dialog
+Phones_import_browse_button==button#xpath#//*[@id="browseButton"]
+Phones_import_browse_file_path_text==text#id#browseText
+Phones_import_button==button#id#ajaxUploadButton
+Phones_import_close_button==button#id#fileUploadPhones_Close
+Phones_import_message_text==text#id#ajaxUploadForm_messageText
+Phones_search_macaddress==text#id#headerRow_MacAddress
+Phones_data_grid_canvas==div#xpath#//*[@class="grid-canvas"]
+Phones_grid_delete_button==button#id#phonesDataGridRemovePhonesButton
+Phones_delete_confirm_button==button#id#fnMessageBox_Yes
+Phones_message_ok_button==button#id#fnMessageBox_OK

@@ -1,0 +1,61 @@
+1) Add this in : C:\ATF_ROBOT\Framework\utils\D2API.py 
+
+  def fetch_phone_info(self, mac, AccName):
+        """
+        """
+        # self.create_connection(ip, username, password)
+        tenantNames = AccName
+        tList = self.get_specific_tenants(tenantNames)
+        dnis = []
+        for tenant in tList:
+            #LIST_DNIS_MAP = r'http://'+self.ip+':5478/director/dnis/list?rows=1000&_filter_tenant_id='+str(tenant[1])+r'&_filter_system_tenant_id='+str(tenant[1])+r''
+
+            LIST_SWITCH_URL = r'http://' + self.ip + ':5478/director/ip_phones/list?_search=false&sidx=&sord=asc&_filter_tenant_id=' + str(tenant[1])+ '&_filter_system_tenant_id=' +str(tenant[1])+r''
+            result = self.client.get(LIST_SWITCH_URL)
+            d1 = json.loads(result.text)
+            n_rows = d1["records"]
+            print n_rows
+            ph = []
+            for x in range(n_rows):
+                if d1["rows"][x]["cell"][0]==mac:
+                    tmplist= d1["rows"][x]["id"]
+                    ph.append(tmplist)
+                    tmplist= d1["rows"][x]["cell"][2][1]
+                    ph.append(tmplist)
+                    print ph
+        return ph
+
+
+    def fetch_switch_status_D2(self, switch_name):
+        URL = 'http://' +self.ip+ ':5478/dm/status_switches/switch_status_list?'
+        result = self.client.get(URL)
+        jresult = json.loads(result.text)
+        print jresult
+        n_rows = jresult["data"]["iTotalRecords"]
+        #print n_rows
+        p = []
+        for x in range(n_rows):
+            if jresult["data"]["aaData"][x][2]==switch_name:
+                tmplist = jresult["data"]["aaData"][x][7]
+                p.append(tmplist)
+                tmplist = jresult["data"]["aaData"][x][18]
+                p.append(tmplist)
+        for x in range(n_rows):
+            if jresult["data"]["aaData"][x][3]=='vPhone' and jresult["data"]["aaData"][x][2]!=switch_name and  jresult["data"]["aaData"][x][7]=='In Service':
+                tmplist = jresult["data"]["aaData"][x][2]
+                p.append(tmplist)
+                tmplist = jresult["data"]["aaData"][x][18]
+                p.append(tmplist)
+                break
+        print p
+        return p
+
+    
+    def change_ipphone_switch(self,phoneid,switchid):
+        URL ='http://' +self.ip+ ':5478/director/ip_phones/move.json?ids=' +phoneid+ '&site_id=3&switch_id=' +switchid
+        JSON_DATA = {}
+        result = self.client.post(URL,json=JSON_DATA)
+        jresult = json.loads(result.text)
+        print jresult
+        return True
+

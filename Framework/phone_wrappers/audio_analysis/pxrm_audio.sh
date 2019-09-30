@@ -1,0 +1,3 @@
+csxgistsyncdisable halaudio 
+csxgistremallpoints
+q

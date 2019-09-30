@@ -1,0 +1,336 @@
+{
+    "add": {
+    "locator": "",
+    "modal_locator": "//div[@aria-describedby='addPersonalDirectoryForm']",
+    "buttons": {
+      "close": {
+          "locator": "//body/div[7]/div[1]/button[1]",
+          "expect": ""
+      },
+      "ok": {
+          "locator": "//button[@id='addPersonalDirectoryForm_OK']",
+          "expect": ""
+      },
+      "cancel": {
+          "locator": "//button[@id='addPersonalDirectoryForm_Cancel']",
+          "expect": ""
+      }
+    },
+    "fields": {
+      "DisplayName": {
+        "locator": "//input[@id='Entry_DisplayName']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 20,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "Phone": {
+        "locator": "//input[@id='Entry_Phone']",
+        "type": "number",
+        "required": true,
+        "minlength": null,
+        "maxlength": 16,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "SpeedDial": {
+        "locator": "//select[@id='Entry_SpeedDial']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "Note": {
+        "locator": "//input[@id='Entry_Note']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 255,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      }
+    }
+  },
+  "edit": {
+    "locator": "//div[@id='updatePersonalDirectoryForm']//form",
+    "modal_locator": "//div[@aria-describedby='updatePersonalDirectoryForm']",
+    "buttons": {
+        "close": {
+            "locator": "//body/div[8]/div[1]/button[1]",
+            "expect": ""
+        },
+        "ok": {
+            "locator": "//button[@id='editPersonalDirectoryForm_OK']",
+            "expect": ""
+        },
+        "cancel": {
+            "locator": "//button[@id='editPersonalDirectoryForm_Cancel']",
+            "expect": ""
+        }
+    },
+    "fields": {
+      "DisplayName": {
+        "locator": "//input[@id='Entry_DisplayName']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 20,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "Phone": {
+        "locator": "//input[@id='Entry_Phone']",
+        "type": "number",
+        "required": true,
+        "minlength": null,
+        "maxlength": 16,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "SpeedDial": {
+        "locator": "//select[@id='Entry_SpeedDial']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "Note": {
+        "locator": "//input[@id='Entry_Note']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 255,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "Note": {
+        "locator": "//input[@id='Entry_Note']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 255,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      }
+    }
+  },
+  "grid": {
+    "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']",
+    "modal_locator": "",
+    "header_checkbox": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::div[contains(@id, '_checkbox_selector')]//input[@type='checkbox']",
+    "totals_locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::ul[@id='personalDirectoryDataGridContextMenu']",
+    "buttons": {
+      "add": {
+        "locator": "//button[@id='personalDirectoryDataGridAddButton']",
+        "expect": "//div[@aria-describedby='addPersonalDirectoryForm']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "update": {
+        "locator": "//button[@id='personalDirectoryDataGridUpdateButton']",
+        "expect": "//form[@id='directory_form']",
+        "enabled": {
+          "0": false,
+          "1": true,
+          "2+": false,
+          "all": false
+        }
+      },
+      "delete": {
+        "locator": "//button[@id='personalDirectoryDataGridDeleteButton']",
+        "expect": "/html/body/div[11]",
+        "enabled": {
+          "0": false,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "import": {
+        "locator": "//button[@id='personalDirectoryDataGridImportButton']",
+        "expect": "//input[@id='browseText']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "export": {
+        "locator": "//button[@id='personalDirectoryDataGridExportBtn']",
+        "expect": "//button[@id='personalDirectoryDataGridExportBtn']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      }
+    },
+    "filters": {
+      "toggleBtn": {
+        "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::button[@id='personalDirectoryDataGridToggleBtn']",
+        "type": "button"
+      },
+      "searchText": {
+        "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='txtSearch_personalDirectoryDataGrid']",
+        "type": "text"
+      },
+      "multiSearchText": {
+        "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='txtMultiSearch_personalDirectoryDataGrid']",
+        "type": "text"
+      },
+      "multiSearchButton": {
+        "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::button[@id='personalDirectoryDataGridMultiSearchButton']",
+        "type": "button"
+      },
+      "saveSearch": {
+        "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='chbMultiSearch_personalDirectoryDataGrid']",
+        "type": "checkbox"
+      }
+    },
+    "columns": {
+      "DisplayName": {
+        "number": 1,
+        "filter": {
+          "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_DisplayName']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "Phone": {
+        "number": 2,
+        "filter": {
+          "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_Phone']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "Position": {
+        "number": 3,
+        "filter": {
+          "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_Position']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "Note": {
+        "number": 4,
+        "filter": {
+          "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_Note']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      }
+    },
+   "contextitems": {
+        "update": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::li[@id='UpdateOptionContextMenuItem']",
+            "expect": ""
+        },
+        "delete": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::li[@id='DeleteOptionContextMenuItem']",
+            "expect": ""
+        }
+    }
+  },
+  "ajaxUpload": {
+    "locator": "//form[@id='ajaxUploadForm']",
+    "modal_locator": "",
+    "buttons": {
+      "browseButton": {
+        "locator": "//input[@id='browseButton']",
+        "expect": ""
+      }
+    },
+    "fields": {
+      "browseText": {
+        "locator": "//input[@id='browseText']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "file": {
+        "locator": "//input[@id='ajaxUploadForm_file']",
+        "type": "file",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      },
+      "ajaxUploadButton": {
+        "locator": "//input[@id='ajaxUploadButton']",
+        "type": "submit",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": ""
+      }
+    }
+  }
+}
+

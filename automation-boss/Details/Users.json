@@ -1,0 +1,934 @@
+{
+  "usersDataGrid": {
+    "locator": "//div[@id='gridContainer_usersDataGrid']",
+    "modal_locator": "",
+    "header_checkbox": "//div[@id='gridContainer_usersDataGrid']/descendant::div[contains(@id, '_checkbox_selector')]//input[@type='checkbox']",
+    "totals_locator": "//div[@id='gridContainer_usersDataGrid']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_usersDataGrid']/descendant::ul[@id='usersDataGridContextMenu']",
+    "buttons": {
+      "adduser": {
+        "locator": "//button[@id='usersDataGridNewPersonButton']",
+        "expect": "//form[@id='frmAddEditPersonWizard']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "moveuser": {
+        "locator": "//button[@id='usersDataGridMoveProfilesButton']",
+        "expect": "",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "reassign": {
+        "locator": "//button[@id='usersDataGridReassignButton']",
+        "expect": "",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      }
+    },
+    "filters": {
+      "toggleBtn": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::button[@id='usersDataGridToggleBtn']",
+        "type": "button"
+      },
+      "searchText": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='txtSearch_usersDataGrid']",
+        "type": "text"
+      },
+      "multiSearchText": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='txtMultiSearch_usersDataGrid']",
+        "type": "text"
+      },
+      "multiSearchButton": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::button[@id='usersDataGridMultiSearchButton']",
+        "type": "button"
+      },
+      "saveSearch": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='chbMultiSearch_usersDataGrid']",
+        "type": "checkbox"
+      }
+    },
+    "columns": {
+      "FullName": {
+        "number": 1,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_FullName']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": true,
+          "expect": ""
+        }
+      },
+      "InternalCallerId": {
+        "number": 2,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_InternalCallerId']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "Tn": {
+        "number": 3,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_Tn']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "BusinessEmail": {
+        "number": 4,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_BusinessEmail']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": true,
+          "expect": ""
+        }
+      },
+      "IsDM": {
+        "number": 5,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_IsDM']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "IsPM": {
+        "number": 6,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_IsPM']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "IsBC": {
+        "number": 7,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_IsBC']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "IsEC": {
+        "number": 8,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_IsEC']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "IsTC": {
+        "number": 9,
+        "filter": {
+          "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::input[@id='headerRow_IsTC']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      }
+    },
+    "groups": {},
+    "contextitems": {
+      "copyuser": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='CopyUserContextMenuItem']",
+        "expect": ""
+      },
+      "move2user": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='MoveUserContextMenuItem']",
+        "expect": ""
+      },
+      "reassignphone": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='ReassignPhoneContextMenuItem']",
+        "expect": ""
+      },
+      "personalinformation": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='PersonalInformationContextMenuItem']",
+        "expect": "//form[@id='formPersonDetails']"
+      },
+      "phonesettings": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='PhoneSettingsContextMenuItem']",
+        "expect": ""
+      },
+      "unlock": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='UnlockContextMenuItem']",
+        "expect": ""
+      },
+      "add-onfeatures": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='AddonFeaturesContextMenuItem']",
+        "expect": ""
+      },
+      "assigncontact": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='AssignContactContextMenuItem']",
+        "expect": ""
+      },
+      "assignprofile": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='AssignProfileContextMenuItem']",
+        "expect": ""
+      },
+      "closeuser": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='CloseUserContextMenuItem']",
+        "expect": ""
+      },
+      "resetpassword": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='ResetPasswordContextMenuItem']",
+        "expect": ""
+      },
+      "swap": {
+        "locator": "//div[@id='gridContainer_usersDataGrid']/descendant::li[@id='SwapContextMenuItem']",
+        "expect": "//form[@id='frmSwapWizard']"
+      }
+    }
+  },
+
+  "AddEditPersonWizard": {
+    "locator": "//form[@id='frmAddEditPersonWizard']",
+    "modal_locator": "//div[@aria-describedby='addPersonWizardForm']",
+    "steps": {
+      "contact": {
+        "locator": "//div[@id='addEditPersonWizard_step_0']"
+      },
+      "phone": {
+        "locator": "//div[@id='addEditPersonWizard_step_1']"
+      },
+      "hardware": {
+        "locator": "//div[@id='addEditPersonWizard_step_2']"
+      },
+      "rolesandpermissions": {
+        "locator": "//div[@id='addEditPersonWizard_step_3']"
+      },
+      "confirmation": {
+        "locator": "//div[@id='addEditPersonWizard_step_4']"
+      }
+    },
+    "buttons": {
+      "close": {
+        "locator": "//body/div[10]/div[1]/button[1]",
+        "expect": ""
+      },
+      "contact": {
+        "locator": "//form[@id='frmAddEditPersonWizard']//a[@step='0']",
+        "expect": "//div[contains(@id, 'Wizard_step_0')]"
+      },
+      "phone": {
+        "locator": "//form[@id='frmAddEditPersonWizard']//a[@step='1']",
+        "expect": "//div[contains(@id, 'Wizard_step_1')]"
+      },
+      "hardware": {
+        "locator": "//form[@id='frmAddEditPersonWizard']//a[@step='2']",
+        "expect": "//div[contains(@id, 'Wizard_step_2')]"
+      },
+      "rolesandpermissions": {
+        "locator": "//form[@id='frmAddEditPersonWizard']//a[@step='3']",
+        "expect": "//div[contains(@id, 'Wizard_step_3')]"
+      },
+      "confirmation": {
+        "locator": "//form[@id='frmAddEditPersonWizard']//a[@step='4']",
+        "expect": "//div[contains(@id, 'Wizard_step_4')]"
+      },
+      "add": {
+        "locator": "//button[@id='roleAdd']",
+        "expect": "//div[contains(@id, 'Wizard_step_3')]"
+      },
+      "cancel": {
+        "locator": "//button[@id='addEditPersonWizard_cancel']",
+        "expect": ""
+      },
+      "back": {
+        "locator": "//button[@id='addEditPersonWizard_previous']",
+        "expect": ""
+      },
+      "next": {
+        "locator": "//button[@id='addEditPersonWizard_next']",
+        "expect": ""
+      },
+      "finish": {
+        "locator": "//button[@id='addEditPersonWizard_finish']",
+        "expect": "//div[@id='gridContainer_usersDataGrid']"
+      }
+    },
+    "fields": {
+      "FirstName": {
+        "locator": "//input[@id='Person_FirstName']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "LastName": {
+        "locator": "//input[@id='Person_LastName']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "BusinessEmail": {
+        "locator": "//input[@id='Person_BusinessEmail']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "PersonalEmail": {
+        "locator": "//input[@id='Person_PersonalEmail']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "User_LocationId": {
+        "locator": "//select[@id='User_LocationId']",
+        "type": "select-one",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Person_LocationId": {
+        "locator": "//select[@id='Person_LocationId']",
+        "type": "select-one",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Title": {
+        "locator": "//input[@id='Person_Title']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "CellPhone": {
+        "locator": "//input[@id='Person_CellPhone']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 40,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "HomePhone": {
+        "locator": "//input[@id='Person_HomePhone']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 40,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "PreferredNotificationEmail": {
+        "locator": "//select[@id='PreferredNotificationEmail']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "PreferredContactMethod": {
+        "locator": "//select[@id='PreferredContactMethod']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Username": {
+        "locator": "//input[@id='Person_Username']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Password": {
+        "locator": "//input[@id='Person_Password']",
+        "type": "password",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": [
+          8,
+          16
+        ],
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "confirmPassword": {
+        "locator": "//input[@id='confirmPassword']",
+        "type": "password",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "PhoneType": {
+        "locator": "//select[@id='PhoneType']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "allLocations": {
+        "locator": "//input[@id='allLocations']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "TnId": {
+        "locator": "//select[@id='Profile_TnId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "Extension": {
+        "locator": "//input[@id='Person_Profile_Extension']",
+        "type": "number",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "UserGroup": {
+        "locator": "//select[@id='UserGroup']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ActivationDate": {
+        "locator": "//input[@id='ActivationDate']",
+        "type": "date",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "WaiveNRR": {
+        "locator": "//input[@id='WaiveNRR']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ExcludeGroupFeatures": {
+        "locator": "//input[@id='ExcludeGroupFeatures']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "Hardware": {
+        "locator": "//input[@id='Hardware']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "hardwareType": {
+        "locator": "//select[@id='hardwareType']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "HardwarePhoneModel": {
+        "locator": "//select[@id='HardwarePhoneModel']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "HardwarePhoneShipDate": {
+        "locator": "//input[@id='HardwarePhoneShipDate']",
+        "type": "date",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "includePowerSupply": {
+        "locator": "//input[@id='includePowerSupply']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "PowerSupply": {
+        "locator": "//select[@id='PowerSupply']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "AssignPhone": {
+        "locator": "//input[@id='AssignPhone']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ExistingPhone": {
+        "locator": "//input[@id='ExistingPhone']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "MacAddress": {
+        "locator": "//input[@id='MacAddressAssignPhone']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ExistingPhoneSelect": {
+        "locator": "//select[@id='ExistingPhoneSelect']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "AssignPhoneModel": {
+        "locator": "//select[@id='AssignPhoneModel']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "availableRoles": {
+        "locator": "//select[@id='availableRoles']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 4
+      },
+      "requestedBy": {
+        "locator": "//select[@id='requestedBy']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 5
+      },
+      "requestSource": {
+        "locator": "//select[@id='requestSource']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 5
+      },
+      "caseNumber": {
+        "locator": "//input[@id='caseNumber']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 8,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 5
+      },
+      "orderNotes": {
+        "locator": "//textarea[@id='orderNotes']",
+        "type": "textarea",
+        "required": false,
+        "minlength": null,
+        "maxlength": 500,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 5
+      }
+    }
+  },
+
+
+  "ElvisSwapWizard": {
+ "locator": "//form[@id='frmSwapWizard']",
+    "modal_locator": "//div[@aria-describedby='swapWizardForm']",
+    "steps": {
+      "select": {
+        "locator": "//div[@id='swapWizard_step_0']"
+      },
+      "summary": {
+        "locator": "//div[@id='swapWizard_step_1']"
+      }
+    },
+    "buttons": {
+      "close": {
+        "locator": "//body/div[17]/div[1]/button[1]",
+        "expect": ""
+      },
+      "select": {
+        "locator": "//form[@id='frmSwapWizard']//a[@step='0']",
+        "expect": "//div[contains(@id, 'Wizard_step_0')]"
+      },
+      "summary": {
+        "locator": "//form[@id='frmSwapWizard']//a[@step='1']",
+        "expect": "//div[contains(@id, 'Wizard_step_1')]"
+      },
+      "cancel": {
+        "locator": "//button[@id='swapWizard_cancel']",
+        "expect": ""
+      },
+      "back": {
+        "locator": "//button[@id='swapWizard_previous']",
+        "expect": ""
+      },
+      "next": {
+        "locator": "//button[@id='swapWizard_next']",
+        "expect": ""
+      },
+      "finish": {
+        "locator": "//button[@id='swapWizard_finish']",
+        "expect": "//div[@id='gridContainer_usersDataGrid']"
+      }
+    },
+    "fields": {
+      "newPhoneType": {
+        "locator": "//select[@id='newPhoneType']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "enabled_294": {
+        "locator": "//input[@id='enabled_294']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "enabled_299": {
+        "locator": "//input[@id='enabled_299']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "enabled_191": {
+        "locator": "//input[@id='enabled_191']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "enabled_116": {
+        "locator": "//input[@id='enabled_116']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "RequestedBy": {
+        "locator": "//select[@id='RequestedBy']",
+        "type": "select-one",
+        "required": true,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "RequestSources": {
+        "locator": "//select[@id='RequestSources']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "CaseNumber": {
+        "locator": "//input[@id='CaseNumber']",
+        "type": "number",
+        "required": true,
+        "minlength": null,
+        "maxlength": 8,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      }
+    }
+  }
+}
+
+

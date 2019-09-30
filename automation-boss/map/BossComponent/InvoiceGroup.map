@@ -1,0 +1,19 @@
+Organization_tab1==a#xpath#//a[contains(text(),'Organization')]
+Invoices_Payments==a#xpath#//a[contains(text(),'Invoices & Payments')]
+tab_invoices_groups==id#id#tab-invoices-groups
+invoiceGroups_AddButton==button#id#invoiceGroupsGridnewInviceGroup
+Invoice_name==input#id#Name
+invoice_contact==select#id#BillingContact
+SecondaryBillingContact==select#id#SecondaryBillingContact
+invoiceGroupWizard_next==button#id#invoiceGroupWizard_next
+invoice_location==select#id#ddlLocations
+btnAddLocation==input#id#btnAddLocation
+CountryKey==select#id#CountryKey
+Address1==input#id#Address1
+Address2==input#id#Address2
+City==input#id#City
+StateProvinceKey==select#id#StateProvinceKey
+ZipCode==input#id#ZipCode
+invoiceGroupWizard_finish==button#id#invoiceGroupWizard_finish
+invoice_Groups_Grid==div#id#datagrid_invoiceGroupsGrid
+

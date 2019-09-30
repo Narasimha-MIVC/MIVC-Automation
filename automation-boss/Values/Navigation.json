@@ -1,0 +1,569 @@
+{
+  "error block": {
+    "locator": "//h2[contains(@class, 'm5-page-header')]"
+  },
+  "error dialog": {
+    "locator": "//div[contains(@class, 'ui-dialog ui-widget')][contains(@style, 'display: block')]//div//span[@class='ui-dialog-title']"
+  },
+  "home": {
+    "menu": [],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]",
+    "expect": "//div[@id='chartContainer']",
+    "external": "false"
+  },
+  "employee directory": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/EmployeeDirectory')]",
+    "expect": "//div[@id='gridContainer_employeeDirectoryDataGrid']",
+    "external": "false"
+  },
+  "personal contacts": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/PersonalDirectory')]",
+    "expect": "//div[@id='gridContainer_personalDirectoryDataGrid']",
+    "external": "false"
+  },
+  "company phonebook": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/CompanyDirectory')]",
+    "expect": "//div[starts-with(@id, 'gridContainer_companyDirectory')]",
+    "external": "false"
+  },
+  "voicemail box": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/Voicemail')]",
+    "expect": "//div[@id='gridContainer_voicemailMessagesDataGrid_1011']",
+    "external": "false"
+  },
+  "call log": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/CallLog/CallRecords')]",
+    "expect": "//div[@id='gridContainer_callLogs']",
+    "external": "false"
+  },
+  "missed calls": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/CallLog/MissedCalls')]",
+    "expect": "//div[@id='gridContainer_callLogsMissedDataGrid']",
+    "external": "false"
+  },
+  "phone settings": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/Details')]",
+    "expect": "//div[@id='profileDetailsTabs_1011']",
+    "external": "false"
+  },
+  "add-on features": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/Features')]",
+    "expect": "//ul[contains(@class, 'feature-list')]",
+    "external": "false"
+  },
+  "personal information": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Person/Details')]",
+    "expect": "//div[@id='personDetailsTabs']",
+    "external": "false"
+  },
+  "call recording": {
+    "menu": ["//a[@href='/Home/Index'][contains(@class, 'drop')]"],
+    "locator": "//a[@href='/Home/Index'][contains(@class, 'drop')]/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Profile/Recordings')]",
+    "expect": "//div[@id='gridContainer_recordingsDataGrid']",
+    "external": "false"
+  },
+  "live answer": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/LiveAnswer?')]",
+    "expect": "//iframe[contains(@src, 'LiveAnswerByAccount')]",
+    "external": "false"
+  },
+  "talk time": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/TalkTime?')]",
+    "expect": "//iframe[contains(@src, 'TalkTimeByAccount')]",
+    "external": "false"
+  },
+  "live answer by group": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/LiveAnswerByGroup')]",
+    "expect": "//iframe[contains(@src, 'LiveAnswerByGroup')]",
+    "external": "false"
+  },
+  "talk time by group": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/TalkTimeByGroup')]",
+    "expect": "//iframe[contains(@src, 'TalkTimeByGroup')]",
+    "external": "false"
+  },
+  "time on phone": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/TimeOnPhoneByProfile')]",
+    "expect": "//iframe[contains(@src, 'TimeOnPhoneByProfile')]",
+    "external": "false"
+  },
+  "inbound calls": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/InboundByProfile')]",
+    "expect": "//iframe[contains(@src, 'InboundByProfile')]",
+    "external": "false"
+  },
+  "outbound calls": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/OutboundByProfile')]",
+    "expect": "//iframe[contains(@src, 'OutboundByProfile')]",
+    "external": "false"
+  },
+  "total calls": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/DailyTotalsByProfile')]",
+    "expect": "//iframe[contains(@src, 'DailyTotalsByProfile')]",
+    "external": "false"
+  },
+  "team call recording": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Team/Recordings')]",
+    "expect": "//div[@id='gridContainer_recordingsDataGrid']",
+    "external": "false"
+  },
+  "subscriptions": {
+    "menu": ["//a[@id='team_nav']"],
+    "locator": "//a[@id='team_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Subscription/ManageSubscriptions')]",
+    "expect": "//div[@id='gridContainer_subscriptionsDataGrid']",
+    "external": "false"
+  },
+  "authorized contacts": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/AuthorizedContacts')]",
+    "expect": "//div[@id='gridContainer_accountAuthorizedContacts']",
+    "external": "false"
+  },
+  "groups": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Groups')]",
+    "expect": "//div[@id='gridContainer_groupGrid']",
+    "external": "false"
+  },
+  "user activity monitoring": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Activity')]",
+    "expect": "//div[@id='gridContainer_activityDataGrid']",
+    "external": "false"
+  },
+  "net promoter score": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Nps')]",
+    "expect": "//div[@id='gridContainer_accountNpsDataGrid']",
+    "external": "false"
+  },
+  "announcements": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Announcement/Announcements')]",
+    "expect": "//div[@id='content']//h3",
+    "external": "false"
+  },
+  "account details": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Details')]",
+    "expect": "//div[@id='accountDetailsTabs']",
+    "external": "false"
+  },
+  "invoices & payments": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Invoices')]",
+    "expect": "//div[@id='invoicesTabs']",
+    "external": "false"
+  },
+  "services": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Service/Explorer')]",
+    "expect": "//div[@id='gridContainer_servicesExplorerDataGrid']",
+    "external": "false"
+  },
+  "orders": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Orders')]",
+    "expect": "//div[@id='gridContainer_accountOrders']",
+    "external": "false"
+  },
+  "contracts": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Contracts')]",
+    "expect": "//div[@id='gridContainer_accountContractsDataGrid']",
+    "external": "false"
+  },
+  "rates": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Rates/RecursiveAccountRates')]",
+    "expect": "//div[@id='gridContainer_recursiveRatesDataGrid']",
+    "external": "false"
+  },
+    "price management": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/PricePlanManagement/PricePlanManagement')]",
+    "expect": "//div[@id='gridContainer_pricePlanManagementDataGrid']",
+    "external": "false"
+  },
+  "usage log": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Usage')]",
+    "expect": "//div[@id='gridContainer_callLogs']",
+    "external": "false"
+  },
+  "courtesy usage": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/CourtesyUsage')]",
+    "expect": "//iframe[contains(@src, 'CourtesyUsage')]",
+    "external": "false"
+  },
+  "fax usage": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/EfaxUsage')]",
+    "expect": "//iframe[contains(@src, 'Efax_Usage')]",
+    "external": "false"
+  },
+  "conference usage": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/ConferenceUsage')]",
+    "expect": "//iframe[contains(@src, 'ConferenceUsage')]",
+    "external": "false"
+  },
+  "usage without services": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/UsageWithoutServices')]",
+    "expect": "//iframe[contains(@src, 'UsageWithoutServices')]",
+    "external": "false"
+  },
+  "organization call recording": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/ManageCallRecordings')]",
+    "expect": "//div[@id='gridContainer_recordingsDataGrid']",
+    "external": "false"
+  },
+  "on-demand conferencing": {
+    "menu": ["//a[@id='organization_nav']"],
+    "locator": "//a[@id='organization_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/ManageConferences')]",
+    "expect": "//div[@id='gridContainer_conferencesDataGridV2']",
+    "external": "false"
+  },
+  "users": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/Users')][1]",
+    "expect": "//div[@id='gridContainer_usersDataGrid']",
+    "external": "false"
+  },
+  "user groups": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/UserGroups')][1]",
+    "expect": "//div[@id='gridContainer_userGroupGrid']",
+    "external": "false"
+  },
+  "emergency registration": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Emergency/Registration')][1]",
+    "expect": "//div[@id='gridContainer_locationRegistrationGrid']",
+    "external": "false"
+  },
+  "phones": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/Phones')][1]",
+    "expect": "//div[@id='gridContainer_phonesDataGrid']",
+    "external": "false"
+  },
+  "phone system phone numbers": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/PhoneNumbers')][1]",
+    "expect": "//div[@id='phoneNumbersTabs']",
+    "external": "false"
+  },
+  "on hold music": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/PartitionHoldMusic/Index')][1]",
+    "expect": "//div[@id='gridContainer_musicDataGrid']",
+    "external": "false"
+  },
+  "geographic locations": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/Locations')][1]",
+    "expect": "//div[@id='gridContainer_accountLocations']",
+    "external": "false"
+  },
+  "visual call flow editor": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/CallFlow/VisualCallFlowEditor')][1]",
+    "expect": "//div[@id='gridContainer_vcfComponentsGrid']",
+    "external": "false"
+  },
+  "call flow settings": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/CallFlow/CallFlow')][1]",
+    "expect": "//embed[@id='callFlow']",
+    "external": "false"
+  },
+  "dialplan": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Partition/Dialplan')][1]",
+    "expect": "//div[@id='PartitionDialplanTabs']",
+    "external": "false"
+  },
+  "account codes": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Partition/PartitionCodes')][1]",
+    "expect": "//div[@id='gridContainer_partitionCodesGrid']",
+    "external": "false"
+  },
+  "bridged call appearances": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Partition/BridgeCallAppearances')][1]",
+    "expect": "//div[@id='gridContainer_bcaProfilesDataGrid']",
+    "external": "false"
+  },
+  "phone system add-on features": {
+    "menu": [
+      "//a[@id='phone_system_nav']",
+      "//a[@id='phone_system_nav']/parent::li/div[starts-with(@class, 'dropdown_')]/div/ul/li[position()=1]"
+    ],
+    "locator": "//a[@id='phone_system_nav']/parent::li/descendant::a[starts-with(@href, '/Account/AddonFeatures')][1]",
+    "expect": "//div[@id='accountFeaturesTab']",
+    "external": "false"
+  },
+  "trust": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[@href='https://oneview.mitel.com/s/trust']",
+    "expect": "//body[contains(@class, 'comm-page-custom-trust')]",
+    "external": "true"
+  },
+  "support cases": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[starts-with(@href, '/Support/Cases')]",
+    "expect": "//body[contains(@class, 'comm-page-custom-support')]",
+    "external": "true"
+  },
+  "mitel ideas": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[starts-with(@href, '/Support/Ideas')][not(contains(@id, 'ideas'))]",
+    "expect": "//body[contains(@class, 'comm-page-topic-catalog')]",
+    "external": "true"
+  },
+  "knowledgebase": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[@href='https://oneview.mitel.com/s/support']",
+    "expect": "//body[contains(@class, 'comm-page-custom-support')]",
+    "external": "true"
+  },
+  "training": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[@href='https://oneview.mitel.com/s/article/Training']",
+    "expect": "//body[contains(@class, 'comm-page-article')]",
+    "external": "true"
+  },
+  "support more": {
+    "menu": ["//a[contains(text(),'Support')][contains(@class, 'drop')]"],
+    "locator": "//a[starts-with(@href, '/Support/ContactUs')][not(contains(@class, 'crumb'))]",
+    "expect": "//div[contains(@class, 'support-container')]",
+    "external": "false"
+  },
+  "accounts": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/Accounts')]",
+    "expect": "//div[@id='gridContainer_accountsGrid']",
+    "external": "false"
+  },
+  "all services": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Service/ServicesFilter')]",
+    "expect": "//form[@id='frmServicesFilterFilters']",
+    "external": "false"
+  },
+  "all orders": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Account/OrdersPending')]",
+    "expect": "//form[@id='frmPendingOrdersFilters']",
+    "external": "false"
+  },
+  "all contracts": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Contract/Contracts')]",
+    "expect": "//div[@id='contractTabs']",
+    "external": "false"
+  },
+  "operations announcements": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Announcement/ManageAnnouncements')]",
+    "expect": "//div[@id='gridContainer_announcementsDataGrid']",
+    "external": "false"
+  },
+  "price plan management": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/PricePlanManagement/ManagePricePlan')]",
+    "expect": "//div[@id='gridContainer_pricePlansDataGrid']",
+    "external": "false"
+  },
+  "instances": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Cluster/Clusters')]",
+    "expect": "//div[@id='gridContainer_ClusterGrid']",
+    "external": "false"
+  },
+  "partitions": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Partition/Partitions')]",
+    "expect": "//div[@id='gridContainer_partitionsGrid']",
+    "external": "false"
+  },
+  "primary partition": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Partition/PrimaryPartition')]",
+    "expect": "//div[@id='partitionDetailsTabs']",
+    "external": "false"
+  },
+  "diagnostics": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Diagnostics/ClusterConnectivity')]",
+    "expect": "//div[@id='content']//div[2]//table[@class='display']",
+    "external": "false"
+  },
+  "audit trail": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Audit/Details')]",
+    "expect": "//div[@id='auditDetailsTabs']",
+    "external": "false"
+  },
+  "phone numbers": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Tn/Inventory')]",
+    "expect": "//div[@id='tnsGrid']",
+    "external": "false"
+  },
+  "director log": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Tn/DirectorLog')]",
+    "expect": "//div[@id='gridContainer_directorLogDataGrid']",
+    "external": "false"
+  },
+  "lichen director log": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Intelligence/DirectorLog')]",
+    "expect": "//iframe[contains(@src, 'DirectorLog')]",
+    "external": "false"
+  },
+  "transaction log": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/TransactionLog/Index')]",
+    "expect": "//div[@id='gridContainer_searchTransactionLogDataGrid']",
+    "external": "true"
+  },
+  "salesforce errors": {
+    "menu": ["//a[@id='operations_nav']"],
+    "locator": "//a[@id='operations_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Salesforce/InterfaceErrors')]",
+    "expect": "//div[@id='gridContainer_salesforceInterfaceErrorDataGrid']",
+    "external": "false"
+  },
+  "rates management": {
+    "menu": ["//a[@id='finance_nav']"],
+    "locator": "//a[@id='finance_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Rates/RatesManagement')]",
+    "expect": "//div[@id='ratesManagementTabs']",
+    "external": "false"
+  },
+  "monthly billing": {
+    "menu": ["//a[@id='finance_nav']"],
+    "locator": "//a[@id='finance_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Billing/MonthlyBilling')]",
+    "expect": "//select[@id='completedPeriods']",
+    "external": "false"
+  },
+  "partner commissions": {
+    "menu": ["//a[@id='finance_nav']"],
+    "locator": "//a[@id='finance_nav']/parent::li//div[starts-with(@class, 'dropdown_')]//a[starts-with(@href, '/Billing/PartnerCommissions')]",
+    "expect": "//div[@id='gridContainer_partnerCommissionsDataGrid']",
+    "external": "false"
+  },
+  "add auto attendant": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'Autoattendant')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add hunt group": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, \"('HuntGroup')\")]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add pickup group": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'PickUpGroup')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add paging group": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'PagingGroup')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add on-hours schedule": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'OnHoursSchedule')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add holidays schedule": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'HolidaysSchedule')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add custom schedule": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'CustomSchedule')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add extension list": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'ExtensionList')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  },
+  "add emergency hunt group": {
+    "menu": ["//button[@id='addButton']"],
+    "locator": "//a[contains(@onclick, 'EmergencyHuntGroup')]",
+    "expect": "//div[@id='editorPanelMain']",
+    "external": "false"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "add_ok": {
+    "DisplayName": "Name",
+    "Phone": "1{rand_int|10}",
+    "Note": "TestNote"
+  },
+  "edit_ok": {
+    "DisplayName": "2",
+    "Phone": "",
+    "Note": "2"
+  }
+
+}

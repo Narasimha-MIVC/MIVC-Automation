@@ -1,0 +1,47 @@
+geo_loc==link#xpath#//a[@id='phone_system_nav']/following-sibling::div/div/ul/li/a[contains(text(),'Geographic Locations')]
+geo_accountLocationsAddButton==button#id#accountLocationsAddButton
+geo_LocationDetails_LocationNameFormatted==text#id#LocationDetails_LocationNameFormatted
+geo_Address_CountryKey==dropdown#id#Address_CountryKey
+geo_Address_Address1==text#id#Address_Address1
+geo_Address_Address2==input#id#Address_Address2
+geo_Address_City==text#id#Address_City
+geo_Address_StateProvinceKey==dropdown#id#Address_StateProvinceKey
+geo_Address_ZipCode==text#id#Address_ZipCode
+geo_bypass_validation==id#id#Address_bypassValidation
+geo_locationDetailsWizard_next==button#id#locationDetailsWizard_next
+geo_locationDetailsWizard_finish==button#id#locationDetailsWizard_finish
+geo_right_click_option==ul#xpath#//*[@id="accountLocationsContextMenu"]
+click_geo_location==div#xpath#//div[@class='grid-canvas']/div/div[2]//a
+geo_connectivity_type==select#xpath#//*[@id="ConnectivityTypeId"]
+geo_fnMessageBox_OK==button#xpath#(//button[@id="fnMessageBox_OK"])
+geo_Street_HouseNo==input#id#Address_SubPremises
+geo_StreetName==input#id#Address_Address6
+geo_streetType==select#id#Address_Address7
+geo_city==input#id#Address_City
+geo_state==select#id#Address_StateProvinceKey
+geo_zipcode==input#id#Address_ZipCode
+geo_FirstName==input#id#Address_FirstName
+geo_LastName==input#id#Address_LastName
+geo_PhoneNumber==input#id#Address_PhoneNumber
+geo_location_dropdown==div#xpath#//*[@class='m5-form']//select[@id="ddlLocations"]
+#emergency_reg_loc_grid==div#xpath#//*[@id="datagrid_profileRegistrationGrid"]/div[5]/div
+emergency_reg_loc_grid==div#xpath#//div[@id='gridContainer_profileRegistrationGrid']/div//div[@class="grid-canvas"]
+click_emergency_reg_loc_grid==div#xpath#//div[@id='gridContainer_profileRegistrationGrid']/div//div[@class="grid-canvas"]/div/div[2]//a
+geo_timeZone==select#id#timeZone
+geo_AreaCode==input#id#AreaCode
+geo_accountLocations_checkbox==input#xpath#//*[@id="datagrid_accountLocations"]/div[5]/div/div/div[1]/input
+geo_close_button==button#id#accountLocationsCloseButton
+geo_close_radio1==input#xpath#//input[@data-value='Yes, I want to re-use this number (these numbers) in the future']
+geo_close_radio2==input#xpath#//input[@data-value='No, I no longer need this number (these numbers)']
+closeLocation_Wizard_cancel==button#id#CloseLocationWizard_cancel
+emergency_loc==link#xpath#//a[@id='phone_system_nav']/following-sibling::div/div/ul/li/a[contains(text(),'Emergency Registration')]
+Users==li#xpath#//li[@id="tab-profiles"]
+emergency_loc_wrt_user==div#xpath#//div[@id='gridContainer_profileRegistrationGrid']//*[@class="grid-canvas"]
+change_emergency_loc_button==button#xpath#//button[@id='showEmergencyLocationWizardBtn']/span[@class='ui-button-text']
+personal_loc_radio_button==input#xpath#//input[@value='personal']
+geo_emergency_locationWizard_next==button#id#emergencyLocationWizard_next
+select_profile_add==text#id#profileAddresses
+confirm_personal_loc==div#xpath#//div[contains(@id, "emergencyLocationWizard_step_2")]//input[@type="checkbox"]
+geo_emergency_locationDetailsWizard_finish==button#id#emergencyLocationWizard_finish
+current_emergency_add_type==div#xpath#//*[@id="ui-tabs-5"]/div/fieldset/div[1]/span[1]
+

@@ -1,0 +1,7 @@
+LoginUserName1==input#id#UserName#0
+LoginPassword1==input#id#Password#0
+LoginSubmit1==button#xpath#//*[@id="main_login"]
+
+LoginUserName==input#id#Uname#0
+LoginPassword==input#id#Pwd#0
+LoginSubmit==submit#id#submit

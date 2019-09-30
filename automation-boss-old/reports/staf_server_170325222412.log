@@ -1,0 +1,5 @@
+selenium.webdriver.remote.remote_connection | DEBUG | POST http://127.0.0.1:62281/session/c28fc29b7a434ce734f87cbf9b6d0729/url {"url": "http://m5dbweb-qa.m5colo.local", "sessionId": "c28fc29b7a434ce734f87cbf9b6d0729"}
+selenium.webdriver.remote.remote_connection | DEBUG | Finished Request
+CommonFunctionality | INFO  | Open URL successful
+Browser | DEBUG | Browser.get_elements: By=id, ByValue=UserName
+selenium.webdriver.remote.remote_connection | DEBUG | POST http://127.0.0.1:62281/session/c28fc29b7a434ce734f87cbf9b6d0729/elements {"using": "id", "sessionId": "c28fc29b7a434ce734f87cbf9b6d0729", "value": "UserName"}

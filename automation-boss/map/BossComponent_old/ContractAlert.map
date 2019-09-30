@@ -1,0 +1,4 @@
+contract_alert_message==alert_message#id#ui-id-10
+contract_alert_title==alert_title#id#ui-id-11
+contract_confirm_message==alert_message#id#ui-id-15
+contract_alert_ok==button#id#fnMessageBox_OK

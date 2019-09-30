@@ -1,0 +1,3 @@
+*** Variables ***
+${uname} =  Generate Random String  8  [LOWER}[NUMBERS]
+&{Account01}  accountType=Test  companyName=Test_acc11  locationName=Test_location  bypassValidation=True  country=United States  address1=960 Stewart Dr  city=Sunnyvale  state=California  zip=94085  currency=USD-United States Dollar  firstName=test  lastName=acc  email=test_acc5@shoretel.com  password=Shoretel1$  confirmPassword=Shoretel1$  createPartition=False  clusterName=HAL  timeZone=Pacific Standard Time

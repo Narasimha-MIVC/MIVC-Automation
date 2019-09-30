@@ -1,0 +1,154 @@
+{
+  "TC-221172": {
+    "FullName": "AutoElvisPM acc",
+    "BusinessEmail": "AutoElvisPm@shoretel.com"
+  },
+
+  "Fill_values": {
+    "FirstName": "Tester",
+    "LastName": "Test{rand_str|8}",
+    "BusinessEmail": "Test{rand_all|15}@there.com",
+    "User_LocationId": "position|2",
+    "Password": "Abc123!!",
+    "confirmPassword": "Abc123!!"
+
+  },
+
+  "contact_ok": {
+    "FirstName": "Tester",
+    "LastName": "Test{rand_str|8}",
+    "BusinessEmail": "{rand_all|15}@there.com",
+    "PersonalEmail": "",
+    "User_LocationId": "position|1",
+    "Person_LocationId": "position|1",
+    "Title": "",
+    "CellPhone": "",
+    "HomePhone": "",
+    "PreferredNotificationEmail": "",
+    "PreferredContactMethod": "email",
+    "NoLogin": "false",
+    "Password": "Abc123!!",
+    "confirmPassword": "Abc123!!"
+  },
+
+  "new_managed_type_phone":{
+    "PhoneType":"position|3"
+ },
+
+  "new_managed_phone_number": {
+    "allLocations": "true",
+	"TnId": "position|2"
+  },
+
+  "new_managed_phone_activation_date": {
+    "ActivationDate": "01/01/2019"
+  },
+
+  "phone_no_profile": {
+  },
+
+
+  "phone_ok": {
+
+    "PhoneType":"position|3",
+    "TnId":"position|3",
+    "ActivationDate":"10/29/2018"
+  },
+
+  "hardware_ok": {
+
+  },
+  "rolesandpermissions_dm": {
+    "availableRoles" :"position|3"
+  },
+   "rolesandpermissions_pm": {
+    "availableRoles" :"position|2"
+  },
+
+    "analog_swap_select": {
+    "newPhoneType": "position|2"
+  },
+  "analogtovirtual_swap_select": {
+    "newPhoneType": "position|3"
+  },
+  "virtualscribe_swap_select": {
+     "enabled_116": "true"
+  },
+  "swap_select_1": {
+    "newPhoneType": "position|1"
+  },
+  "swap_select_2": {
+    "newPhoneType": "position|2"
+  },
+  "swap_select_3": {
+    "newPhoneType": "position|3"
+  },
+  "managed_swap_select": {
+    "newPhoneType": "position|2"
+  },
+  "managedaddons_swap_select": {
+    "enabled_294": "true",
+    "enabled_299": "true"
+  },
+  "managedwithoutaddons_swap_select": {
+    "enabled_294": "false",
+    "enabled_299": "false",
+    "enabled_116": "false"
+  },
+  "courtesyProfile": {
+    "BusinessEmail": "acourtesyprofile@mitel.com"
+
+  },
+  "AnalogProfile": {
+    "BusinessEmail": "aanalogprofile@mitel.com"
+
+  },
+  "VirtualProfile": {
+    "BusinessEmail": "avirtualscribeprofile@mitel.com"
+
+  },
+  "ManagedWithAddProfile": {
+    "BusinessEmail": "amanagedwithaddprofile@mitel.com"
+
+  },
+  "ManagedWithoutAddProfile": {
+    "BusinessEmail": "amanagedwithoutaddsprofile@mitel.com"
+
+  },
+  "courtesy_swap_select": {
+    "newPhoneType": "position|1"
+  },
+  "swap_summary": {
+    "RequestedBy": "position|5",
+    "RequestSources": "position|2"
+  },
+  "requestedby_summary": {
+    "RequestedBy": "position|5"
+  },
+
+  "confirmation_ok": {
+    "Notes": "",
+    "requestedBy": "position|1",
+    "requestSource": "Email"
+  },
+
+  "confirmation_for_requestby_dm": {
+    "requestedBy": "position|4"
+  },
+  "confirmation_for_requestby_pm": {
+    "requestedBy": "position|5"
+  },
+
+  "confirmation_for_requestsource":{
+
+    "requestSource": "position|3"
+
+  },
+
+  "test_values":{
+    "FullName": "Test User",
+    "Tn": "15127007000",
+    "BusinessEmail": "fsydff@asfccdddv.com"
+  }
+
+}

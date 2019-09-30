@@ -1,0 +1,43 @@
+{
+  "formPersonDetails_ok": {
+    "ProfileId": "1",
+    "Feature": "Feature",
+    "Packages": "Packages",
+    "DateLive": "01/01/2018"
+  },
+  "edit_in_place_ok": {
+	"PIusername": "testusername@test.com",
+    "firstName": "Randall",
+    "lastName": "Arlitt",
+    "title": "Little Big Shot",
+    "businessEmail": "randall.arlitt@mitel.com",
+    "personalEmail": "rarlitt@rarlitt.com",
+    "cellPhone": "1{rand_int|10}"
+
+  },
+  "edit_in_place_orig": {
+	"PIusername": "Automation_Elvis@shoretel.com",
+    "firstName": "Automation_Elvis",
+    "lastName": "Account",
+    "title": "",
+    "businessEmail": "Automation_Elvis@shoretel.com",
+    "personalEmail": "",
+    "cellPhone": ""
+
+  },
+  "changePersonPassword_ok": {
+    "OldPersonPassword": "Abc123!!",
+    "NewPersonPassword": "Test123!!",
+    "ConfirmPersonPassword": "Test123!!"
+  },
+  "changePersonPassword_orig": {
+    "OldPersonPassword": "Test123!!",
+    "NewPersonPassword": "Abc123!!",
+    "ConfirmPersonPassword": "Abc123!!"
+
+  },
+  "TC221172": {
+    "FullName": "AutoElvisPM acc",
+    "BusinessEmail": "AutoElvisPm@shoretel.com"
+  }
+}

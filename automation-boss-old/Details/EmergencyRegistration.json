@@ -1,0 +1,110 @@
+{
+  "locationRegistrationGrid": {
+    "locator": "//div[@id='gridContainer_locationRegistrationGrid']",
+    "modal_locator": "",
+    "header_checkbox": false,
+    "totals_locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::ul[@id='locationRegistrationGridContextMenu']",
+    "buttons": {
+      "update": {
+        "locator": "//button[@id='locationRegistrationGridbtnUpdateLocation']",
+        "expect": "",
+        "enabled": {
+          "0": false,
+          "1": true,
+          "2+": false,
+          "all": false
+        }
+      },
+      "export": {
+        "locator": "//button[@id='locationRegistrationGridExportBtn']",
+        "expect": "",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      }
+    },
+    "filters": {
+      "toggleBtn": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::button[@id='locationRegistrationGridToggleBtn']",
+        "type": "button"
+      },
+      "searchText": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='txtSearch_locationRegistrationGrid']",
+        "type": "text"
+      },
+      "multiSearchText": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='txtMultiSearch_locationRegistrationGrid']",
+        "type": "text"
+      },
+      "multiSearchButton": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::button[@id='locationRegistrationGridMultiSearchButton']",
+        "type": "button"
+      },
+      "saveSearch": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='chbMultiSearch_locationRegistrationGrid']",
+        "type": "checkbox"
+      }
+    },
+    "columns": {
+      "Name": {
+        "number": 0,
+        "filter": {
+          "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='headerRow_Name']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "TnFormatted": {
+        "number": 1,
+        "filter": {
+          "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='headerRow_TnFormatted']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "Status": {
+        "number": 2,
+        "filter": {
+          "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::select[@id='headerRow_Status']",
+          "type": "select-one"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "LastUpdated": {
+        "number": 3,
+        "filter": {
+          "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::input[@id='headerRow_LastUpdated']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      }
+    },
+    "groups": {},
+    "contextitems": {
+      "update": {
+        "locator": "//div[@id='gridContainer_locationRegistrationGrid']/descendant::li[@id='updateLocationContextMenuItem']",
+        "expect": "//*[@id='updateLocationRegistrationForm']/div/fieldset/div[3]/button/span"
+      }
+    }
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "accountLocations": {
+    "locator": "//div[@id='gridContainer_accountLocations']",
+    "modal_locator": "",
+    "header_checkbox": "//div[@id='gridContainer_accountLocations']/descendant::div[contains(@id, '_checkbox_selector')]//input[@type='checkbox']",
+    "totals_locator": "//div[@id='gridContainer_accountLocations']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_accountLocations']/descendant::ul[@id='accountLocationsContextMenu']",
+    "buttons": {
+      "add": {
+        "locator": "//button[@id='accountLocationsAddButton']",
+        "expect": "//form[@id='frmLocationDetailsWizard']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "close": {
+        "locator": "//button[@id='accountLocationsCloseButton']",
+        "expect": "//div[@id='gridContainer_accountLocations']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "export": {
+        "locator": "//button[@id='accountLocationsExportBtn']",
+        "expect": "//div[@id='gridContainer_accountLocations']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      }
+    },
+    "filters": {
+      "toggleBtn": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::button[@id='accountLocationsToggleBtn']",
+        "type": "button"
+      },
+      "searchText": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='txtSearch_accountLocations']",
+        "type": "text"
+      },
+      "multiSearchText": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='txtMultiSearch_accountLocations']",
+        "type": "text"
+      },
+      "multiSearchButton": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::button[@id='accountLocationsMultiSearchButton']",
+        "type": "button"
+      },
+      "saveSearch": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='chbMultiSearch_accountLocations']",
+        "type": "checkbox"
+      }
+    },
+    "columns": {
+      "LabelFormatted": {
+        "number": 1,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_LabelFormatted']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "Status": {
+        "number": 2,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::select[@id='headerRow_Status']",
+          "type": "select-one"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "FullAddress": {
+        "number": 3,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_FullAddress']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "ProfileNumberFormatted": {
+        "number": 4,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_ProfileNumberFormatted']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "ActiveMRRFormatted": {
+        "number": 5,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_ActiveMRRFormatted']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "CurrencyCode": {
+        "number": 6,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_CurrencyCode']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      },
+      "ForcastDateFormatted": {
+        "number": 7,
+        "filter": {
+          "locator": "//div[@id='gridContainer_accountLocations']/descendant::input[@id='headerRow_ForcastDateFormatted']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": ""
+        }
+      }
+    },
+    "groups": {},
+    "contextitems": {
+      "editdetails": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::li[@id='EditOptionContextMenuItem']",
+        "expect": "//form[@id='frmLocationDetailsWizard']"
+      },
+      "close": {
+        "locator": "//div[@id='gridContainer_accountLocations']/descendant::li[@id='CloseOptContextMenuItem']",
+        "expect": ""
+      }
+    }
+  },
+  "LocationDetailsWizard": {
+    "locator": "//form[@id='frmLocationDetailsWizard']",
+    "modal_locator": "//div[@aria-describedby='addLocationForm']",
+    "steps": {
+      "main": {
+        "locator": "//div[@id='locationDetailsWizard_step_0']"
+      },
+      "settings": {
+        "locator": "//div[@id='locationDetailsWizard_step_2']"
+      },
+      "confirmation": {
+        "locator": "//div[@id='locationDetailsWizard_step_3']"
+      }
+    },
+    "buttons": {
+      "mapit": {
+        "locator": "//*[@id='fsDetails']/div[1]/div[2]/button",
+        "expect": "//form[@id='frmLocationDetailsWizard']"
+      },
+      "close": {
+        "locator": "//body/div[9]/div[1]/button[1]",
+        "expect": ""
+      },
+      "main": {
+        "locator": "//form[@id='frmLocationDetailsWizard']//a[@step='0']",
+        "expect": "//div[contains(@id, 'Wizard_step_0')]"
+      },
+      "settings": {
+        "locator": "//form[@id='frmLocationDetailsWizard']//a[@step='1']",
+        "expect": "//div[contains(@id, 'Wizard_step_1')]"
+      },
+      "confirmation": {
+        "locator": "//form[@id='frmLocationDetailsWizard']//a[@step='2']",
+        "expect": "//div[contains(@id, 'Wizard_step_2')]"
+      },
+      "cancel": {
+        "locator": "//button[@id='locationDetailsWizard_cancel']",
+        "expect": ""
+      },
+      "back": {
+        "locator": "//button[@id='locationDetailsWizard_previous']",
+        "expect": ""
+      },
+      "next": {
+        "locator": "//button[@id='locationDetailsWizard_next']",
+        "expect": ""
+      },
+      "finish": {
+        "locator": "//button[@id='locationDetailsWizard_finish']",
+        "expect": "//div[@id='gridContainer_accountLocations']"
+      }
+    },
+    "fields": {
+      "LocationNameFormatted": {
+        "locator": "//input[@id='LocationDetails_LocationNameFormatted']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "CountryKey": {
+        "locator": "//select[@id='Address_CountryKey']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Address1": {
+        "locator": "//input[@id='Address_Address1']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Address2": {
+        "locator": "//input[@id='Address_Address2']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "City": {
+        "locator": "//input[@id='Address_City']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "StateProvinceKey": {
+        "locator": "//select[@id='Address_StateProvinceKey']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "ZipCode": {
+        "locator": "//input[@id='Address_ZipCode']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Address_bypassValidation": {
+        "locator": "//input[@id='Address_bypassValidation']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "FirstName": {
+        "locator": "//input[@id='Address_FirstName']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "LastName": {
+        "locator": "//input[@id='Address_LastName']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "PhoneNumber": {
+        "locator": "//input[@id='Address_PhoneNumber']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "LocationNotes": {
+        "locator": "//textarea[@id='LocationNotes']",
+        "type": "textarea",
+        "required": false,
+        "minlength": null,
+        "maxlength": 4000,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "Location_IsCommissionable": {
+        "locator": "//input[@id='Location_IsCommissionable']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ITConsultantPartnerId": {
+        "locator": "//select[@id='ITConsultantPartnerId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ConnectivityTypeId": {
+        "locator": "//select[@id='ConnectivityTypeId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ConnectivityLocationId": {
+        "locator": "//select[@id='ConnectivityLocationId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ConnectivityAccountId": {
+        "locator": "//select[@id='ConnectivityAccountId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ConnectivityCarrier": {
+        "locator": "//input[@id='ConnectivityCarrier']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "LocationLanIp": {
+        "locator": "//input[@id='LocationLanIp']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "LocationPhoneIp": {
+        "locator": "//input[@id='LocationPhoneIp']",
+        "type": "text",
+        "required": false,
+        "minlength": null,
+        "maxlength": 100,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "LocationDemarcation": {
+        "locator": "//textarea[@id='LocationDemarcation']",
+        "type": "textarea",
+        "required": false,
+        "minlength": null,
+        "maxlength": 1000,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      }
+    }
+  }
+}

@@ -1,0 +1,363 @@
+1) Add this in C:\ATF_ROBOT\automation-boss\RobotKeywords\BOSSKeywords.robot 
+
+#Maha
+I configure call forwarding settings with a parameter ${available_state} ${Call_routing_condition} ${Call_forward_condition} ${PhNumber} ${noofrings}
+    &{parameter}=    Create Dictionary      available_state=${available_state}   Call_routing_condition=${Call_routing_condition}  Call_forward_condition=${Call_forward_condition}   PhNumber=${PhNumber}  noofrings=${noofrings}
+    ${result}=  Run Keyword     configure_availablity_Settings  &{parameter}
+    Should be true   ${result}
+
+I create new power routing with a parameter ${rulename} ${prcondition} ${prforward} ${PhNumber} ${deleteflag}
+    &{parameter}=    Create Dictionary      rulename=${rulename}   prcondition=${prcondition}  prforward=${prforward}   PhNumber=${PhNumber}   deleteflag=${deleteflag}
+    ${result}=  Run Keyword     create_new_power_routing  &{parameter}
+    Should be true   ${result}
+
+I select call routing page using extension ${phextension}
+    ${result}=  Run Keyword     select_call_routing_using_extension  ${phextension}
+    Should be true   ${result}
+
+2) Add this in C:\ATF_ROBOT\automation-boss\lib\BossComponent.py	
+#Maha
+    def configure_availablity_Settings(self, **params):
+        """
+         Configure always forward to voicemail
+
+         :param params: None
+
+         :return: None
+
+         `Created by:` vuh
+        """
+        try:
+            result = self.boss_page.phoneServiceUsers.configure_availablity_Settings(params['available_state'], params['Call_routing_condition'], params['Call_forward_condition'], params['PhNumber'], params['noofrings'])
+            return result
+        except:
+            raise AssertionError("configure availabilty settings configuration failed!")
+
+    def create_new_power_routing(self, **params):
+        """
+         Configure always forward to voicemail
+
+         :param params: None
+
+         :return: None
+
+         `Created by:` vuh
+        """
+        try:
+            result = self.boss_page.phoneServiceUsers.create_new_power_routing(params['rulename'], params['prcondition'], params['prforward'], params['PhNumber'], params['deleteflag'])
+            return result
+        except:
+            raise AssertionError("create new power routing failed!")
+
+
+    def select_call_routing_using_extension(self, phextension):
+        """
+         Configure always forward to voicemail
+
+         :param params: None
+
+         :return: None
+
+         `Created by:` vuh
+        """
+        try:
+            result = self.boss_page.phoneServiceUsers.select_call_routing_using_extension(phextension)
+            return result
+        except:
+            raise AssertionError("create new power routing failed!")
+			
+			
+3) Add this in C:\ATF_ROBOT\automation-boss\page\BOSSComponent\PhoneUsers.py			
+#Maha
+
+    def configure_availablity_Settings(self, available_state="Available", Call_routing_condition="CallForwarding", Call_forward_condition="CallForwardAnotherNumber", PhNumber="5501", noofrings="5"):
+        """
+        `Description:` Configure call routing parameters.
+
+        `:param params:available State, Call routing condition, Call Forward condition, Phone number , No of rings.
+
+        created by: Maha
+        """
+        try:
+            self.action_ele.select_from_dropdown_using_text('CallRoutingTab_Availability', available_state)
+            # Click on Find Me change button
+            if Call_routing_condition== "SimultaneousRing":
+                #self.action_ele.click_element('changeFindMe')
+                # click on Finish
+                self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+            elif Call_routing_condition== "CallForwarding":
+                time.sleep(1)
+                self.action_ele.click_element('changeVoicemail')
+
+
+                if Call_forward_condition=="Keepringing":
+                    # Click on "Forward the call to" radio button
+                    element = self._browser.element_finder("KeepRinging")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition=="CallForwardVoicemail":
+                    # Click on "Forward the call to" radio button
+                    element = self._browser.element_finder("forwardTheCallTo")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+                    # Select voicemail option
+                    self.action_ele.select_from_dropdown_using_text('forwardTheCallToOptions', "voicemail")
+                    # select number of rings
+                    self.action_ele.select_from_dropdown_using_text('ringsBeforeForwarding', noofrings)
+                    time.sleep(1)
+                    # and if more than 8 calls forward to
+                    self.action_ele.select_from_dropdown_using_text('ifMoreThan8CallsForwardTo', "voicemail")
+                    # click on Finish
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition=="CallForwardAnotherNumber":
+                    # Click on "Forward the call to" radio button
+                    element = self._browser.element_finder("forwardTheCallTo")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+                    # Select voicemail option
+                    self.action_ele.select_from_dropdown_using_text('forwardTheCallToOptions', "another number")
+                    time.sleep(1)
+                    self.action_ele.input_text('ForwardcallinputNumber',PhNumber)
+                    time.sleep(2)
+                    # select number of rings
+                    self.action_ele.select_from_dropdown_using_text('ringsBeforeForwarding', noofrings)
+                    time.sleep(1)
+                    # and if more than 8 calls forward to
+                    self.action_ele.select_from_dropdown_using_text('ifMoreThan8CallsForwardTo', "voicemail")
+                    # click on Finish
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition=="AlwaysForwardVoicemail":
+                    # Click on "Forward the call to" radio button
+                    element = self._browser.element_finder("AlwaysforwatdTo")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+
+                    self.action_ele.select_from_dropdown_using_text('AlwaysforwatdToOptions', "voicemail")
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition=="AlwaysForwarAnotherNumber":
+                    # Click on "Forward the call to" radio button
+                    element = self._browser.element_finder("AlwaysforwatdTo")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+
+                    self.action_ele.select_from_dropdown_using_text('AlwaysforwatdToOptions', "another number")
+                    time.sleep(1)
+                    self.action_ele.input_text('AlwaysforwatdinputNumber',PhNumber)
+                    time.sleep(2)
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition == "DNDNeverForward":
+                    element = self._browser.element_finder("dndneverforward")
+                    if element:
+                        element.click()
+                    else:
+                        return False
+                    time.sleep(1)
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+                elif Call_forward_condition == "DNDAlwaysVM":
+                    self.action_ele.explicit_wait("dndalwaysvm")
+                    time.sleep(1)
+                    self.action_ele.click_element('dndalwaysvm')
+
+                    self.action_ele.click_element('availabilityRoutingWizard_finish')
+                else:
+                    log("Please give the proper Call Forward Option")
+
+            elif Call_routing_condition== "Findme":
+                #self.action_ele.click_element('changeFindMe')
+                # click on Finish
+                self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+            elif Call_routing_condition== "VoicemailInteraction":
+                #self.action_ele.click_element('changeFindMe')
+                # click on Finish
+                self.action_ele.click_element('availabilityRoutingWizard_finish')
+
+            else:
+                log("Please give the proper Call routing Option")
+
+            return True
+        except:
+            raise AssertionError("Navigation Failed!!")
+
+    def create_new_power_routing(self,rulename="prtest",prcondition="On_the_Phone",prforward="another_number", PhNumber="5501", deleteflag="0"):
+        """
+        `Description:` Create and delete the power routing
+
+        `:param params:` Power routing Name , Pre condition , Forward rule, Phone Number, Delete flag
+
+        created by: Maha
+        """
+        try:
+            # import pdb;pdb.Pdb(stdout=sys.__stdout__).set_trace()
+            if deleteflag == "0":
+                time.sleep(2)
+                self.action_ele.explicit_wait("PowerRouting")
+                self.action_ele.click_element('PowerRouting')
+                self.action_ele.explicit_wait("CreateNewPowerRouting")
+                self.action_ele.click_element('CreateNewPowerRouting')
+                self.action_ele.explicit_wait("PowerRoutingRuleName")
+                self.action_ele.input_text('PowerRoutingRuleName', rulename)
+
+                if prcondition=="On_the_Phone":
+                    self.action_ele.explicit_wait("PowerRoutingOnthePhone")
+                    self.action_ele.click_element('PowerRoutingOnthePhone')
+                    self.action_ele.explicit_wait("PowerRoutingAddButton")
+                    self.action_ele.click_element('PowerRoutingAddButton')
+
+                    if prforward=="another_number":
+                        self.action_ele.explicit_wait("PowerRoutingForwordOption")
+                        self.action_ele.click_element('PowerRoutingForwordOption')
+                        self.action_ele.explicit_wait("PowerRoutingForwordPhNumber")
+                        self.action_ele.input_text('PowerRoutingForwordPhNumber', PhNumber)
+
+                    elif prforward=="voicemail" :
+                            self.action_ele.explicit_wait("PowerRoutingForwordOptionvm")
+                            self.action_ele.click_element('PowerRoutingForwordOptionvm')
+                    else:
+                        log("power routing forward selection is not proper")
+
+                    self.action_ele.explicit_wait("PowerRoutingOKbutton")
+                    self.action_ele.click_element('PowerRoutingOKbutton')
+                    time.sleep(2)
+                    self.action_ele.click_element('PowerRoutingEnable')
+                    self.action_ele.click_element('PowerRoutingSave')
+                    time.sleep(2)
+                    self.action_ele.click_element('AvailabilityRoutingbtn')
+                else:
+                    log("power routing condition selection is not proper")
+
+            elif deleteflag == "1":
+                time.sleep(2)
+                #import pdb;pdb.Pdb(stdout=sys.__stdout__).set_trace()
+                self.action_ele.explicit_wait("PowerRouting")
+                self.action_ele.click_element('PowerRouting')
+                self.action_ele.explicit_wait("PowerRoutingDeleteButton")
+                self.action_ele.click_element('PowerRoutingDeleteButton')
+                self.action_ele.explicit_wait("Service_Void_Yes")
+                time.sleep(1)
+                self.action_ele.click_element('Service_Void_Yes')
+                time.sleep(2)
+                self.action_ele.click_element('PowerRoutingSave')
+                time.sleep(2)
+                self.action_ele.click_element('AvailabilityRoutingbtn')
+            else:
+                log("delete flag selection is selection is not proper")
+
+            return True
+        except:
+            raise AssertionError("Failed to clear phones configured for Call Routing!!")
+
+    def select_call_routing_using_extension(self, extension):
+        """
+        `Description:` Look for the user whose phone extension is provided, then click
+                        on the Service/Phone Name column. Then select the
+                        Call Routing tab.
+
+        `:param params:` Extension of user.
+
+        created by: Maha
+        """
+        try:
+            time.sleep(2)
+            self.action_ele.explicit_wait("Phone_system_tab")
+            self.action_ele.click_element("Phone_system_tab")
+            self.action_ele.click_element("Users_link")
+            self.action_ele.explicit_wait("headerRowExtensionInput")
+            self.action_ele.input_text("headerRowExtensionInput", extension)
+            self.action_ele.explicit_wait("au_datagrid_usersDataGrid")
+            grid_table_row = self._browser.element_finder("au_datagrid_usersDataGrid")
+            if grid_table_row:
+                print grid_table_row
+
+                # It is essential to wait for the element to load, even though we were waiting for the grid to load.
+                self.action_ele.explicit_wait("MatchingServicePhoneName")
+                elms = self._browser.elements_finder("MatchingServicePhoneName")
+                elms[0].click()
+
+                self.action_ele.explicit_wait("CallRouting_tab")
+                self.action_ele.click_element("CallRouting_tab")
+
+                # Make sure we are starting with default options for call routing.
+                #self.set_default_options_for_call_routing()
+                return True
+
+        except:
+            raise AssertionError("Navigation Failed!!")
+			
+
+4) Add this in C:\ATF_ROBOT\automation-boss\map\BossComponent\Service_Page.map			
+AvailabilityRoutingbtn==btn#xpath#//*[@id="callRoutingTypePicker"]/label[1]
+PowerRouting==btn#xpath#//*[@id="callRoutingTypePicker"]/label[2]
+CreateNewPowerRouting==btn#xpath#//*[@id="powerCallRoutingContainer"]/div/fieldset/button
+PowerRoutingRuleName==input#id#txbPowerRouting
+PowerRoutingOnthePhone==btn#xpath#//*[@id="frmPowerRouting"]/fieldset[1]/div[1]/span[4]/button
+PowerRoutingAddButton==btn#xpath#//*[@id="powerRoutingRulesOptions"]/div/button
+PowerRoutingForwordOption==btn#xpath#//*[@id="frmPowerRouting"]/fieldset[2]/div/div[2]/input[1]
+PowerRoutingForwordOptionvm==btn#xpath#//*[@id="frmPowerRouting"]/fieldset[2]/div/div[1]/input[1]
+PowerRoutingForwordPhNumber==input#xpath#//*[@id="txbPowerRoutingForwardCall"]
+PowerRoutingOKbutton==btn#xpath#//*[@id="powerRoutingForm_OK"]
+PowerRoutingEnable==btn#xpath#//*[@id="powerCallRoutingContainer"]/div/fieldset/div/div/div/span[2]/label/input
+PowerRoutingSave==btn#xpath#//*[@id="powerCallRoutingContainer"]/div/fieldset/div/button
+headerRowExtensionInput==input#id#headerRow_Extension
+PowerRoutingDeleteButton==btn#xpath#//*[@id="powerCallRoutingContainer"]/div/fieldset/div/div/div/span[2]/button[2]
+dndneverforward==btn#xpath#//*[@id="cosmoCallRoutingCallForwardingContainer"]/fieldset/div/div[2]/input
+dndalwaysvm==btn#xpath#//*[@id="cosmoCallRoutingCallForwardingContainer"]/fieldset/div/div[1]/input[1]
+AlwaysforwatdTo==btn#xpath#//div/div/div/div/fieldset/div/div[2]/div[3]/input[@name="forwardRadioButton"]
+AlwaysforwatdToOptions==menu#xpath#//fieldset/div/div[2]/div[3]/select
+AlwaysforwatdinputNumber==input#xpath#//*[@id="cosmoCallRoutingCallForwardingContainer"]/fieldset/div/div[2]/div[3]/input[2]
+ForwardcallinputNumber==input#xpath#//*[@id="cosmoCallRoutingCallForwardingContainer"]/fieldset/div/div[2]/div[2]/input[2]
+KeepRinging==btn#xpath#//div/div/div/div/fieldset/div/div[2]/div[1]/input[@name="forwardRadioButton"]
+
+5) Add this in : C:\ATF_ROBOT\Framework\phone_wrappers\phone_4xx\PPhoneInterface.py
+    def pphone_press_button_softkey5(self, user):
+        """Press PPhone button via kbd server
+
+        :param user: User dict
+        :type user: type dict
+        :return ret_val: none
+        """
+        self.pphone_press_button(user, kButton_Softkey5)
+		
+    def getdm_unheardVM_count(self, user):
+        """Returns unheard voice mails count.
+        :param user: User dict
+        :type user: type dict
+        :return ret_val:  Returns unheard VMs count
+        :rtype: str
+        """
+        #logger.warn("In getdm_callee_number. TODO map ca to session number")
+        VMcount = self.pphone_ssh_dm(user, "cli -c getdm", "numVoiceMailMsgs")
+        while VMcount == "{Unknown error}":
+            print("INSIDE WHILE LOOP to get VM count.....")
+            VMcount = self.pphone_ssh_dm(user, "cli -c getdm", "numVoiceMailMsgs")
+        print "VM count is : %s"%VMcount
+        return VMcount
+		
+    def verify_VM_count(self, num1, num2, count):
+        if (int(num2)-int(num1)) == int(count):
+            logger.info("VM Count is Verified")
+        else:
+            raise Exception("VM Count is NOT Increased")
+            #logger.info("VM Count is NOT Increased")
+            return 0
+        return 1
+

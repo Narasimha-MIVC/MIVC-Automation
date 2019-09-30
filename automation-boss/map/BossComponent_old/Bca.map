@@ -1,0 +1,82 @@
+Bridged_Call_Appearances==a#xpath#//*[text()="Bridged Call Appearances"]
+Add_BCA_Button==button#xpath#//*[@id="bcaProfilesDataGridAddButton"]
+Copy_BCA_Button==button#xpath#//*[@id="bcaProfilesDataGridCopyButton"]
+Edit_BCA_Button==button#xpath#//*[@id="bcaProfilesDataGridEditButton"]
+Delete_BCA_Button==button#xpath#//*[@id="bcaProfilesDataGridDeleteButton"]
+BCA_Radio_Button==input#xpath#//*[@id="isPlainBca"]
+BCA_Profile_Name==input#xpath#//*[@id="profileName"]
+BCA_Associated_Profile_Name==input#xpath#//*[@id="associatedProfiles"]
+BCA_Extension==input#xpath#//*[@id="extension"]
+BCA_Location==select#xpath#//*[@id="location"]
+BCA_Assign_PhoneNumber==select#xpath#//*[@id="assignPhoneNumber"]
+BCA_PhoneNumber==select#xpath#//*[@id="PhoneNumbers"]
+BCA_OutboundCallerIds==select#xpath#//*[@id="outboundCallerIds"]
+BCA_Save_Button==button#xpath#//*[@id="btnAddBcaSave"]
+BCA_Cancel_Button==button#xpath#//*[@id="btnAddEditBcaCancel"]
+BCA_Cancel_Page_Info==p#xpath#//*[contains(text(), "Are you sure you want to cancel Adding this Bridged Call Appearance?")]
+BCA_OK_Button==button#id#fnMessageBox_OK
+BCA_Yes_Button==button#xpath#//*[@id="fnMessageBox_Yes"]
+BCA_Header_Name_Field==span#xpath#//*[@class="slick-column-name" and @title="Name"]
+BCA_Header_Extension_Field==span#xpath#//*[@class="slick-column-name" and @title="Extension"]
+BCA_Header_Status_Field==span#xpath#//*[@class="slick-column-name" and @title="Status"]
+BCA_Header_Location_Field==span#xpath#//*[@class="slick-column-name" and @title="Location"]
+BCA_Grid_Header_Row_Name==input#xpath#//*[@id="headerRow_Name"]
+BCA_Grid_Canvas==div#xpath#//*[@class="grid-canvas"]
+BCA_Delete_Button==button#xpath#//*[@id="bcaProfilesDataGridDeleteButton"]
+BCA_Delete_Confirm_Yes_Button==button#xpath#//*[@id="fnMessageBox_Yes"]
+BCA_Actions_Manage_Popup_Info==div#xpath#//div[@class="ui-dialog-content ui-widget-content"]/p
+BCA_Page==a#xpath#//*[text()="Bridged Call Appearances"]
+BCA_Privacy_Check_Box==input#xpath#//*[@id="includeSystemDirectory"]
+BCA_CFBusy==select#xpath#//*[@id="CFBusy"]
+BCA_CFBusy_Extn==input#xpath#//*[@id="extension_cfbusy"]
+BCA_CFNoAnswer==select#xpath#//*[@id="CFNoAnswer"]
+BCA_CFNoAnswer_Extn==input#xpath#//*[@id="extension_cfnoanswer"]
+BCA_Conf_Option==select#xpath#//*[@id="conferencingOptions"]
+BCA_Enable_Tone==input#xpath#//*[@id="enableTone"]
+BCA_Show_More_Option==a#xpath#//*[@id="expandBca"]
+BCA_Show_Less_Option==a#xpath#//*[@id="collapseBca"]
+BCA_Copy_Page_Title==span#xpath#//*[@id="ui-id-5" and @class="ui-dialog-title"]
+BCA_Edit_Page_Title==span#xpath#//*[@id="ui-id-4" and @class="ui-dialog-title"]
+BCA_Save_Success_Page_Title==span#xpath#//*[@class="ui-dialog-title" and text()="Mitel Management Portal"]
+Associated_BCA==input#xpath#//*[@id="isSca"]
+A_BCA_Extn==input#xpath#//*[@id="extension"]
+A_BCA_Profile==select#xpath#//*[@id="associatedProfiles"]
+M5Portal_Bread_Crumb==div#xpath#//*[@id="m5portal_breadcrumb"]
+BCA_Add_Page_Title==span#xpath#//span[contains(text(), "Add Bridged Call Appearance")]
+Ph_Number_Text_Box==input#xpath#//*[@id="Number_text"]
+Ph_Number_Data_Grid==tbody#xpath#//*[@id="tnsDataGrid"]/tbody
+Geo_Loc_HeaderRow_Label==input#xpath#//*[@id="headerRow_LabelFormatted"]
+Geo_Loc_Grid_Canvas==div#xpath#//*[@class="grid-canvas"]
+BCA_Add_Conference_Option_Label==img#xpath#//*[@id="conferencingOptionsLabel"]/img
+User_Page_HeaderRow_FullName==input#xpath#//*[@id="headerRow_FullName"]
+User_Grid_Canvas==div#xpath#//*[@class="grid-canvas"]
+User_Personal_Info_headerRow_FormattedTN==input#xpath#//*[@id="headerRow_FormattedTN"]
+User_Phone_Settings_Prog_Buttons==li#xpath#//*[@id="tab-prog-buttons"]
+User_Phone_Settings_Prog_Button_Types==div#xpath#//*[@id="progButtonsAccordion"]
+User_Ph_Prog_Button_Rows_Select_Type==select#xpath#//*[@id="tabs-buttonBox4"]/div/div[2]/div/div[2]/div[2]/div/div[2]/select[1]
+User_Ph_Prog_Button_Rows_Select_Function==select#xpath#//*[@id="tabs-buttonBox4"]/div/div[2]/div/div[2]/div[2]/div/div[2]/select[2]
+User_Ph_Prog_Button_Rows_Select_BCA==select#xpath#//*[@id="user_prog_button_4_button_0_Bca"]
+User_Ph_Settings_Sca_Enable==span#xpath#//*[@id="SCAEnabled"]
+User_Ph_Settings_Sca_Enable_Extn==input#xpath#//*[@id="dummyScaExtn"]
+User_Ph_Settings_Sca_Extn_Label==label#xpath#//*[@id="SCAExtensionLabel"]
+User_Ph_Setting_Sca_Submit==button#xpath#//*[@id="SCAEnabled"]/form/button[1]
+User_Ph_Setting_Sca_Cancel==button#xpath#//*[@id="SCAEnabled"]/form/button[2]
+User_Ph_Setting_Sca_Info==img#xpath#//*[@class="m5-tooltip-image"]
+Ph_System_Ph_Numbers_Number==input#xpath#//*[@id="headerRow_TnId"]
+Ph_System_Ph_Numbers_Type==select#id#headerRow_TnType
+Ph_System_Ph_Numbers_Dest_type==select#xpath#//*[@id="headerRow_DestinationType"]
+Ph_System_Ph_Numbers_Destination==input#xpath#//*[@id="headerRow_Destination"]
+Ph_System_Ph_Numbers_Status==select#xpath#//*[@id="headerRow_TnStatus"]
+Ph_System_Ph_Numbers_Location==input#id#headerRow_FormattedLocationName
+Account_Home_Page==a#xpath#//*[@id="company_name"]/a
+Grid_Canvas==div#xpath#//*[@class="grid-canvas"]
+Phone_Numbers_Tab==a#xpath#//*[@id="menu"]/li[2]/div/div[1]/ul/li[5]/a
+Ph_System_Ph_Number_Assign==button#xpath#//*[@id="tnsDataGridassign"]
+Ph_System_Ph_Number_TN_edit==button#id#tnsDataGridedit
+Ph_System_Ph_Number_Op_Dest_Type_AutoAttendant==input#id#autoAttendant
+Ph_System_Ph_Number_Op_Dest_Type_HuntGroup==input#id#huntGroup
+Ph_System_Ph_Number_Op_Dest_Type_Bca==input#id#bridgedCallAppearance
+Ph_System_Ph_Number_Op_Dest_Type_User==input#xpath#//*[@id="user"]
+Ph_System_Ph_Number_Op_Dest_Type_Unassign==input#id#Unassign
+Ph_System_Ph_Number_Op_Destination==select#id#dropdown
+Ph_System_Ph_Number_Op_Save_Button==button#id#btnAssignOneNumberSave

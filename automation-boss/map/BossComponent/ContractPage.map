@@ -1,0 +1,20 @@
+cp_datagrid_allContracts==grid#id#datagrid_allContracts
+cp_allContractsbtnRefresh==button#id#allContractsbtnRefresh
+cp_headerRow_AccountName==input#id#headerRow_AccountName
+cp_account==input#id#account
+cp_projectManager==input#id#projectManager
+cp_contractDateFrom==input#id#contractDateFrom
+cp_contractDateTo==input#id#contractDateTo
+cp_contractType==input#id#contractType
+cp_contractStatus==input#id#contractStatus
+contract_grid==grid#id#datagrid_accountContractsDataGrid
+contract_grid_first_column==select#xpath#//*[@id="datagrid_allContracts"]/div[5]/div/div/div[1]/a
+
+
+
+
+orders_page==select#xpath#//*[@id="menu"]/li[1]/div/div[2]/ul/li[4]/a
+order_status_input==select#id#headerRow_OrderStatusName
+order_grid==grid#xpath#//*[@id="datagrid_accountOrders"]/div[5]/div/div[contains(@class, "ui-widget-content")]
+process_button==button#xpath#//*[@id="btnProcessNow"]
+close_yes==button#xpath#//*[@id="fnMessageBox_Yes"]

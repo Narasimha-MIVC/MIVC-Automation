@@ -1,0 +1,193 @@
+aob_setup_link_old==link#xpath#//a[@id='phone_system_nav']/following-sibling::div/div/ul/li/div/span/a[contains(text(),'Mitel Easy Setup')]
+welcome==name#xpath#//label[@class="header-main-text"]
+skip_btn==btn#xpath#//button[@class="btn btn-skip"]
+continue_button==btn#xpath#//button[@class="btn btn-transfer btn-transfer-continue"]
+transfer_button==btn#xpath#//button[@class="btn btn-transfer"]
+transfer_more_button==btn#xpath#//button[@class="btn btn-skip btn-tm"]
+current_provider_button==btn#xpath#//button[@class="btn dropdown-toggle btn-default"]
+other_provider==text#xpath#//ul[@class="dropdown-menu inner"]/li/a/span[contains(text(), 'Other (specify)')]
+other_provider_name==text#xpath#//div[@class="other-provider"]/input
+transfer_request_authorization_checkbox_label==label#xpath#//div[@class="checkbox"]/label
+transfer_request_gotit_button==btn#xpath#//button[@class="btn btn-primary gotit"]
+other_provider_error==text#xpath#//div[@class="other-provider"]/div[@class="errorholder"]
+loc_user_btn==name#xpath#//button[@class="btn btn-primary setUpBox status-button-blue"]
+loc_user_text==text#xpath#//div[@class="col-sm-8 col-md-8 location-header-text"]/span
+activation_text==text#xpath#//*[@class="locationStatusSpan"]
+date==date#xpath#.//*[@id='datagrid_accountLocations']/div[5]/div/div/div[8]/a
+loc_name_text==text#xpath#.//*[@id='headerRow_LabelFormatted']
+loc_name==name#xpath#//span[@class="locationLabel"]
+transfer_num_heading==text#xpath#//div[@class="col-sm-8 col-md-8 transfer-text"]/span
+add_type_button==btn#xpath#//button[@class="btn btn-default Rectangle-28-button"]
+tansfer_img==img#xpath#//div[@class="col-sm-1 col-md-1 transfer-icon clickable"]/span
+user_fields==text#xpath#//input[@class="form-control style-scope shor-textfield"]
+leave_button==btn#xpath#//button[@class="btn btn-continue"]
+firstname==text#xpath#//*[@id="firstName"]/div/input
+phone_buttons==btn#xpath#//div[@class='userinfobox active-userinfo']/div/div/div/div/button
+left_side_block==block#xpath#//div[@class="left-container"]/div
+check_icon_for_user==check#xpath#//span[@class="sub-header-icons complete-orange border-user"]
+status_bar_text==text#xpath#//div[@class="smaller"]
+header_image==img#xpath#//div[@class="shor-logo"]/img
+revisit_button==btn#xpath#//button[@class="btn btn-primary setUpBox status-button-white"]
+revisit_button1==btn#xpath#//button[contains(text(),"Revisit")]
+cancel_button==btn#xpath#//button[@class="btn btn-cancel"]
+aob_cancel_text_default_button==btn#xpath#//button[contains(@class, 'btn btn-default') and text()="Cancel"]
+
+aob_business_hour_selection==div#xpath#//div[contains(@class, 'step-text-child') and contains(text(), 'Business Hours')]
+
+aob_x_close_button==img#xpath#//img[@class="close" and @type="button"]
+aob_x_close_add_business_hours_button==img#xpath#//*[@id="myModal"]/div/div/div[1]/img
+
+aob_add_business_hours_days_button==div#xpath#//div[@class="days clickable"]
+aob_add_business_hours_days_active_button==div#xpath#//div[@class="days clickable dayActive"]
+aob_add_business_hours_time_input==input#xpath#//input[contains(@class, 'form-control') and @type="time"]
+
+aob_save_button==btn#xpath#//button[@class="btn btn-save"]
+aob_save_text_button==btn#xpath#//button[text()="Save"]
+aob_save_text_deepblue_button==btn#xpath#//button[contains(@class, 'btn btn-deepblue') and text()="Save"]
+aob_save_text_primary_button==btn#xpath#//button[contains(@class, 'btn-primary') and text()="Save"]
+
+aob_update_save_default_button==btn#xpath#//button[contains(@class, 'btn btn-save-default') and text()="Update"]
+aob_update_call_handling_button==btn#xpath#//html/body/shor-aob/app-callhandling/div/div[1]/div[3]/div[5]/div/div[2]/button[1]
+aob_update_button_v2==btn#xpath#//*[button[text()="Update"]]
+
+add_button==btn#xpath#//button[@class="btn btn-default"]
+add_button_default==btn#xpath#//button[contains(@class, 'btn btn-default') and text() = "Add"]
+aob_add_text_button==btn#xpath#//button[text()="Add"]
+
+user_names1==names#xpath#//span[@class="padding-left-16"]
+drop_down_text==list#xpath#//select[@class="form-control"]
+location_labels==label#xpath#//span[@class="locationLabel"]
+bundle_heading==head#xpath#//span[@class="header"]
+main_heading==head#xpath#//span[@class="profileTypeShortname"]
+stay_on_page==btn#xpath#//button[@class="btn btn-cancel"]
+skip_button==btn#xpath#//button[@class="btn btn-skip1"]
+user_names==naes#xpath#//div[@class="col-md-6 displayname"]/span
+aob_help_url==url#xpath#//a[@class="clickable"]
+aob_help_page_user_name==text#xpath#.//*[@id='okta-signin-username']
+aob_help_page_password==text#xpath#.//*[@id='okta-signin-password']
+aob_help_submit==btn#xpath#.//*[@id='okta-signin-submit']
+aob_help_page_Search==btn#xpath#.//*[@id='phSearchButton']
+aob_all_button==btn#xpath#//div[@class="status-button-parent"]/button
+bundle_user_count==text#xpath#//div[@class="profile-box active-box"]/div/div/div
+progress_bar==bar#xpath#//div[@class="loader-container"]
+active_bundle_text==bun#xpath#//div[@class="profile-box active-box"]/span
+call_handling_page==hea#xpath#//h2[@class="activation-header"]
+aob_left_container_names==name#xpath#//div[@class="left-container"]/div/span
+aob_user_page_check_box==chk#xpath#.//*[@id='datagrid_usersDataGrid']/div[5]/div/div/div/input
+aob_user_link==link#xpath#.//*[@id='datagrid_usersDataGrid']/div[5]/div/div/div[2]/a
+aob_get_phone_number==num#xpath#//div[@class="col-md-7 text-right"]/span
+get_all_number==num#xpath#//select[@class="form-control"]/optgroup
+aob_order_status==drop#xpath#.//*[@id='headerRow_OrderStatusName']
+location_text_field==text#xpath#.//*[@id='headerRow_FormattedLocationName']
+order_items==btn#xpath#.//*[text()='Order Items']
+bundle_desc==name#xpath#.//*[@id='accountOrdersDataGrid_wrapper']/table/tbody/tr/td[4]
+bundle_quantity==name#xpath#.//*[@id='accountOrdersDataGrid_wrapper']/table/tbody/tr/td[2]
+aob_order_id==id#xpath#//div[@id='datagrid_accountOrders']/div[5]/div/div[2]/div[1]/span/a
+aob_status_text_for_user_count==btn#xpath#//div[@class="profile-box active-box"]/div/div/div[2]
+aob_future_date_textbox==text#xpath#//input[@type="text"]
+ch_continue==bt#xpath#//button[text()="Continue"]
+ch_setup==bt#xpath#//button[text()="Set Up"]
+ch_dont_Setup==bt#xpath#//button[text()="Don't Set Up"]
+act_save_and_finish==btn#xpath#//button[text()="Save & Finish"]
+act_option==label#xpath#//label[@class="calendar-label"]
+act_heading==tedxt#xpath#//h3[@class="Activate-right-away" ]
+aob_no_number_message==text#xpath#//span[@class="errorPhone"]
+primary_partition_header==text#xpath#//*[@id="headerRow_Name"]
+name_grid==tab#xpath#.//*[@id='datagrid_partitionsGrid']/div[5]/div/div/div[1]/a
+active_user_field==accordion#xpath#//div[@class="accordion-header active-user-box"]
+activate_icon==ico#xpath#//span[@class="activate-grey sub-header-icons text-center right-0"]
+callhandling_icon==ico#xpath#//span[@class="call-handling-grey sub-header-icons text-center right-0"]
+activate_text==ico#xpath#//*[text()="Activate"]
+callhadnling_text==ico#xpath#//*[text()="Call Handling"]
+aob_revisit==btn#xpath#//*[text()="Customize"]
+aob_ch_button==btn#xpath#//div[@class='btn-wrapper']/button
+aob_ch_drop_down==drp#xpath#//select[@class="form-control width-290"]
+aob_ch_page_button==btn#xpath#//div[@class="row action-bar"]/div/button
+aob_ch_icon_after_setup==icon#xpath#//span[@class="call-handling-orange text-center iconHolder"]
+aob_ch_reset_page_button==btn#xpath#//div[@class="modal-footer"]/div/div/button
+welcome_page_transfer_icon_block==div#xpath#//div[@class="col-md-4 transfer-icon"]
+welcome_page_locations_users_icon_block==div#xpath#//div[@class="col-md-4 locations-users-icon"]
+add_user_type_button==button#xpath#//body/shor-aob[1]/aob-user[1]/div[1]/div[1]/div[3]/div[1]/div[3]/div[1]/div[2]/button[1]
+add_user_type_onetime_charge_value==span#xpath#//*[@id="myModal"]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[3]/div[3]/div[1]/div[1]/div[2]/div[1]/span[1]
+add_user_type_monthly_charge_value==span#xpath#//*[@id="myModal"]/div[1]/div[1]/div[1]/div[2]/div[1]/div[5]/div[3]/div[3]/div[3]/div[1]/div[2]/div[1]/span[1]
+aob_ch_dropdown_box==drop#xpath#//div[@class="main-container container"]/div[2]/div[3]/div[3]/select
+test==drop#xpath#//select
+switch_account_list==list#xpath#//div[@aria-describedby="SwitchAccount"]/ul/li/a
+phone_number_page==grid#xpath#.//*[@id='datagrid_tnsDataGrid']
+heading_name==grid#xpath#.//*[@id='datagrid_usersDataGrid']/div/div/div/nobr/span
+col_name==grid#xpath#.//*[@id='datagrid_usersDataGrid']/div/div/div/div
+
+aob_transfer_button==btn#xpath#//button[@class="btn btn-transfer"]
+aob_transfer_more_button==btn#xpath#//button[@class="btn btn-skip btn-tm"]
+aob_cp_drop_down_box==drop#xpath#//button[@class="btn dropdown-toggle btn-default"]
+aob_current_provider==drp#xpath#//select[@class="selectpicker ng-untouched ng-pristine ng-valid"]/option
+aob_tn_text==text#xpath#//textarea
+aob_tn_check==chk#xpath#//div[@class="checkbox"]/label
+aob_learn_more==link#xpath#//div[@class="featureDescription"]/div/div/span/a
+
+aob_activation_calendar==cal#xpath#//input[@type="text"]
+aob_transfer_number_entry==count#xpath#//div[@class="transferinfo-content"]
+
+aob_setup_link==lin#xpath#//*[@id="menu"]/li[4]/div/div[2]/ul/li/div/span[2]/a
+aob_setup_link1==lin#xpath#//a[text()="Mitel Easy Setup"]
+aob_page_validation==ele#xpath#//img[@class="img-responsive logo"]
+
+aob_transfer_page_number==ele#xpath#//span[@class="transfer-text2"]
+aob_temparory_number_link==link#xpath#//a[@class="activate-now-link clickable"]
+
+user_page_slick_grid==grid#id#usersDataGridGrid
+add_user_type_bundles==bt#xpath#//div[@class="col-md-6 clickable"]/div
+currency_charge==div#xpath#//div[@class="small-inner-text"]/span
+right_arrow_toggle==bt#xpath#//div[@class="rightarrow"]
+price_formatting_add_user_type==div#xpath#//span[@class='tableheader font-semibold' and contains(text(),'Charge')]
+Revisit_button==button#xpath#//button[text()[contains(.,'Revisit')]]
+Business_hours_CH_page==div#xpath#//div[text()[contains(.,'Business Hours')]]
+live_answer_CH_page==div#xpath#//div[text()[contains(.,'Live Answer')]]
+take_message_CH_page==div#xpath#//div[text()[contains(.,'Take a Message')]]
+menu_greeting_CH_page==div#xpath#//div[text()[contains(.,'Menu Greeting')]]
+operator_CH_page==div#xpath#//div[text()[contains(.,'Operator')]]
+operator_add_button==button#xpath#//button[text()[contains(.,'Add')]]
+operator_extn_box==input#id#autosearchtextbox
+aob_ch_business_hours_icon==icon#xpath#//span[@class="clock-blue-24 text-center pull-left step-icon-small"]
+aob_icon==ic#xpath#//td[@class="sub-header-item text-center"]
+aob_tn_got_it_button==btn#xpath#//button[@class="btn btn-primary gotit"]
+aob_tabs==name#xpath#//div[@class="row"]/div/div/span[2]
+aob_ch_active_tab==tab#xpath#//div[@class="component-box selectedBox"]
+aob_ch_business_hour==tab#xpath#//div[@class="component-box selectedBox"]/aob-businesshours
+aob_ch_business_hour_add==tab#xpath#//button[text()="Add"]
+aob_ch_business_hour_days==tab#xpath#//div[@class="days clickable"]/span
+aob_ch_business_hour_start_time==tab#xpath#//input[@id="datepicker-autoclose1"]
+aob_ch_business_hour_end_time==tab#xpath#//input[@id="datepicker-autoclose2"]
+aob_ch_business_hour_save_button==tab#xpath#//button[@class="btn btn-primary"]
+
+aob_operator_number_rings==text#xpath#//input[@type="number"]
+aob_operator_ring_text==trext#xpath#//div[@class="ring-count"]
+
+aob_tn_delete_button==btn#xpath#//button[@class="btn btn-delete"]
+filtered_extension==div#xpath#//div[@class="extension-text"]
+filtered_username==div#xpath#//div[@class="name-text"]
+clear_icon==span#xpath#//span[@class="clear-icon clickable"]
+aob_ch_choose_button==x#xpath#//button[@class="btn btn-default"]
+
+aob_ch_get_selected_number==num#xpath#//select[@class="form-control width-290"]/optgroup
+aob_keep_number_button==btn#xpath#//button[@class="btn btn-confirm" and text()="Keep Number"]
+
+selected_bundle_type==btn#xpath#//div[@class="profile-box active-box"]/span
+bundle_user_types==btn#xpath#//div[@class="left-container"]/div/span
+add_user_type==btn#xpath#//div[@class="rectangle-userType"]/div[2]/button
+bundle_types==btn#xpath#//div[@class="col-md-6 clickable"]/div
+bundle_add_button==btn#xpath#//button[@class="btn btn-default AddButton"]
+confirm_button==btn#xpath#//div[@class="col-md-12 btn-holder"]/button
+bundle_types_next==btn#xpath#//div[@class="row visible"]/div[3]/div/div
+user_profile_bar==text#xpath#//div[@class="profile-bar done-bar"]
+add_user_button==btn#xpath#//button[@class="btn btn-adduser"]
+add_user_confirm_button==btn#xpath#//button[@class="btn btn-default AddButton"]
+user_displayed_number==text#xpath#//select[@class="status-button-parent"]
+activation_calendar_present==input#xpath#//input[@class="ng-tns-c16-0 ng-untouched ng-pristine ui-inputwrapper-filled ng-valid"]
+activation_calendar_not_present==input#xpath#//p-calendar[@class="ng-tns-c16-0 ng-untouched ng-pristine ui-inputwrapper-filled"]
+aob_checkmark_active==img#xpath#//span[@class="locations-users-icon_content locationiconHolder text-center active-locationiconHolder"]
+location_checkmark_active==img#xpath#//span[@class="locations-users-icon_content locationiconHolder text-center active-locationiconHolder"]
+location_back_button==button#xpath#//shor-button[@type="footer-back"]
+location_save_logout==button#xpath#//shor-button[@type="save-logout"]
+
+

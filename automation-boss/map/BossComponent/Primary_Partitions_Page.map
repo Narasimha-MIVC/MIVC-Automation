@@ -1,0 +1,145 @@
+m5portal_support_topbar==div#id#m5portal_support_topbar
+container==div#id#container
+_content==div#id#_content
+_header==div#id#_header
+top==div#id#top
+help==a#id#help
+ideas==a#id#ideas
+announcements==a#id#announcements
+top-options==div#id#top-options
+userOptions==div#id#userOptions
+userMenuItems==div#id#userMenuItems
+switch-account-text==a#id#switch-account-text
+logo==a#id#logo
+company_name==div#id#company_name
+_navigation==div#id#_navigation
+main==div#id#main
+content==div#id#content
+breadcrumb==div#id#breadcrumb
+m5portal_breadcrumb==div#id#m5portal_breadcrumb
+searchWidget==div#id#searchWidget
+tbxTerm==input#id#tbxTerm
+
+partitionDetailsTabs==div#id#partitionDetailsTabs
+ui-id-3==a#id#ui-id-3
+ui-id-4==a#id#ui-id-4
+ui-id-5==a#id#ui-id-5
+ui-id-6==a#id#ui-id-6
+ui-id-7==a#id#ui-id-7
+ui-id-8==a#id#ui-id-8
+ui-id-9==a#id#ui-id-9
+ui-id-10==a#id#ui-id-10
+ui-tabs-1==div#id#ui-tabs-1
+partitionDetails==div#id#partitionDetails
+IsPrimaryDiv==div#id#IsPrimaryDiv
+defaultDBNSettingChkbox==input#id#defaultDBNSettingChkbox
+ui-tabs-2==div#id#ui-tabs-2
+ui-tabs-3==div#id#ui-tabs-3
+ui-tabs-4==div#id#ui-tabs-4
+ui-tabs-5==div#id#ui-tabs-5
+ui-tabs-6==div#id#ui-tabs-6
+ui-tabs-7==div#id#ui-tabs-7
+ui-tabs-8==div#id#ui-tabs-8
+ajaxHandler==div#id#ajaxHandler
+
+
+contactUsForm==div#id#contactUsForm
+
+
+contactUsForm_Close==button#id#contactUsForm_Close
+
+
+SwitchAccount==div#id#SwitchAccount
+
+
+SwitchAccount_OK==button#id#SwitchAccount_OK
+SwitchAccount_Cancel==button#id#SwitchAccount_Cancel
+partitionName==text#id#partitionName
+OperationsPrimaryPartitionsProfiles==a#id#ui-id-11
+OperationsPrimaryPartitionsNumbers==a#id#ui-id-6
+
+PrimaryPartitionFirstName==input#id#headerRow_FirstName
+PrimaryPartitionLastName==input#id#headerRow_LastName
+PrimaryPartitionExtension==input#id#headerRow_Extension
+PrimaryPartitionPhoneNumber==input#id#headerRow_TnFormatted
+PrimaryPartitionProfileTypeName==select#id#headerRow_ProfileTypeName
+
+#profile grid
+partitionProfilesDataGridReassignButton==button#id#partitionProfilesDataGridReAssignButton
+partitionProfilesDataGridAddButton==button#id#partitionProfilesDataGridAddButton
+partitionProfilesDataGridEditButton==button#id#partitionProfilesDataGridEditButton
+ProfileDataGrid==grid#id#datagrid_partitionProfilesDataGrid
+ProfileDataGridCanvas==div#xpath#//*[@class="grid-canvas"]
+UsersDataGridCanvas==div#xpath#//*[@class="grid-canvas"]
+ProfileGridHeaderFirstNameColumn==span#xpath#//*[@class="slick-column-name" and @title="First Name"]
+ProfileGridHeaderLastNameColumn==span#xpath#//*[@class="slick-column-name" and @title="Last Name"]
+ProfileGridHeaderEmailColumn==span#xpath#//*[@class="slick-column-name" and @title="Email"]
+ProfileGridHeaderEmailSearch==test#id#headerRow_EmailFormatted
+ProfileGridHeaderLocationColumn==span#xpath#//*[@class="slick-column-name" and @title="Location"]
+ProfileUnassignButton==button#id#partitionProfilesDataGridUnassignButton
+
+#reassign profile wizard
+ReassignTnId==select#id#reassignTn
+ProfileReassignSaveButton==button#id#reassignNumberForm_OK
+ProfileReassignCancelButton==button#id#reassignNumberForm_Cancel
+ProfileReassignSuccessPageMsg==p#xpath#//p[contains(text(), "Number was re-assigned")]
+
+#add profile wizard
+AddLocationToAssign==select#id#AddLocationToAssign
+TnEnabled==checkbox#id#TnEnabled
+TnLocations==select#id#TnLocations
+AddTnId==select#id#AddTnId
+AddExtension==input#id#AddExtension
+AddAutoAssignExtn==input#id#AddAutoAssignExtn
+AddFirstName==input#id#AddFirstName
+AddLastName==input#id#AddLastName
+AddEmail==input#id#AddEmail
+ErrorMessageAddExtension==text#xpath#.//*[@id="addProfileWizard_step_0"]/fieldset[1]/div/table/tbody/tr[3]/td[2]/div/div
+ProductId==select#id#ProductId
+ProfileAddNextButton==button#id#addProfileWizard_next
+RequestedByAdd==select#id#RequestedByAdd
+RequestSourcesAdd==select#id#RequestSourcesAdd
+ProfileAddCancelButton==button#id#addProfileWizard_cancel
+ProfileAddBackButton==button#id#addProfileWizard_previous
+ProfileAddSaveButton==button#id#addProfileWizard_finish
+ProfileConfirmYesButton==button#id#fnMessageBox_Yes
+ProfileSaveSuccessPageTitle==span#xpath#//*[@class="ui-dialog-title" and text()="Order created"]
+ProfileOperationSuccessOK==button#id#fnMessageBox_OK
+ProfileWizardConfirmCancel==span#xpath#//*[@class="ui-dialog-title" and text()="Cancel"]
+
+#edit profile page
+personGeneralDetails==page#id#personGeneralDetails
+editProfilesForm==page#id#ui-id-15
+editProfilesFormCancelButton==button#id#editProfilesForm_Cancel
+
+#reset PIN
+partitionProfilesDataGridResetPinButton==button#id#partitionProfilesDataGridResetPinButton
+NewProfilePassword==input#id#NewProfilePassword
+ConfirmProfilePassword==input#id#ConfirmProfilePassword
+changeProfilePasswordFormOK==button#id#changeProfilePasswordForm_OK
+PinUseDefault==checkbox#id#UseDefault
+ChangePinSuccessOK==button#id#fnMessageBox_OK
+ErrorMessagePhonePin==text#xpath#.//*[@id='ChangeProfilePassword']/form/fieldset/table/tbody/tr/td/div/div
+
+#bulk import
+PartitionProfilesDataGridImportButton==button#id#partitionProfilesDataGridImportButton
+ImportBrowseButton==button#xpath#//*[@id="browseButton"]
+ImportBrowseFilePathText==text#id#browseText
+ImportPreviewButton==button#id#ajaxUploadButton
+ImportFormImportButton==button#id#fileUploadProfiles_Import
+ImportFormCloseButton==button#id#fileUploadProfiles_Close
+ImportFormRequestedBy==dropdown#id#BulkRequestedBy
+ImportFormRequestedSources==dropdown#id#RequestSources
+ImportFormMessageText==text#id#ajaxUploadForm_messageText
+ImportFormUploadForm==form#id#ajaxUploadForm
+ImportFormProfileGrid==grid#id#datagrid_prevProfiles
+ImportFormExtnSearch==text#xpath#//*[@id="datagrid_prevProfiles"]//*[@id="headerRow_Extension"]
+
+#unassign profile
+RequestedByDropdown==dropdown#id#RequestedBy
+RequestSources==dropdown#id#RequestSources
+ProfileUnassignOKButton==button#id#unassignNumberForm_OK
+ProfileUnassignSuccessOK==button#id#fnMessageBox_OK
+ProfileUnassignProcessing==#id#partitionProfilesDataGrid_processing
+profile_comp_name==div#xpath#//div[@class='slick-cell l1 r1']
+

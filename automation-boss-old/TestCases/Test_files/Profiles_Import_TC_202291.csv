@@ -1,0 +1,14 @@
+RCF Target Number,Profile Type,DID,Extension,First Name,Last Name,Email Address,Phone Location
+,MiCloud Connect Essentials,11234567890,1031,DIDdoesnotexist,Essentials,DIDdoesnotexist@test.com,Automation One
+,MiCloud Connect Essentials,,4106,ExtnInUse,Essentials,ExtnInUse@test.com,Automation One
+,MiCloud Connect Premier,14087004105,4105,DuplicateDID,Standard,DuplicateDID1@test.com,Automation One
+,MiCloud Connect Elite,14087004105,1021,DuplicateDID,Advanced,DuplicateDID2@test.com,Automation One
+,MiCloud Connect Education Essentials,,11018,FiveDigitExtn,EdStandard,fivedigitextn@test.com,Automation One
+,MiCloud Connect Elite,,101,ThreeDigitExtn,Courtesy,threedigitExtn@test.com,Automation One
+,MiCloud Connect Voicemail Only,,0016,Leadingzeros,Voicemail,leadingzeros@test.com,Automation One
+,MiCloud Connect Voicemail Only,,9916,Leadingnine,Voicemail,leadingnine@test.com,Automation One
+,,,1026,notype,Voicemail,notype@test.com,Automation One
+,MiCloud Connect Elite,,1027,noemail,Courtesy,,Automation One
+,MiCloud Connect Elite,,1028,,nofirstname,nofirstname@test.com,Automation One
+,MiCloud Connect Elite,,1029,nolastname,,nolastname@test.com,Automation One
+,MiCloud Connect Elite,,1030,nolocation,Advanced,nolocation@test.com,

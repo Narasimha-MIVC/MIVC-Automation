@@ -1,0 +1,102 @@
+*** Settings ***
+Documentation     Login to BOSS portal and Edit Pickup Group - Change to Invalid Extension
+#...               dev-Vasuja
+#...               Comments:
+
+#Suite Setup and Teardown
+Suite Setup       Set Init Env
+Suite Teardown    Close The Browsers
+
+
+#Keywords Definition file
+Resource           ../../RobotKeywords/BOSSKeywords.robot
+
+#Variable files
+Resource           ../../Variables/EnvVariables.robot
+Resource           ../VCFE/Variables/Vcfe_variables.robot
+
+
+#BOSS Component
+Library			  ../../lib/BossComponent.py    browser=${BROWSER}
+Library           ../../lib/DirectorComponent.py
+Library  String
+
+*** Test Cases ***
+1 Login as staff user and Edit Pickup Group - Change to Invalid Extension
+    [Tags]    Regression    PK
+    Given I login to ${URL} with ${bossUsername} and ${bossPassword}
+    When I switch to "switch_account" page
+    And I switch to account ${SCOCosmoAccount} with ${AccWithoutLogin} option
+    when I switch to "Visual_Call_Flow_Editor" page
+    Set to Dictionary    ${Pickupgroup_Add}    pickuploc    ${locationName}
+    Set to Dictionary    ${Pickupgroup_Add}    extnlistname    ${extnlistname}
+    ${extn_num}=    I create pickup group    &{Pickupgroup_Add}
+    Set to Dictionary    ${Pickupgroup_Add}    PGExtn    ${extn_num}
+    And I switch to "Visual_Call_Flow_Editor" page
+    @{extn_list}=    Create List    9999    0123
+    : FOR   ${extn}   IN  @{extn_list}
+    \    I select vcfe component by searching extension "${Pickupgroup_Add['PGExtn']}"
+    \    set to dictionary   ${Pickupgroup_edit}   PGExtn    ${extn}
+    \    I edit pickup group    &{Pickupgroup_edit}
+    \    I click on cancel button
+    And I switch to "Visual_Call_Flow_Editor" page
+    [Teardown]  run keywords  I delete vcfe entry for ${Pickupgroup_Add['PGExtn']}
+    ...                      I log off
+    ...                      I check for alert
+
+
+2 Login as DM user and Edit Pickup Group - Change to Invalid Extension
+    [Tags]    Regression    PK    Generic
+    Given I login to ${URL} with ${phoneDMUser01["user_email"]} and ${phoneDMUser01["password"]}
+    when I switch to "Visual_Call_Flow_Editor" page
+    Set to Dictionary    ${Pickupgroup_Add}    pickuploc    ${locationName}
+    Set to Dictionary    ${Pickupgroup_Add}    extnlistname    ${extnlistname}
+    ${extn_num}=    I create pickup group    &{Pickupgroup_Add}
+    Set to Dictionary    ${Pickupgroup_Add}    PGExtn    ${extn_num}
+    And I switch to "Visual_Call_Flow_Editor" page
+    @{extn_list}=    Create List    9999    0123
+    : FOR   ${extn}   IN  @{extn_list}
+    \    I select vcfe component by searching extension "${Pickupgroup_Add['PGExtn']}"
+    \    set to dictionary   ${Pickupgroup_edit}   PGExtn    ${extn}
+    \    I edit pickup group    &{Pickupgroup_edit}
+    \    I click on cancel button
+    And I switch to "Visual_Call_Flow_Editor" page
+    [Teardown]  run keywords  I delete vcfe entry for ${Pickupgroup_Add['PGExtn']}
+    ...                      I log off
+    ...                      I check for alert
+
+3 Login as PM user and Edit Pickup Group - Change to Invalid Extension
+    [Tags]    Regression    PK
+    Given I login to ${URL} with ${phonePMUser01["user_email"]} and ${phonePMUser01["password"]}
+    when I switch to "Visual_Call_Flow_Editor" page
+    Set to Dictionary    ${Pickupgroup_Add}    pickuploc    ${locationName}
+    Set to Dictionary    ${Pickupgroup_Add}    extnlistname    ${extnlistname}
+    ${extn_num}=    I create pickup group    &{Pickupgroup_Add}
+    Set to Dictionary    ${Pickupgroup_Add}    PGExtn    ${extn_num}
+    And I switch to "Visual_Call_Flow_Editor" page
+    @{extn_list}=    Create List    9999    0123
+    : FOR   ${extn}   IN  @{extn_list}
+    \    I select vcfe component by searching extension "${Pickupgroup_Add['PGExtn']}"
+    \    set to dictionary   ${Pickupgroup_edit}   PGExtn    ${extn}
+    \    I edit pickup group    &{Pickupgroup_edit}
+    \    I click on cancel button
+    And I switch to "Visual_Call_Flow_Editor" page
+    [Teardown]  run keywords  I delete vcfe entry for ${Pickupgroup_Add['PGExtn']}
+    ...                      I log off
+    ...                      I check for alert
+
+
+*** Keywords ***
+Set Init Env
+    ${uni_num}=    Generate Random String    4    12345678
+    ${uni_str}=    Generate Random String    8    [LETTERS][NUMBERS]
+
+    Set suite variable    ${uni_str}
+
+    Set suite variable    &{Pickupgroup_Add}
+
+
+    : FOR    ${key}    IN    @{Pickupgroup_Add.keys()}
+    \    ${updated_val}=    Replace String    ${Pickupgroup_Add["${key}"]}    {rand_str}    ${uni_str}
+    \    Set To Dictionary    ${Pickupgroup_Add}    ${key}    ${updated_val}
+

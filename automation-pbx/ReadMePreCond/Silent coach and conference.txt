@@ -1,0 +1,50 @@
+It requires 6 phones. 2 Phone contains real did in differnet cluster.
+Mendatiry configuration.
+Phone01 cluster2, did
+Phone02 cluster1, did
+Phone03 cluster1, extn
+Phone04 cluster1, extn
+Phone05 cluster1, extn
+Phone06 cluster1, extn
+
+Need to copy 3 api at:  C:\ATF_ROBOT\Framework\phone_wrappers\phone_4xx\PPhoneInterface.py
+
+    def getdm_expect_display_name(self, user, session=1, name="Conference"):
+        """Neeraj"""
+        time.sleep(1)
+        try:
+            result = self.pphone_ssh_dm(user, "cli -c getdm", "callstackdm.session%s.iden.displayname" %session)
+        except:
+            raise Exception("\nERROR:: While fetching display name")
+        else:
+            if result == name:
+                logger.console("\nDisplay name as :%s, Varified for user: %s with extension:%s" %(name, user.first_name, user.extension))
+                return True
+            else:
+                logger.console("\nERROR:: Display name mismatch, Expected name :%s, Resulted name :%s" %(name, result))
+                return False
+
+    def getdm_expect_conf_number(self, user, session=1, confnum=1):
+	"""Neeraj"""
+        time.sleep(1)
+        result = self.pphone_ssh_dm(user, "cli -c getdm", "callstackdm.session%s.conferencelistdm.sessionCount" %session)
+        if result == confnum:
+            logger.console("\nConference number Varified ... count=%s" %result)
+            return result
+        else:
+            raise Exception("\nERROR:: Expected Conference number :%s, Received Conference number :%s" %(confnum, result))
+
+    def pphone_make_did_call(self, user_from, user_to, ca_line):
+      
+        """Makes call from user_from to user_to on ca_line"
+        :param user_from: User dict
+        :type user_from: type dict
+        :param user_to: User dict
+        :type user_to: type dict
+        :param ca_line: Call appearance line on which to make call
+        :type ca_line: type str
+        :return ret_val: none
+        """
+        tn = telnetlib.Telnet(user_from.ip, kKbd_Socket)
+        tn.write("9" + str(user_to.did) + "\n") 
+        self.wait_for_dialing_call(user_from, ca_line)

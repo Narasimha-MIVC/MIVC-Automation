@@ -1,0 +1,85 @@
+{
+  "add_main_validate": {
+    "LocationNameFormatted": "TestLoc {rand_str|4}",
+    "Address1": "801 Brazos St.",
+    "City": "Austin",
+    "StateProvinceKey": "position|44",
+    "ZipCode": "78701",
+    "LocationNotes": "Testing Notes"
+
+  },
+
+  "add_settings": {
+    "Location_IsCommissionable": "True"
+  },
+
+  "test_values": {
+    "LabelFormatted": "Austin",
+    "FullAddress": "78730",
+    "Status": "position|3"
+
+  },
+  "update_values": {
+    "LabelFormatted": "Austin2",
+    "FullAddress": "78730",
+    "Status": "position|3"
+
+  },
+  "update_values2": {
+    "LabelFormatted": "Rochester",
+    "FullAddress": "16416",
+    "Status": "position|3"
+
+  },
+  "update_values3": {
+    "LabelFormatted": "New York",
+    "FullAddress": "16416",
+    "Status": "position|3"
+
+  },
+  "MPLS_network": {
+      "ConnectivityTypeId": "position|6"
+  },
+
+  "MPLS_network_reset": {
+      "ConnectivityTypeId": "position|5"
+  },
+
+    "confirmation_ok": {
+      "ConnectivityTypeId": "position|5",
+      "ConnectivityCarrier": "Conectivity Carrier",
+      "LocationDemarcation": "Demarcation Notes"
+  },
+
+  "close_selection": {
+    "LocationNameFormatted": "Test"
+  },
+  "wizard_examples": {
+    "LocationNameFormatted": "LocationNameFormatted",
+    "CountryKey": "CountryKey",
+    "Address1": "Address1",
+    "Address2": "Address2",
+    "City": "City",
+    "StateProvinceKey": "StateProvinceKey",
+    "ZipCode": "ZipCode",
+    "Address_bypassValidation": "false",
+    "FirstName": "FirstName",
+    "LastName": "LastName",
+    "PhoneNumber": "PhoneNumber",
+    "LocationNotes": "LocationNotes"
+  },
+  "wizard_settings_examples": {
+    "Location_IsCommissionable": "false",
+    "ITConsultantPartnerId": "ITConsultantPartnerId"
+  },
+  "wizard_network_examples": {
+    "ConnectivityTypeId": "ConnectivityTypeId",
+    "ConnectivityLocationId": "ConnectivityLocationId",
+    "ConnectivityAccountId": "ConnectivityAccountId",
+    "ConnectivityCarrier": "ConnectivityCarrier",
+    "LocationLanIp": "LocationLanIp",
+    "LocationPhoneIp": "LocationPhoneIp",
+    "LocationDemarcation": "LocationDemarcation"
+  }
+
+}

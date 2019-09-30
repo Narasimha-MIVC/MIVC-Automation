@@ -1,0 +1,167 @@
+Add to Path->
+C:\Automation_final\Framework\phone_wrappers\phone_4xx\PPhoneInterface.py
+
+
+def pphone_press_button_voicemail(self, user):
+        """Press PPhone button via kbd server
+
+        :param user: User dict
+        :type user: type dict
+        :return ret_val: none
+        """
+        self.pphone_press_button(user, kButton_VoiceMail)
+
+    def getdm_expect_conf_number(self, user, session=1, confnum=1):
+        time.sleep(1)
+        result = self.pphone_ssh_dm(user, "cli -c getdm", "callstackdm.session%s.conferencelistdm.sessionCount" %session)
+
+        if result == confnum:
+            logger.console("\nConference number Varified ... count=%s" %result)
+            return result
+        else:
+            raise Exception("\nERROR:: Expected Conference number :%s, Received Conference number :%s" %(confnum, result))
+
+    def getdm_unheardVM_count(self, user):
+        """Returns unheard voice mails count.
+        :param user: User dict
+        :type user: type dict
+        :return ret_val:  Returns unheard VMs count
+        :rtype: str
+        """
+        #logger.warn("In getdm_callee_number. TODO map ca to session number")
+        VMcount = self.pphone_ssh_dm(user, "cli -c getdm", "numVoiceMailMsgs")
+        while VMcount == "{Unknown error}":
+            print("INSIDE WHILE LOOP to get VM count.....")
+            VMcount = self.pphone_ssh_dm(user, "cli -c getdm", "numVoiceMailMsgs")
+        print "VM count is : %s"%VMcount
+        return VMcount
+
+
+    def pphone_deleteVMMessages(self, user, VMpassword = 1234):
+        #import pdb;
+        #pdb.Pdb(stdout=sys.__stdout__).set_trace()
+
+        VMcount = int(self.pphone_ssh_dm(user, "cli -c getdm", "numVoiceMailMsgs"))
+        if VMcount == -1:
+            print("Error in deleteVMMessages.........")
+
+        if VMcount >= 0:
+            if VMcount == 0:
+                print("No VMMessages to delete ")
+            else:
+                self.pphone_press_button_voicemail(user)
+                time.sleep(2)
+                self.pphone_dial_digits(user, VMpassword)
+                time.sleep(6)
+
+                i = 0
+                while (i < VMcount):
+                    print "Delete VM %d" % (i)
+                    self.pphone_press_button_softkey3(user)
+                    i = i+1
+                    time.sleep(3)
+                self.pphone_press_button_softkey5(user)
+
+
+        else:
+            raise Exception("Error in deleteVMMessages.........")
+
+
+
+    def pphone_force_idle_state(self,*args):
+        """Forces pphone to idle state
+
+        :param args: List of user dicts mapped to real pphones
+        :type args: type list
+        :return ret_val: none
+        :raises ExceptionType: Raises robot exception if no match
+        """
+        for user in args:
+            end_time = time.time() + self.force_idle_timeout
+            while True:
+                # Make sure pphone is idle
+                if self.getdm_session_count(user) == 0:
+                    #check pphone is not on voicemail or directory page
+                    index = self.pphone_search_softkey_text(user, "Call VM")
+                    if index != -1:
+                        self.pphone_press_button(user,kButton_VoiceMail)
+                    index = self.pphone_search_softkey_text(user, "Open")
+                    if index != -1:
+                        self.pphone_press_button(user, kButton_Directory)
+                    break
+                else:
+                    self.pphone_handset_up(user)
+                    time.sleep(0.5)
+                    self.pphone_handset_down(user)
+
+                if time.time() > end_time:
+                    raise Exception("pphone %s was not able to be forced to idle state" % user.ip)
+                    break
+            # Forcing handset up and down
+            self.pphone_handset_up(user)
+            time.sleep(1)
+            self.pphone_handset_down(user)
+            logger.info("pphone %s is idle" % user.ip)
+
+
+    def verify_pphone_held(self, user):
+        """Verifies if phone user is held
+
+        :param user: User dict
+        :type user: type dict
+        :return ret_val: none
+        :raises ExceptionType: Raises robot exception if not hold    user, "callstackdm.session%s.QA_TEST_MONITOR_HOLD_STATE"%sessioncount)
+        """
+        #pdb.Pdb(stdout=sys.__stdout__).set_trace()
+        sessioncount = self.getdm_session_count(user)
+        print "getdm session count : %s "%sessioncount
+        phonestate = self.pphone_ssh_dm(user, "cli -c getdm", "callstackdm.session%s.QA_TEST_MONITOR_HOLD_STATE"%sessioncount)
+        print "getdm phone state : %s "%phonestate
+        if phonestate == "isHeld":
+            print "Hold verified"
+            return 1
+        else:
+            raise Exception("verify_pphone_held: Pphone is not held")
+
+    def pphone_verify_CHM(self,user,mode):
+
+
+
+        state=self.pphone_ssh_dm(user, "cli -c getdm", "user.callHandlingMode")
+        #import pdb;
+        #pdb.Pdb(stdout=sys.__stdout__).set_trace()
+        if re.match(state, mode):
+            return 1
+        else:
+            raise Exception("pphone_verify_CHM: user CHM was not matched" )
+        return 0
+
+    def pphone_press_button_softkey4(self, user):
+        """Press PPhone button via kbd server
+
+        :param user: User dict
+        :type user: type dict
+        :return ret_val: none
+        """
+        self.pphone_press_button(user, kButton_Softkey4)
+
+    def pphone_verify_call_in_voicemail(self, user_callee):
+            """Verifies if user_caller is called by user_callee
+            :param user_callee: User dict
+            :type user_callee: type dict
+            :param user_caller: User dict
+            :type user_caller: type dict
+            :param ca_line: Call appearance line
+            :type ca_line: type str
+            :return ret_val: 1 if matched else 0
+            :raises ExceptionType: Raises robot exception if no match
+            """
+
+            p = "Voice Mail"
+            pattern = ".*%s" % p
+            resp = self.si_query(user_callee, "getline line0 3")
+            if re.match(pattern, resp):
+                return 1
+            else:
+                raise Exception("answer_verify_caller: user %s was not matched" % user_calle.first_name)
+            return 0

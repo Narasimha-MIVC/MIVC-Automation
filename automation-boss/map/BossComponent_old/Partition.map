@@ -1,0 +1,14 @@
+primary_partition_link==a#id#primary_partition_submenu
+primary_partition_grid==div#xpath#//*[@id="datagrid_partitionNumbersDataGrid"]
+sites==tab#id#tab-sites
+site_checkbox==id#id#chbSetAsSite
+ok_btnPartitionSitesOk==button#id#btnPartitionSitesOk
+Par_localAreaCode==input#xpath#//input[contains(@id,'tbAreaCode_')]
+
+primary_partition_assign_button==button#id#partitionNumbersDataGridAssignButton
+primary_partition_export_button==button#xpath#//*[@id="partitionNumbersDataGridExportBtn"]
+dialplanoperations==select#xpath#//*[@name="dialingRange.Key"]
+dialplandigits==list#xpath#//td[contains(text(),'Digit')]
+ph_system_dialplan==a#xpath#//a[text()='Dialplan']
+phone_system_dialplanoperations==list#xpath#//td[@class="general-data"]
+phone_system_dialplandigits==list#xpath#//td[@class="display-label narrow"]

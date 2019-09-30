@@ -1,0 +1,6 @@
+Update Login Detail in the path->
+C:\Automation_final\automation-pbx\Variables\LoginDetails.robot
+
+Update PhoneNumberInfo in the path->
+C:\Automation_final\automation-pbx\Variables\PhoneNumberInfo.robot
+numberRange=15092008455 (according to range available)

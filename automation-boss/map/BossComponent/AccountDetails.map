@@ -1,0 +1,2 @@
+acc_page_geo_loc==id#xpath#//li[@id='tab-locations']
+acc_page_geo_loc_dropdown==list#xpath#//*[@class='locations-filter']//select

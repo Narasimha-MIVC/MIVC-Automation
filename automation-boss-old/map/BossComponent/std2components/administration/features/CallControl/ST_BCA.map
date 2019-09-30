@@ -1,0 +1,12 @@
+std2_features_callcontrol_BCA==a#xpath#//*[@id="bcas_angular_menu_li"]/a
+add_bca_user_button==button#xpath#//*[@id="new_button"]
+bca_user_Name==input#xpath#//*[@id="bca_Description"]
+bca_user_Extension==input#xpath#//*[@id="bca_dn_attributes_DN"]
+bca_user_backup_Extension==input#xpath#//*[@id="bca_BackupDN"]
+bca_save_user==button#xpath#//*[@id="ng_save_button"]
+search_bca_user_name==tr#xpath#//tr[contains(@class,'ui-search-toolbar')]/th[2]/div/input[@id='gs_Description']
+first_row_bca_user_name==div#xpath#//*[@class="ui-jqgrid-bdiv"]/div/table[(@id="list_table")]/tbody/tr[2]/td[2]
+first_row_bca_user_extension==div#xpath#//*[@class="ui-jqgrid-bdiv"]/div/table[(@id="list_table")]/tbody/tr[2]/td[3]
+Delete_std2_bca_user_Button==button#xpath#//*[@id="delete_button"]
+bca_user_did_enable==input#xpath#//*[@id="bca_DIDEnabled"]
+bca_user_did_range==input#xpath#//*[@id="bca_did_range_digits"]

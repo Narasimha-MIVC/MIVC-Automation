@@ -1,0 +1,512 @@
+{
+  "add": {
+    "locator": "",
+    "modal_locator": "//div[@aria-describedby='addPersonalDirectoryForm']",
+    "buttons": {
+      "close": {
+          "locator": "//body/div[7]/div[1]/button[1]",
+          "expect": ""
+      },
+      "ok": {
+          "locator": "//button[@id='addPersonalDirectoryForm_OK']",
+          "expect": ""
+      },
+      "cancel": {
+          "locator": "//button[@id='addPersonalDirectoryForm_Cancel']",
+          "expect": ""
+      }
+    },
+    "fields": {
+      "BGroupID": {
+        "locator": "//select[@id='PersonalEntry_buddy_group_items_attributes_0__BGroupID']",
+        "type": "select-one",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "FirstName": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_FirstName']",
+        "type": "text",
+        "required": true,
+        "minlength": 2,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "LastName": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_LastName']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "CompanyName": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_CompanyName']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "DepartmentName": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_DepartmentName']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "WorkPhone": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_WorkPhone']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "CellPhone": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_CellPhone']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "PagerPhone": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_PagerPhone']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "HomePhone": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_HomePhone']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "FaxPhone": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_FaxPhone']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "PrimaryPhoneContactFieldID": {
+        "locator": "//select[@id='PersonalEntry_PrimaryPhoneContactFieldID']",
+        "type": "select-one",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "EmailAddress": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_EmailAddress']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      },
+      "IMUri": {
+        "locator": "//input[@id='PersonalEntry_tab_address_attributes_IMUri']",
+        "type": "text",
+        "required": false,
+        "minlength": false,
+        "maxlength": false,
+        "rangelength": false,
+        "minvalue": false,
+        "maxvalue": false,
+        "rangevalue": false,
+        "expect": ""
+      }
+    }
+  },
+  "edit": {
+    "locator": "//div[@id='updatePersonalDirectoryForm']//form",
+    "modal_locator": "//div[@aria-describedby='updatePersonalDirectoryForm']",
+    "buttons": {
+        "close": {
+            "locator": "//body/div[8]/div[1]/button[1]",
+            "expect": ""
+        },
+        "ok": {
+            "locator": "//button[@id='updatePersonalDirectoryForm_OK']",
+            "expect": ""
+        },
+        "cancel": {
+            "locator": "//button[@id='updatePersonalDirectoryForm_Cancel']",
+            "expect": ""
+        }
+    },
+    "fields": {
+      "BGroupID": {
+          "locator": "//select[@id='PersonalEntry_buddy_group_items_attributes_0__BGroupID']",
+          "type": "select-one",
+          "required": false
+      },
+      "FirstName": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_FirstName']",
+          "type": "text",
+          "required": true
+      },
+      "LastName": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_LastName']",
+          "type": "text",
+          "required": false
+      },
+      "CompanyName": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_CompanyName']",
+          "type": "text",
+          "required": false
+      },
+      "DepartmentName": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_DepartmentName']",
+          "type": "text",
+          "required": false
+      },
+      "WorkPhone": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_WorkPhone']",
+          "type": "text",
+          "required": false
+      },
+      "CellPhone": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_CellPhone']",
+          "type": "text",
+          "required": false
+      },
+      "PagerPhone": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_PagerPhone']",
+          "type": "text",
+          "required": false
+      },
+      "HomePhone": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_HomePhone']",
+          "type": "text",
+          "required": false
+      },
+      "FaxPhone": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_FaxPhone']",
+          "type": "text",
+          "required": false
+      },
+      "PrimaryPhoneContactFieldID": {
+          "locator": "//select[@id='PersonalEntry_PrimaryPhoneContactFieldID']",
+          "type": "select-one",
+          "required": false
+      },
+      "EmailAddress": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_EmailAddress']",
+          "type": "text",
+          "required": false
+      },
+      "IMUri": {
+          "locator": "//input[@id='PersonalEntry_tab_address_attributes_IMUri']",
+          "type": "text",
+          "required": false
+      }
+    }
+  },
+  "grid": {
+    "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']",
+    "modal_locator": "",
+    "header_checkbox": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::div[contains(@id, '_checkbox_selector')]//input[@type='checkbox']",
+    "totals_locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::ul[@id='personalDirectoryDataGridContextMenu']",
+    "buttons": {
+        "add": {
+            "locator": "//button[@id='personalDirectoryDataGridAddButton']",
+            "expect": "",
+            "enabled": {
+                "0": true,
+                "1": true,
+                "2+": true,
+                "all": true
+            }
+        },
+        "update": {
+            "locator": "//button[@id='personalDirectoryDataGridUpdateButton']",
+            "expect": "",
+            "enabled": {
+                "0": false,
+                "1": true,
+                "2+": false,
+                "all": false
+            }
+        },
+        "delete": {
+            "locator": "//button[@id='personalDirectoryDataGridDeleteButton']",
+            "expect": "",
+            "enabled": {
+                "0": false,
+                "1": true,
+                "2+": true,
+                "all": false
+            }
+        },
+        "addgroup": {
+            "locator": "//button[@id='personalDirectoryDataGridAddGroup']",
+            "expect": "",
+            "enabled": {
+                "0": true,
+                "1": true,
+                "2+": true,
+                "all": true
+            }
+        },
+        "import": {
+            "locator": "//button[@id='personalDirectoryDataGridImportButton']",
+            "expect": "",
+            "enabled": {
+                "0": true,
+                "1": true,
+                "2+": true,
+                "all": true
+            }
+        },
+        "export": {
+            "locator": "//button[@id='personalDirectoryDataGridExportBtn']",
+            "expect": "",
+            "enabled": {
+                "0": true,
+                "1": true,
+                "2+": true,
+                "all": true
+            }
+        }
+    },
+    "columns": {
+        "FirstName": {
+            "number": 1,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_FirstName']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "LastName": {
+            "number": 2,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_LastName']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "PrimaryPhone": {
+            "number": 3,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_PrimaryPhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "CompanyName": {
+            "number": 4,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_CompanyName']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "DepartmentName": {
+            "number": 5,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_DepartmentName']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "WorkPhone": {
+            "number": 6,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_WorkPhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "CellPhone": {
+            "number": 7,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_CellPhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "PagerPhone": {
+            "number": 8,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_PagerPhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "HomePhone": {
+            "number": 9,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_HomePhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "FaxPhone": {
+            "number": 10,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_FaxPhone']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "EmailAddress": {
+            "number": 11,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_EmailAddress']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        },
+        "IMUri": {
+            "number": 12,
+            "filter": {
+                "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::input[@id='headerRow_IMUri']",
+                "type": "text"
+            },
+            "cell": {
+                "clickable": false,
+                "expect": ""
+            }
+        }
+    },
+    "groups": {
+        "contacts": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::span[contains(@class, 'slick-group-title')][contains(text(),'Contacts ')]"
+        },
+        "monitorlist": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::span[contains(@class, 'slick-group-title')][contains(text(),'Monitor List ')]"
+        },
+        "favorite": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::span[contains(@class, 'slick-group-title')][contains(text(),'Favorite ')]"
+        }
+    },
+    "contextitems": {
+        "update": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::li[@id='UpdateOptionContextMenuItem']",
+            "expect": ""
+        },
+        "delete": {
+            "locator": "//div[@id='gridContainer_personalDirectoryDataGrid']/descendant::li[@id='DeleteOptionContextMenuItem']",
+            "expect": ""
+        }
+    }
+  },
+  "addgroup": {
+    "locator": "//div[@id='addPersonalDirectoryGroupForm']//form",
+    "modal_locator": "//div[@aria-describedby='addPersonalDirectoryGroupForm']",
+    "buttons": {
+        "close": {
+            "locator": "//body/div[9]/div[1]/button[1]",
+            "expect": ""
+        },
+        "ok": {
+            "locator": "//button[@id='addPersonalDirectoryGroupForm_OK']",
+            "expect": ""
+        },
+        "cancel": {
+            "locator": "//button[@id='addPersonalDirectoryGroupForm_Cancel']",
+            "expect": ""
+        }
+    },
+    "fields": {
+        "Name": {
+            "locator": "//input[@id='GroupEntry_Name']",
+            "type": "text",
+            "required": false
+        }
+    }
+  }
+}

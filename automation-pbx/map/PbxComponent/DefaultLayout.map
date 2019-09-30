@@ -1,0 +1,63 @@
+
+
+Home_menu==tab#id#menu
+Home_tab==link#xpath#a[contains(text(),'Home')]
+Team_tab==link#id#team_nav
+Phone_system_tab==link#id#phone_system_nav
+Operations_tab==link#id#operations_nav
+Organization_tab==id#xpath#//ul[@id='menu']/li/a[contains(text(),'Organization')]
+Live_Answer_tab==id#xpath#//*[@id="menu"]/li[2]/div/div[1]/ul/li[1]/a[contains(text(),'Live Answer')]
+Talk_Time_tab==id#xpath#//*[@id="menu"]/li[2]/div/div[1]/ul/li[2]/a[contains(text(), 'Talk Time')]
+
+Location==select#xpath#//*[@id="ReportViewer1_ctl04_ctl03_ddValue"]
+class_tab==select#xpath#//*[@id="ReportViewer1_ctl04_ctl05_ddValue"]
+view_report==input#id#ReportViewer1_ctl04_ctl00
+validate_data_tk==table#xpath#/html/body/form/div[3]/span/div/table/tbody/tr[5]/td[3]/div/div[1]/div/table
+validate_la==table#xpath#/html/body/form/div[3]/span/div/table/tbody/tr[5]/td[3]/div/div[1]/div/table/tbody/tr/td/table/tbody/tr/td/table
+
+Emp_tab==id#xpath#//a[contains(text(), 'Employees')]
+did==id#xpath#//a[contains(text(), '(347) 817-6319')]
+
+did_data==table#xpath#/html/body/form/div[3]/span/div/table/tbody/tr[5]/td[3]/div/div[1]/div/table
+
+loc_click==#id#ReportViewer1_ctl04_ctl00_ddValue
+loc_nob_trobleshuting==select#xpath#//*[@id="ReportViewer1_ctl04_ctl03_ddValue"]
+Location_search==id#xpath#//*[@id="datagrid_locationRegistrationGrid"]/a[contains(text(), 'Test location')]
+
+Authorized_contact_tab==id#xpath#//a[contains(text(),'Authorized Contacts')]
+Phone_system_tab1==id#xpath#//a[contains(text(),'Phone System')]
+Services_link1==id#xpath#//a[contains(text(),'Services')]
+Services_link==id#xpath#//a[@id='organization_nav']/following-sibling::div/div/ul/li/a[contains(text(),'Services')]
+Accounts_link==id#xpath#//a[contains(text(),'Accounts')]
+Contracts_link==id#xpath#//*[@id="operations_div"]/div/ul/li/a[contains(text(),'Contracts')]
+Partitions_link==id#xpath#//*[@id="operations_div"]/div/ul/li/a[contains(text(),'Partitions')]
+Primary_Partition_link==link#id#primary_partition_submenu
+
+Users_link==link#id#phone_system_users
+
+Partitions==list#xpath#//*[@class="scrollable"]/li
+
+User_Options==link#id#userOptions
+Switch_account==link#id#switch-account-text
+
+company_name==id#id#company_name
+dm_login_agree==button#id#btnContinue
+Homepage_userMenuItems==link#id#userMenuItems
+Homepage_logoff==link#xpath#//a[contains(text(),'Log Off')]
+
+status_tab==tab#id#headerRow_OrderStatusName
+location_tab==loc#xpath#.//*[@id='headerRow_FormattedLocationName']
+order_link==id#xpath#//a[contains(text(),'Orders')]
+order_id==id#xpath#//div[@id='datagrid_accountOrders']/div[5]/div/div[2]/div[1]/span/a
+order_status==id#xpath#//*[@id='OrderStatus']
+save_button==id#id#btnSave
+ok_button==id#xpath#//*[@id="fnMessageBox_OK"]
+export_button==id#id#accountOrdersExportBtn
+geo_location_status==id#id#headerRow_Status
+geo_location_name_field==grid#xpath#//div[@id='datagrid_accountLocations']/div[5]/div/div/div[2]
+close_location_next==id#id#CloseLocationWizard_next
+close_location_finish==id#id#CloseLocationWizard_finish
+location_export_button==id#id#accountLocationsExportBtn
+confirmation_text==id#xpath#//*[@id='divMessage']
+by_pass_validation==id#id#Address_bypassValidation
+close_option==id#id#ui-id-4

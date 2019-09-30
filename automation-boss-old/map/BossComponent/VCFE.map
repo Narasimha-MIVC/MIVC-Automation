@@ -1,0 +1,210 @@
+Phone_System_tab==a#id#phone_system_nav
+Emergency_Registration_link==a#xpath#//a[contains(text(),'Emergency Registration')]
+Phone_System_datagrid==id#id#datagrid_locationRegistrationGrid
+headerRow_Name==input#id#headerRow_Name
+PhStm_Emergency_id==input#id#headerRow_TnFormatted
+Ph_Status==select#id#headerRow_Status
+Ph_Last_updated==input#id#headerRow_LastUpdated
+Emergency_reg_update==button#xpath#//button[@id='locationRegistrationGridbtnUpdateLocation' and @title='Update']
+Emergency_reg_button==button#xpath#//button[@class='registrationAction ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only']
+loc_status==text#xpath#//*[@id="datagrid_locationRegistrationGrid"]//div[contains(text(), 'Registered')]
+
+phone_system_nav==a#id#phone_system_nav
+Visual_Call_Flow_Editor==a#xpath#//a[@id='phone_system_nav']/following-sibling::div/div/ul/li/a[contains(text(),'Visual Call Flow Editor')]
+Emergency_add_dropdown==button#id#addButton
+Emergency_huntgroup==a#xpath#//a[contains(text(),'Emergency Hunt Group')]
+Emergency_huntgroup_extn==input#name#selAaExt
+
+Emergency_huntgroup_location==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[1]/td[2]/select
+Emergency_huntgroup_Finishbutton==button#xpath#//button[@title='Finish']
+fnMessageBox_OK==button#id#fnMessageBox_OK
+vcfe_hunt_group==ul#xpath#//ul[@class='ui-corner-bottom ui-dropdown-menu ui-menu ui-widget ui-widget-content ui-corner-all']/li[2]/a
+vcfe_huntgrp_Name==input#xpath#//input[@name='txbHgName']
+vcfe_Huntgrp_Extn==input#xpath#//input[@name='selAaExt']
+vcfe_Huntgrp_Bckup_Extn==input#xpath#//input[@name='txbHgBackupExt']
+vcfe_pickup_group_extn==input#xpath#//input[@ng-model='selectedData.dnFormatted']
+vcfe_huntgroup_location==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[5]/td[2]/select
+vcfe_edit==button#xpath#//button[@title='Edit Members']
+vcfe_assign==button#xpath#//button[@title='Assign DID']
+vcfe_selPhoneNumber==select#id#selPhoneNumber
+vcfe_HG_CompDetails==div#xpath#//div[contains(text(),'New Hunt Group - Component Details')]
+vcfe_HG_Search==input#xpath#//input[@ng-model='selectedData.searchStr']
+vcfe_Select_Extn==button#xpath#//button[contains(@title,'Select Extension')]
+vcfe_HG_Back==button#xpath#//button[contains(@title,'Back')]
+vcfe_extn_private_checkbox==input#id#hg_ext_pvt
+
+vcfe_extnlist==a#xpath#//a[contains(@class,"ui-corner-all") and contains(text(),'Extension List')]
+vcfe_extnlist_name==input#xpath#//input[contains(@ng-model,'selectedData.name')]
+vcfe_EL_CompDetails==div#xpath#//div[contains(text(),'New Extension List - Component Details')]
+vcfe_EL_Search==input#xpath#//input[@ng-model='selectedData.searchStr']
+
+vcfe_pickup_group==a#xpath#//a[contains(@id,"ui-id") and contains(text(),'Pickup Group')]
+vcfe_pickup_group_name==input#xpath#//input[@ng-model='selectedData.name']
+vcfe_pickup_group_location==select#xpath#//select[@ng-model='selectedData.LocationId']
+vcfe_pickup_group_extnlist==select#xpath#//select[@ng-model='selectedData.extListId']
+vcfe_pickup_finish==button#xpath#//button[@title='Finish']
+vcfe_EditorPanel==div#xpath#//div[@ng-click='toggleEditorPanel()']
+VCFE_link1==a#xpath#//*[@id="menu"]/li[2]/div/div[1]/ul/li[1]/div/ul/li[8]/a
+Add_VCFE==button#id#addButton
+Add_AA==a#id#ui-id-3
+Aa_Name==text#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[1]/td[2]/input
+Aa_Extension==text#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[2]/td[2]/input
+Aa_privateExtension==input#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[3]/td[2]/input
+Aa_Location==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[4]/td[2]/select
+Aa_assignDID==button#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[5]/td[2]/div[1]/button
+Aa_PNselector==select#xpath#//*[@id="selPhoneNumber"]
+Aa_finishAA==button#xpath#//*[@id="componentDetailsContainerButtons"]/button[1]
+Aa_edit_confirm==div#xpath#//*[@class="ui-dialog-content ui-widget-content"]/p
+Aa_edit_MDT==input#xpath#//*[@name='txbAaInterDigitDelay']
+Aa_click_out==div#xpath#(//*[@class='settingsTemplateContainerLabel mw125'])[1]
+
+
+Add_PG==select#xpath#//*[@id="ui-id-6"]
+Pg_Name==input#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[1]/td[2]/input
+Pg_Extension==input#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[2]/td[2]/input
+Pg_PrivateExtension==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[3]/td[2]/input
+Pg_Location==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[4]/td[2]/select
+Pg_ExtensionList==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[15]/td/select
+
+vcfe_custom_schedule==a#xpath#//a[contains(@id,"ui-id") and contains(text(),'Custom Schedule')]
+vcfe_custom_schedule_name==input#xpath#//input[@ng-model='selectedData.name']
+vcfe_selScheduleTimezone==id#id#selScheduleTimezone
+vcfe_add_button==button#xpath#//button[@title='Add']
+vcfe_custom_name==input#xpath#//input[@ng-model='c.name']
+vcfe_custom_date==input#xpath#//input[@ng-model='c.scheduleDate']
+vcfe_custom_starttime==input#xpath#//input[@ng-model='c.startTime']
+vcfe_custom_stoptime==input#xpath#//input[@ng-model='c.stopTime']
+vcfe_Finish_button==button#xpath#//button[@title='Finish']
+
+VCFE_datagrid1==grid#xpath#//*[@id="datagrid_vcfComponentsGrid"]/div[5]
+VCFE_delete==button#xpath#//*[@id="vcfComponentsGriddeleteButton"]
+VCFE_delete_yes==button#xpath#//*[@id="fnMessageBox_Yes"]
+VCFE_extn_list_error==div#xpath#/html/body/div[7]
+VCFE_error_text==div#xpath#//div[contains(@id, 'ui-id-')]
+#VCFE_error_text==div#xpath#//div[contains(@class,"ui-dialog-content ui-widget-content")]
+VCFE_entry_search==input#xpath#//*[@id="headerRow_ComponentName"]
+
+pg_extension_head==text#xpath#//*[@id="headerRow_ExtensionData"]
+pg_extension_number==text#xpath#.//*[@id='datagrid_vcfComponentsGrid']/div/div/div/div[3]
+pg_edit_checkbox==chk#xpath#.//*[@class='slick-viewport']//*[@type='checkbox']
+pg_edit_button==btn#xpath#.//*[@id='vcfComponentsGrideditButton']
+pg_copy_button==btn#xpath#.//*[@id='vcfComponentsGridcopyButton']
+pg_edit_page_text_box==txt#xpath#.//*[@id='pug_name']
+pg_edit_page_drop==drop#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[7]/td/select
+pg_edit_finish_button==btn#xpath#.//*[@id='componentDetailsContainerButtons']/button[1]
+pg_add_btn==btn#xpath#.//*[@id='addButton']
+pg_error_text==text#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[3]/td/div/div
+pg_delete==xpath#xpath#.//*[@id='datagrid_vcfComponentsGrid']/div[5]/div/div/div[1]/input
+pg_ext_list==text#xpath#.//*[@id='datagrid_vcfComponentsGrid']/div[5]/div/div/div[3]
+pg_refresh_btn==btn#xpath#.//*[@id='editorPanelHeader']/button[2]
+pg_editor_panel==btn#xpath#.//*[@id='componentDetailsContainer']/div[2]
+pgg_sync_delay==text#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[18]/td[2]/input
+pgg_edit_page_name==text#xpath#.//*[@id='pg_name']
+pgg_extention_list==drop#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[15]/td/select
+pgg_extension_error==text#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr/td/div/div
+pgg_cancel_button==btn#xpath#.//*[@id='componentDetailsContainerButtons']/button[2]
+pgg_open_schdule==btn#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr/td/button
+pgg_svg_panel==panel#xpath#.//*[@id='svgContainer']
+pgg_epp_check==chk#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[8]/td/input
+pgg_active_audio==label#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[12]/td/label
+pgg_active_audio_btn==label#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[12]/td/input
+pgg_speaker==lable#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[11]/td/label
+pgg_speaker_btn==lable#xpath#.//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[11]/td/input
+cs_label==lab#xpath#.//*[@id='scheduleDaysContainer']/div/div[1]/label
+user_label==lbl#xpath#.//*[@id='addEditPersonWizard']/div/div[1]/div/ol/li[2]/a
+add_user_button1==xpath#xpath#.//*[@id='usersDataGridNewPersonButton']
+cs_error==text#xpath#.//*[@class='ui-dialog-content ui-widget-content']/p
+vcfe_val_errors==div#xpath#//div[contains(text(), 'The extension is not available. Suggested extension :')]
+vcfe_extension_textbox==input#id#headerRow_ExtensionData
+vcfe_checkbox==div#xpath#//*[@id="datagrid_vcfComponentsGrid"]/div[5]/div/div/div[1]/input
+vcfe_vcfComponentsGrideditButton==button#id#vcfComponentsGrideditButton
+vcfe_Call_member_when_forwarding_all_calls==form#xpath#//input[@ng-model='selectedData.callWhenForwarding']
+vcfe_editorPanelTab==div#xpath#//div[@class='editorPanelTab']
+vcfe_rings_per_member==input#xpath#//input[@ng-model='selectedData.ringsPerMember']
+vcfe_cancel_button==button#xpath#//button[@title='Cancel']
+vcfe_Skip_member_if_already_on_a_call==input#xpath#//input[@ng-model='selectedData.skipMemberOnCall']
+vcfe_hg_noAnswerRings==input#xpath#//input[@ng-model='selectedData.noAnswerRings']
+vcfe_hg_simultaneous==label#xpath#//label[contains(text(), 'Simultaneous')]/preceding-sibling::input[@type='radio']
+vcfe_hg_top_down==label#xpath#//label[contains(text(), 'Top-down')]/preceding-sibling::input[@type='radio']
+vcfe_hg_includeDialByName==input#xpath#//input[@ng-model='selectedData.includeDialByName']
+vcfe_Call_Forward_Settings==button#xpath#//button[@title='Change Settings']
+vcfe_onHour==select#xpath#//select[@ng-model='selectedData.onHourScheduleID']
+vcfe_onHour_option==select#xpath#//select[@ng-model='selectedData.onHourScheduleID']/option
+vcfe_Off_hours==input#xpath#//input[@ng-model='selectedData.cfOffHoursHoliday']
+vcfe_holidaySchedule==select#xpath#//select[@ng-model='selectedData.holidayScheduleID']
+vcfe_holidaySchedule_option==option#xpath#//select[@ng-model='selectedData.holidayScheduleID']/option
+vcfe_assign_CustomSchedule==button#xpath#(//*[@class='settingsTemplateContainerEdit'])[4]
+vcfe_select_schedule==select#xpath#//select[@ng-model='selectedData.objId']
+vcfe_loc_errors==div#xpath#//div[contains(text(), 'This field is required.')]
+vcfe_val_error==div#xpath#//*[@class='error']
+vcfe_mdt_errors==div#xpath#//div[contains(text(), 'Please enter a value between 1000 and 7000.')]
+vcfe_decimal_errors==div#xpath#//div[contains(text(), 'Please enter only digits.')]
+vcfe_upload_prompt==button#xpath#//*[@id='btnMenuPromptUpload']
+vcfe_name_check==div#xpath#//div[@class='opertionDestination ng-binding']
+vcfe_assign_HolidaySchedule==button#xpath#(//*[@class='settingsTemplateContainerEdit'])[3]
+#vcfe_assign_OHSchedule==button#xpath#(//*[@class='settingsTemplateContainerEdit'])[2]
+vcfe_add_dropdown==button#id#addButton
+hs_add_holidays_schedule==a#xpath#//a[contains(@id,"ui-id") and contains(text(),'Holidays Schedule')]
+hs_name==input#xpath#//input[@ng-model='selectedData.name']
+hs_selScheduleTimezone==select#id#selScheduleTimezone
+hs_selScheduleTimezone_options==select#xpath#//select[@id='selScheduleTimezone']/option
+hs_add_button==button#xpath#//button[@title='Add']
+hs_holidayScheduleItemName==input#xpath#//input[contains(@class, 'holidayScheduleItemName')]
+hs_holidayScheduleDatepicker==input#xpath#//input[contains(@class,'holidayScheduleDatepicker')]
+ohs_add_OnHours_schedule==a#xpath#//a[contains(@id,"ui-id") and contains(text(),'On-Hours Schedule')]
+ohs_name==input#xpath#//*[@name='txbOnHoursName']
+ohs_remove_operations==button#xpath#//div[@class="operationSelect"]/span/button[2]/span[1]
+ohs_disable_monitor==input#xpath#//*[@id='frmVcfEditorPanel']/div/div/div/table/tbody/tr[10]/td[2]/input
+ohs_multiple_digit_operation==select#xpath#//div[@class="operationSelect"]/div/select
+ohs_Press_one_Operation==select#xpath#//*[@id="frmVcfEditorPanel"]/div/div/div/table/tbody/tr[7]/td/div[3]/div[5]/div[2]/div[1]/select
+ohs_mdo_extn_field==input#xpath#//div[@class!="ng-hide"]/input[@ng-model="op.extraInfo"]
+ohs_show_MDO==button#xpath#//div[@class='ui-widget-content ng-scope']/a
+ohs_save_ckbox==button#xpath#//div[@class="operationSelect"]/div/span[@class!="ng-hide"]/button[@title="Update"]
+ohs_first_start_time==input#xpath#(//*[@name="tsStartTime"])[1]
+ohs_first_stop_time==input#xpath#(//*[@name="tsStopTime"])[1]
+vcfe_interactive_grid==div#xpath#.//div[@class='svgTreeContainer expandedSvgTreeContainer']
+vcfe_updated_component==gnode#xpath#.//*[@class='node']/*[@class='nodeTextHeader']/*[contains(text(),'Holidays')]
+vcfe_interactive_display==gnode#xpath#.//*[@class='nodeText clickableObj']
+vcfe_processing_grid==div#id#//*[@id="vcfComponentsGrid_processing"]/img
+vcfe_adjust_timeout==input#xpath#//*[@ng-model="selectedData.timeout"]
+vcfe_onHourSchedule==select#xpath#//select[@ng-model='selectedData.onHourScheduleID']
+vcfe_error==span#xpath#//span[contains(text(), 'Error')]
+hg_group_member==ul#xpath#//ul[@id='hgSortableSelected']/li/span
+hg_group_member_delete==button#xpath#//button[@title='Remove Extension']
+Emr_hg_show_more_operations==a#xpath#//a[contains(text(), 'Show more Operations')]
+Emr_hg_show_fewer_operations==a#xpath#//a[contains(text(), 'Show fewer Operations')]
+hg_call_stack==input#xpath#//input[@ng-model='selectedData.cfFull']
+hg_NoAnswer==input#xpath#//input[contains(@ng-model, 'selectedData.cfNoAnswer')]
+hg_OffHoursHoliday==input#xpath#//input[contains(@ng-model, 'selectedData.cfOffHoursHoliday')]
+hs_removebutton==button#xpath#//button[@title='Remove']
+hs_yearly_checkbox==input#xpath#//input[@ng-model='h.yearly']
+hs_blankName_errorMsg==div#xpath#//div[contains(@id, "ui-id")]/p/text()
+hs_duplicate_errorMsg==span#xpath#//div[contains(@id, "ui-id")]/p/text()
+hg_error==div#xpath#//div[@class= 'error']
+VCFE_datagrid==div#id#datagrid_vcfComponentsGrid
+vcfe_verify_prompt==div#xpath#//*[@title="Click here to download prompt.wav"]
+pg_include_dial_by_name==input#xpath#//input[@ng-model="selectedData.includeDialByName"]
+vcfe_pphone_delete==button#xpath#//button[@jq-button-click='hideDIDRangeSettings()']
+Emergency_hg_loc_dropdown==select#xpath#//select[@name="EmgHGLocationName"]/option
+Emergency_hg_Move_down==button#xpath#//*[@title="Move Down"]
+Emergency_hg_Move_up==button#xpath#//*[@title="Move Up"]
+Emergency_hg_member_list==li#xpath#//*[@id='hgSortableSelected']/li
+Emergency_hg_tooltip==img#xpath#//img[@class='m5-tooltip-image']
+Emergency_hg_tooltip_msg==img#xpath#//img[@tooltip='Active Locations with Emergency Registrations and no Emergency Hunt Group attached, will be listed here.']
+vcfe_slick_header_column_extension==div#xpath#//span[@title='Extension']
+vcfe_multiple_timeout_input_box==input#xpath#//input[@name="txbAaInterDigitDelay"]
+VCFE_type_search==input#xpath#//*[@id="headerRow_ComponentType"]
+vcfe_multiple_digit_val_errors==div#xpath#//div[contains(text(), 'This field is required.')]
+aa_label==lbl#xpath#//*[@class='settingsTemplateContainerSchedule']/div[2]/label
+vcfe_language_alignment_wrt_custom==div#xpath#//div/label[text()='Language:']//preceding::label[text()='Custom Schedule -']
+vcfe_settings_allignment_wrt_language==div#xpath#//div/label[text()='Language:']//preceding::div[contains(text() ,'Settings')]
+vcfe_settings_allignment_wrt_custom==div#xpath#//div/label[text()='Custom Schedule -']//following::div/div[@class="settingsTemplateContainerEdit"]/following::div[contains(text() ,'Settings')]
+vcfe_slick_header_column_type==div#xpath#//span[@title='Type']
+vcfe_grid_cell==div#xpath#//div[@class="slick-cell l1 r1"]
+vcfe_slick_viewport==div#xpath#//div[@class='slick-viewport']
+
+vcfe_default_AA==div#xpath#//*[@id="datagrid_vcfComponentsGrid"]/div[5]/div/div/div[3]
+
+ohs_Press_0_Option==div#xpath#//div[text()='Press 0']//following::select[1]
+p0_save_ckbox==button#xpath#//div[text()='Press 0']//following::span[1]/button[@title="Update"]
+vcfe_assign_OHSchedule==button#xpath#//label[text()='On-Hours Schedule - ']/..//following::button[2]

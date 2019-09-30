@@ -1,0 +1,10 @@
+*** Variables ***
+&{geolocation_US}     Location=Testloc_{rand_str}    Country=United States   Address01=1385 Broadway  city=New York  state=New York  Zip=10018
+&{geolocation_close_US}     Location=Testloc_to_close_{rand_str}    Country=United States   Address01=300 State Street    Address02=Rochester, NY 14614, USA    city=Rochester    state=New York    Zip=14614    by_pass=True
+&{geolocation_AUS}    Location=Testloc_{rand_str}     Country=Australia     streetNo=441    streetName=st kilda    streetType=Road    City=Melbourne    state=Victoria    postcode=3004    firstName=Tracy    lastName=Victor    phoneNumber=+61224220250    timeZone=AUS Eastern Standard Time    areaCode=2
+&{geolocation_close_AUS}    Location=Testloc_to_close_{rand_str}    Country=Australia     streetNo=441    streetName=st kilda   streetType=Road    City=Melbourne    state=Victoria    postcode=3004    firstName=Tracy    lastName=Victor    phoneNumber=+61224220250    timeZone=AUS Eastern Standard Time    areaCode=2
+&{geolocation_UK}    Location=Testloc_{rand_str}    Country=United Kingdom    buildingName=Inspired    streetName=Easthampstead Road    postalTown=Bracknell    Postcode=RG12 1YQ    timeZone=GMT Standard Time    areaCode=28
+&{geolocation_close_UK}    Location=Testloc_to_close_{rand_str}    Country=United Kingdom    buildingName=Inspired    streetName=Easthampstead Road    postalTown=Bracknell    Postcode=RG12 1YQ    timeZone=GMT Standard Time    areaCode=28
+&{geolocation01}     Location=Testloc_{rand_str}    Country=United States   Address01=1385 Broadway  city=New York  state=New York  Zip=10018
+&{geolocation_US_api}     loc_name=Testloc_{rand_str}    Address_CountryKey=UnitedStates   Address_Address1=1385 Broadway  Address_City=New York  Address_StateProvinceKey=NewYork  Address_ZipCode=10018  Address_bypassValidation=True    part_name=${bossCluster}    invoice_group=${accountName1}
+&{geolocation_02}        Country=United States   Address01=300 State Street    Address02=Rochester, NY 14614, USA    city=Rochester    state=New York    Zip=14614

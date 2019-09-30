@@ -1,0 +1,442 @@
+{
+  "userGroupGrid": {
+    "locator": "//div[@id='gridContainer_userGroupGrid']",
+    "modal_locator": "",
+    "header_checkbox": "//div[@id='gridContainer_userGroupGrid']/descendant::div[contains(@id, '_checkbox_selector')]//input[@type='checkbox']",
+    "totals_locator": "//div[@id='gridContainer_userGroupGrid']/descendant::span[@class='slick-pager-status']",
+    "context_locator": "//div[@id='gridContainer_userGroupGrid']/descendant::ul[@id='userGroupGridContextMenu']",
+    "buttons": {
+      "add": {
+        "locator": "//button[@id='userGroupGridnew_group']",
+        "expect": "//form[@id='frmGroupWizard']",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "copy": {
+        "locator": "//button[@id='userGroupGridnew_copy']",
+        "expect": "",
+        "enabled": {
+          "0": true,
+          "1": true,
+          "2+": true,
+          "all": true
+        }
+      },
+      "delete": {
+        "locator": "//button[@id='userGroupGriddead_group']",
+        "expect": "",
+        "enabled": {
+          "0": false,
+          "1": true,
+          "2+": true,
+          "all": false
+        }
+      }
+    },
+    "filters": {
+      "toggleBtn": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::button[@id='userGroupGridToggleBtn']",
+        "type": "button"
+      },
+      "searchText": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='txtSearch_userGroupGrid']",
+        "type": "text"
+      },
+      "multiSearchText": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='txtMultiSearch_userGroupGrid']",
+        "type": "text"
+      },
+      "multiSearchButton": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::button[@id='userGroupGridMultiSearchButton']",
+        "type": "button"
+      },
+      "saveSearch": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='chbMultiSearch_userGroupGrid']",
+        "type": "checkbox"
+      }
+    },
+    "columns": {
+      "Name": {
+        "number": 1,
+        "filter": {
+          "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='headerRow_Name']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "ProfileType": {
+        "number": 2,
+        "filter": {
+          "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='headerRow_ProfileType']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "DateCreated": {
+        "number": 3,
+        "filter": {
+          "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='headerRow_DateCreated']",
+          "type": "text"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      },
+      "IsSystemLevel": {
+        "number": 4,
+        "filter": {
+          "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::input[@id='headerRow_IsSystemLevel']",
+          "type": "checkbox"
+        },
+        "cell": {
+          "clickable": false,
+          "expect": "",
+          "external": false
+        }
+      }
+    },
+    "groups": {},
+    "contextitems": {
+      "edit": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::li[@id='editOptionContextMenuItem']",
+        "expect": ""
+      },
+      "delete": {
+        "locator": "//div[@id='gridContainer_userGroupGrid']/descendant::li[@id='deleteOptionContextMenuItem']",
+        "expect": ""
+      }
+    }
+  },
+  "GroupWizard": {
+    "locator": "//form[@id='frmGroupWizard']",
+    "modal_locator": "//div[@aria-describedby='userGroupAddForm']",
+    "steps": {
+      "properties": {
+        "locator": "//div[@id='groupWizard_step_0']"
+      },
+      "telephony": {
+        "locator": "//div[@id='groupWizard_step_1']"
+      },
+      "voicemail": {
+        "locator": "//div[@id='groupWizard_step_2']"
+      },
+      "call": {
+        "locator": "//div[@id='groupWizard_step_3']"
+      }
+    },
+    "buttons": {
+      "close": {
+        "locator": "//body/div[8]/div[1]/button[1]",
+        "expect": "//div[@id='gridContainer_userGroupGrid']"
+      },
+      "properties": {
+        "locator": "//form[@id='frmGroupWizard']//a[@step='0']",
+        "expect": "//div[contains(@id, 'Wizard_step_0')]"
+      },
+      "telephony": {
+        "locator": "//form[@id='frmGroupWizard']//a[@step='1']",
+        "expect": "//div[contains(@id, 'Wizard_step_1')]"
+      },
+      "voicemail": {
+        "locator": "//form[@id='frmGroupWizard']//a[@step='2']",
+        "expect": "//div[contains(@id, 'Wizard_step_2')]"
+      },
+      "call": {
+        "locator": "//form[@id='frmGroupWizard']//a[@step='3']",
+        "expect": "//div[contains(@id, 'Wizard_step_3')]"
+      },
+      "cancel": {
+        "locator": "//button[@id='groupWizard_cancel']",
+        "expect": "//div[@id='gridContainer_userGroupGrid']"
+      },
+      "back": {
+        "locator": "//button[@id='groupWizard_previous']",
+        "expect": ""
+      },
+      "next": {
+        "locator": "//button[@id='groupWizard_next']",
+        "expect": ""
+      },
+      "finish": {
+        "locator": "//button[@id='groupWizard_finish']",
+        "expect": "//div[@id='gridContainer_userGroupGrid']"
+      }
+    },
+    "fields": {
+      "Name": {
+        "locator": "//input[@id='Name']",
+        "type": "text",
+        "required": true,
+        "minlength": null,
+        "maxlength": 30,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "ProfileTypeId": {
+        "locator": "//select[@id='ProfileTypeId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "HoldMusicId": {
+        "locator": "//select[@id='HoldMusicId']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 1
+      },
+      "AllowCallPickUp": {
+        "locator": "//input[@id='AllowCallPickUp']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "AllowOverheadPaging": {
+        "locator": "//input[@id='AllowOverheadPaging']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "AllowHuntgroupStateChange": {
+        "locator": "//input[@id='AllowHuntgroupStateChange']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "AllowExtensionAssignment": {
+        "locator": "//input[@id='AllowExtensionAssignment']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ShowCallerId": {
+        "locator": "//input[@id='ShowCallerId']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "ShowCallHistory": {
+        "locator": "//input[@id='ShowCallHistory']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "AllowAvailabilityStateChange": {
+        "locator": "//input[@id='AllowAvailabilityStateChange']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "DirectedIntercom": {
+        "locator": "//select[@id='DirectedIntercom']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "WhisperPage": {
+        "locator": "//select[@id='WhisperPage']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "Barge": {
+        "locator": "//select[@id='Barge']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "SilentMonitor": {
+        "locator": "//select[@id='SilentMonitor']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 2
+      },
+      "AllowVoicemailCallBack": {
+        "locator": "//input[@id='AllowVoicemailCallBack']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "AllowBroadcastList": {
+        "locator": "//input[@id='AllowBroadcastList']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "AllowSystemList": {
+        "locator": "//input[@id='AllowSystemList']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "AllowDownloadWav": {
+        "locator": "//input[@id='AllowDownloadWav']",
+        "type": "checkbox",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 3
+      },
+      "ClassofService": {
+        "locator": "//select[@id='ClassofService']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 4
+      },
+      "AccountCodeMode": {
+        "locator": "//select[@id='AccountCodeMode']",
+        "type": "select-one",
+        "required": false,
+        "minlength": null,
+        "maxlength": null,
+        "rangelength": null,
+        "minvalue": null,
+        "maxvalue": null,
+        "rangevalue": null,
+        "expect": "",
+        "step": 4
+      }
+    }
+  }
+}

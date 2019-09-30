@@ -1,0 +1,8 @@
+RCF Target Number,Profile Type,DID,Extension,First Name,Last Name,Email Address,Phone Location
+,MiCloud Connect Essentials,,1011,autotest,Essentials,autotestEssentials@test.com,Automation One
+,MiCloud Connect Premier,,1012,autotest,Standard,autotestStandard@test.com,Automation One
+,MiCloud Connect Elite,,1013,autotest,Advanced,autotestAdvanced@test.com,Automation One
+,MiCloud Connect Education Essentials,,1017,autotest,EdEssentials,autotestEdEssentials@test.com,Automation One
+,MiCloud Connect Education Premier,,1018,autotest,EdStandard,autotestEdStandard@test.com,Automation One
+,MiCloud Connect Courtesy,,1015,autotest,Courtesy,autotestCourtesy@test.com,Automation One
+,MiCloud Connect Voicemail Only,,1016,autotest,Voicemail,autotestVoicemail@test.com,Automation One

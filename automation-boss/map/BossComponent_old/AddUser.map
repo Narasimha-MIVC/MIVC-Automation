@@ -1,0 +1,272 @@
+adduser_button==select#id#usersDataGridNewPersonButton#0
+adduser_firstname==input#id#Person_FirstName#0
+adduser_lastname==input#id#Person_LastName#0
+adduser_businessEmail==input#id#Person_BusinessEmail#0
+adduser_personalEmail==input#id#Person_PersonalEmail#0
+adduser_userLocation==select#id#User_LocationId#0
+adduser_billingLocation==select#id#Person_LocationId#0
+adduser_title==input#id#Person_Title#0
+adduser_cellPhone==input#id#Person_CellPhone#0
+adduser_homePhone==input#id#Person_HomePhone#0
+adduser_userName==input#id#Person_Username#0
+adduser_password==input#id#Person_Password#0
+adduser_confirmPassword==input#id#confirmPassword#0
+adduser_preferredNotificationEmail==select#id#PreferredNotificationEmail#0
+adduser_preferredContactMethod==select#id#PreferredContactMethod#0
+adduser_contactnextbutton==button#id#addEditPersonWizard_next#0
+
+adduser_phoneLocation==select#id#Phone_LocationId#0
+adduser_phoneType==select#id#PhoneType#0
+adduser_phoneAllLocations==input#id#allLocations#0
+adduser_phoneNumber==select#id#Profile_TnId#0
+adduser_activationDate==input#id#ActivationDate#0
+
+phone_Location==select#id#Phone_LocationId#0
+phone_Type==select#id#PhoneType#0
+phone_AllLocations==input#id#allLocations#0
+phone_Number==select#id#Profile_TnId#0
+Person_Profile_Extension==input#id#Person_Profile_Extension#0
+activationDate==input#id#ActivationDate#0
+divFeaturesLabels==div#xpath#//*[@id='features']/label
+divFeaturesInputs==div#xpath#//*[@id='features']/input
+divBundleLabels==div#xpath#//*[@id='bundleFeatures']/label
+divBundleInputs==div#xpath#//*[@id='bundleFeatures']/input
+divalacarteLabels==div#xpath#//*[@id='alacarteFeatures']/label
+divalacarteInputs==div#xpath#//*[@id='alacarteFeatures']/input
+waiveNRR==input#id#WaiveNRR#0
+excludeGroupFeature==input#id#ExcludeGroupFeatures#0
+cloudCollab==input#id#profileOption_348#0
+cloudTeamwork==input#id#profileOption_434#0
+unifiedIM==input#id#profileOption_437#0
+cloudArchiving==input#idprofileOption_365#0
+cloudCDR==input#id#profileOption_350#0
+cloudCCAdvanced==input#id#profileOption_395#0
+cloudCCEssentials==input#id#profileOption_393#0
+cloudCCStandard==input#id#profileOption_394#0
+cloudCCSupervisor==input#id#profileOption_392#0
+cloudScribe==input#id#profileOption_346#0
+enableIM==input#id#EnableIM#0
+enableVedio==input#id#EnableVideo#0
+
+hw_add==input#id#Hardware
+hw_type==select#id#hardwareType
+hw_model==select#id#HardwarePhoneModel
+hw_ship_date==input#id#HardwarePhoneShipDate
+hw_power_supply==input#id#includePowerSupply
+hw_power_supply_type==select#id#PowerSupply
+
+availableRoles==input#id#availableRoles#0
+addRoles==input#xpath#//*[@id="roleAdd"]/span[2]
+
+requestedBy==select#id#requestedBy#0
+requestSource==select#id#requestSource#0
+requestSource_num_tab==select#id#RequestSources#0
+caseNumber==input#id#CaseNumber#0
+
+adduser_finish==button#id#addEditPersonWizard_finish#0
+user_search_email==text#id#headerRow_BusinessEmail#0
+au_datagrid_usersDataGrid==grid#id#datagrid_usersDataGrid
+au_isDM==checkbox#id#headerRow_IsDM
+au_isPM==checkbox#id#headerRow_IsPM
+au_isBC==checkbox#id#headerRow_IsBC
+au_isEC==checkbox#id#headerRow_IsEC
+au_isTC==checkbox#id#headerRow_IsTC
+
+loc_scope==radio#id#scopeLocation_0
+acc_scope==radio#id#scopeAccount_0
+
+user_errors==errordiv#xpath#//div[@class="error"]
+
+user_phone_settings==select#xpath#//*[@id="datagrid_usersDataGrid"]/div[5]/div/div/div[3]/a
+user_phone_settings_dm_pm==select#xpath#//*[@id="datagrid_usersDataGrid"]/div[5]/div/div/div[2]/a
+user_prog_button==button#xpath#//*[@id="tab-prog-buttons"]
+user_silent_coach==select#xpath#//*[@id="tab-ipPhones"]/div/div[3]/div/div[1]/div[1]/div[3]
+#user_silent_monitor==select#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[1]/div[1]/div[1]
+user_select_prog_button_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[3]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_3_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_4_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[5]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_5_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[6]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_6_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[7]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_7_type==select#xpath#//*[@id="tab-ipPhones"]/div/div[8]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[3]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_3_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_4_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[5]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_5_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[6]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_6_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[7]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_7_function==select#xpath#//*[@id="tab-ipPhones"]/div/div[8]/div/div[2]/div[2]/div/div[2]/select[1]
+user_select_prog_button_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[3]/div/div[2]/div[2]/div/div[3]/div/div/div/input
+user_select_prog_button_3_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[2]/div[2]/div/div[3]/div/div/div/input
+user_select_prog_button_4_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[5]/div/div[2]/div[2]/div/div[3]/div/div/div/input
+user_select_prog_button_5_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[6]/div/div[2]/div[2]/div/div[3]/div/div/div/input
+user_select_prog_button_6_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[7]/div/div[2]/div[2]/div/div[3]/div/div/div/input
+user_select_prog_button_7_extension==select#xpath#//*[@id="tab-ipPhones"]/div/div[8]/div/div[2]/div[2]/div/div[3]/div/div/div/div/input
+user_prog_button_long_label==input#xpath#//*[@bo-id="user_prog_button_0_button_1_LongLabel"]
+user_prog_button_3_long_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[2]/div[2]/div/div[2]/input[1]
+user_prog_button_4_long_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[5]/div/div[2]/div[2]/div/div[2]/input[1]
+user_prog_button_5_long_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[6]/div/div[2]/div[2]/div/div[2]/input[1]
+user_prog_button_6_long_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[7]/div/div[2]/div[2]/div/div[2]/input[1]
+user_prog_button_7_long_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[8]/div/div[2]/div[2]/div/div[2]/input[1]
+user_prog_button_short_label==input#xpath#//*[@bo-id="user_prog_button_0_button_1_SoftKeyLabel"]
+user_prog_button_3_short_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[4]/div/div[2]/div[2]/div/div[2]/input[2]
+user_prog_button_4_short_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[5]/div/div[2]/div[2]/div/div[2]/input[2]
+user_prog_button_5_short_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[6]/div/div[2]/div[2]/div/div[2]/input[2]
+user_prog_button_6_short_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[7]/div/div[2]/div[2]/div/div[2]/input[2]
+user_prog_button_7_short_label==input#xpath#//*[@id="tab-ipPhones"]/div/div[8]/div/div[2]/div[2]/div/div[2]/input[2]
+user_select_prog_button_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][2]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_3_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][3]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_4_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][5]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_5_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][5]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_6_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][6]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_7_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][7]/div/div/div/div/div/div/div/div[2]/div/select
+user_select_prog_button_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][2]/div/div/div/div/div/div/div/div[1]/div/input
+user_select_prog_button_3_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][3]/div/div/div/div/div/div/div/div[1]/div/input
+user_select_prog_button_4_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][4]/div/div/div/div/div/div/div/div[1]/div/input
+user_select_prog_button_5_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][5]/div/div/div/div/div/div/div/div[1]/div/input
+user_select_prog_button_6_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][6]/div/div/div/div/div/div/div/div[1]/div/input
+user_select_prog_button_7_extension_with_call_action==select#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][7]/div/div/div/div/div/div/div/div[1]/div/input
+user_prog_button_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][2]/div/div/div/div/div/div/div/div/input
+user_prog_button_3_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][3]/div/div/div/div/div/div/div/div/input
+user_prog_button_4_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][4]/div/div/div/div/div/div/div/div/input
+user_prog_button_5_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][5]/div/div/div/div/div/div/div/div/input
+user_prog_button_6_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][6]/div/div/div/div/div/div/div/div/input
+user_prog_button_7_digits==input#xpath#//div[@id='tab-ipPhones']/div/div[@class='toolbar_tr_border ng-scope'][7]/div/div/div/div/div/div/div/div/input
+user_prog_button_save==button#xpath#//button[contains(@id,'savebtn')]
+
+
+user_list==table_val#xpath#//div[@id='datagrid_usersDataGrid']/div[5]/div/div
+user_link==link#xpath#//div[@id='datagrid_usersDataGrid']/div[5]/div/div/div/a
+reset_pwd==name#id#button-reset-user-password
+right_click==name1#id#ui-id-6
+change_password==cp#id#changePassword
+
+PhoneSettingsContextMenuItem==contextmenu#id#PhoneSettingsContextMenuItem
+ResetPasswordContextMenuItem==contextmenu#id#ResetPasswordContextMenuItem
+
+home_page_link==link#xpath#//*[@id='m5-logon-form']/form/div/div[2]/a
+headerName==name#xpath#//*[@id='content']/div/h2
+userName==uname#xpath#//*[@id='UserName']
+submit==submit#xpath#//*[@id='btnSubmit']
+final_header==text#xpath#//*[@id='content']/div/h2
+return==text#xpath#//*[@id='content']/div/p/a
+email_list==names#xpath#//div[@id='datagrid_usersDataGrid']/div[5]/div/div/div[6]/div
+phone_name==pname#xpath#//div[@id='datagrid_usersDataGrid']/div[5]/div/div/div[3]/a
+close_user_context_menu==id#xpath#.//*[@id='usersDataGridContextMenu']/li/a
+confirm_box==msg#id#fnMessageBox_Yes
+header_close_user==name#xpath#//*[@id='closePersonWizard_step_0']/form/div/h2
+next==button#id#closePersonWizard_next
+simple_click==clikc#xpath#//*[@id='close-action-common-fields']/div[3]/div[1]/span
+request_dropdown==drp#xpath#//*[@id='RequestedBy']
+case_id==sscase#xpath#//*[@id='CaseNumber']
+finish_button==finish#xpath#//*[@id='closePersonWizard_finish']
+ok_box==ok#id#fnMessageBox_OK
+password_confirmation==text#xpath#//*[@id="fnMessageBox_OK"]/span
+build==class#css_class#m5-version
+home_page==name#xpath#.//*[@id='company_name']/a
+close_user_date==id#id#BillCeaseDate
+email_search==email#id#headerRow_BusinessEmail
+new_password==id#id#NewPortalPassword
+confirm_pwd==id#id#ConfirmPortalPassword
+submit_button==id#xpath#//button[@id='btnSubmit']
+confirmation_message==id#xpath#//*[@id="divMessage"]
+personal_information_pageLink==id#xpath#//*[@id="userMenuItems"]/ul/li/a[contains(text(),'Personal Information')]
+geo_location_grid==grid#xpath#//*[@id="datagrid_accountLocations"]/div[5]/div/div/div[2]
+
+usergroup_link==link#xpath#//a[@id='phone_system_nav']/following-sibling::div/div/ul/li/a[contains(text(),'User Groups')]
+userGroupGridnew_group_addButton==id#id#userGroupGridnew_group
+userGroup_Name==id#id#Name
+UG_ProfileTypeId==id#id#ProfileTypeId
+UG_HoldMusicId==id#id#HoldMusicId
+UG_AllowCallPickUp==id#id#AllowCallPickUp
+UG_AllowOverheadPaging==id#id#AllowOverheadPaging
+UG_AllowHuntgroupStateChange==#id#AllowHuntgroupStateChange
+UG_AllowExtensionAssignment==id#id#AllowExtensionAssignment
+UG_ShowCallerId==id#id#ShowCallerId
+UG_ShowCallHistory==id#id#ShowCallHistory
+UG_AllowAvailabilityStateChange==id#id#AllowAvailabilityStateChange
+UG_DirectedIntercom==id#id#DirectedIntercom
+UG_WhisperPage==id#id#WhisperPage
+UG_Barge==id#id#Barge
+UG_SilentMonitor==id#id#SilentMonitor
+UG_groupWizard_next==id#id#groupWizard_next
+UG_AllowVoicemailCallBack==id#id#AllowVoicemailCallBack
+UG_AllowBroadcastList==id#id#AllowBroadcastList
+UG_AllowSystemList==id#id#AllowSystemList
+UG_AllowDownloadWav==id#id#AllowDownloadWav
+UG_ClassofService==id#id#ClassofService
+UG_AccountCodeMode==id#id#AccountCodeMode
+UG_groupWizard_finish==id#id#groupWizard_finish
+
+User_phoneName==div#xpath#//a[@title="Phone Settings"]
+User_UserGroup==id#id#UserGroup
+User_UserGroup_submit==span#xpath#//span[@id='UserGroup']/form/button[@type='submit']
+ug_headerRow_Name==input#id#headerRow_Name
+ug_name_in_grid==a#xpath#//*[@id="datagrid_userGroupGrid"]/div[5]/div/div/div[2]
+ug_checkbox==input#xpath#//*[@id="datagrid_userGroupGrid"]/div[5]/div/div/div[1]/input
+ug_delete==button#xpath#//button[@title='Delete']
+ug_delete_yes==button#id#fnMessageBox_Yes
+ug_list==div#xpath#//*[@id="datagrid_userGroupGrid"]/div[5]/div/div/div[2]
+
+
+grid_Name==input#id#headerRow_FullName
+grid_checkbox_user==div#xpath#//*[@id="datagrid_usersDataGrid"]/div[5]/div/div/div[1]
+gu_user_link==link#xpath#//*[@id="datagrid_usersDataGrid"]/div[5]/div/div/div[2]/a
+personservice_grid==div#id#datagrid_personServices
+personservice_productname==input#id#headerRow_ProductName
+personservice_featurepresent==div#xpath#//*[@id="datagrid_personServices"]/div[5]/div/div
+personservice_refresh==span#xpath#//*[@id="pager_personServices"]/div/span[4]/span[1]/span
+
+disabledoption==li#xpath#//li[@class="ui-menu-item ui-state-disabled"]
+
+profile==div#id#ProfileId
+feature==select#id#Feature
+profile_activationDate==text#id#DateLive
+cnumber==input#id#CaseNumberDiv
+addButton==button#id#addFeatureButton
+okButton==button#id#fnMessageBox_OK
+
+keepGlobalTn_no==input#xpath#//*[@id="divPlaceHolderGlobalNumber"]/div[3]/input
+keepGlobalTn_yes==input#xpath#//*[@id="divPlaceHolderGlobalNumber"]/div[2]/input
+
+mobilityCheckbox==input#id#profileOption_349
+
+User_Location_dd==select#xpath#//optgroup[@label="Global"]/option
+adduser_backbtn==button#id#addEditPersonWizard_previous
+adduser_cancel==button#id#addEditPersonWizard_cancel
+User_SCA==span#id#SCAEnabled
+User_SCA_submit==span#xpath#//span[@id="SCAEnabled"]/form/button[@type='submit']
+
+cancel_button==cancel#xpath#//*[@id='closePersonWizard_cancel']
+cancel_button1==button#id#closePersonWizard_cancel
+profile_requestedBy==select#id#requestedBy
+profile_requestSource==select#id#requestSource
+profile_caseNumber==input#id#CaseNumberAdd
+profile_user_confirm_button==button#id#addProfileWizard_finish
+user_mail==div#xpath#//*[@class="grid-canvas"]/div/div[6]
+
+add_user_extension_input==input#id#AddExtension
+num_page_add_user_extension_input==input#id#extension
+num_page_add_user_OK==button#id#assignNumberForm_OK
+num_page_add_user_Cancel==button#id#assignNumberForm_Cancel
+num_page_assign_button==button#id#partitionNumbersDataGridAssignButton
+swap_productType==select#id#newPhoneType
+Swap_user_context_menu == li#id#SwapContextMenuItem
+home_phone_settings_link==ul#xpath#//ul[@id="menu"]/li/div/div/ul/li/a[contains(text(), 'Phone Settings')]
+Swap_next == button#id#swapWizard_next
+Swap_finish == button#id#swapWizard_finish
+OK_button == button#id#fnMessageBox_OK
+close_user_radio_button1==input#xpath#//input[@data-value='Yes, I want to re-use this number in the future']
+close_user_radio_button2==input#xpath#//input[@data-value='No, I no longer need this number']
+tab_emergency_loc==li#id#tab-e911
+button_change==button#id#showEmergencyLocationWizardBtn
+personal_address==input#xpath#//input[@value="personal"]
+emergency_loc_next==button#id#emergencyLocationWizard_next
+select_address==select#id#profileAddresses
+address_1==input#id#Address_Address1
+address_2==input#id#Address_Address2
+city==input#id#Address_City
+state==select#id#Address_StateProvinceKey
+zip_code==input#id#Address_ZipCode
+accept_address_change==input#id#e911Accept
+emergency_location_update_finish==button#id#emergencyLocationWizard_finish
+
+Add_User_Request_Submitted_Title==span#xpath#//*[@id="ui-id-33" and @class="ui-dialog-title"]
