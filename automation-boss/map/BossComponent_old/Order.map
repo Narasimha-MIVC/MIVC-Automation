@@ -1,4 +1,0 @@
-OrderIDHearderTab==span#xpath#//nobr/span[@class='slick-column-name'][contains(text(),'Order ID')]
-OrderDataGridCanvas==div#xpath#//*[@class="grid-canvas"]
-OrderOrderIDTextSearch==textSearch#id#headerRow_Id
-order_id_link==link#xpath#//*[@id="datagrid_accountOrders"]/div[5]/div/div[2]/div[1]/span/a

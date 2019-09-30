@@ -1,4 +1,0 @@
-global_auth_portal_login_user==input#id#name
-global_auth_portal_login_user_next==button#xpath#//button[@class="btn align-middle btn-positive"]
-global_auth_portal_login_password==input#id#userPassword
-global_auth_portal_login_password_next==button#xpath#//button[@class="btn align-middle btn-positive next"]

@@ -1,3 +1,0 @@
-std2_maintenance_hybrid_services==a#xpath#//*[@id="dm_status_connect_sync_services_menu_link"]
-std2_maintenance_hybrid_services_title==div#id#list-pane-title
-std2_maintenance_hybrid_services_table==table#xpath#//table[@id="1" and @class="datatable dataTable"]

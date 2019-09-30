@@ -1,2 +1,0 @@
-*** Variables ***
-&{Contact}  group=Favorite  firstName=First1  lastName=Last1  companyName=Company1  departmentName=Dept_{rand_str}  workPhone=1011111111  cellPhone=1012222222  pagerPhone=1013333333  homePhone=1014444444  faxPhone=1015555555  default=Business Phone  email=test_pca1@shoretel.com  im=IM1
