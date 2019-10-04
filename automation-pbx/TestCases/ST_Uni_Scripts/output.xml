@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190925 02:10:31.075" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
-<suite source="C:\Users\Mitel\Desktop\ATF_ROBOT_Uni_Scripts\automation-pbx\TestCases\ST_Uni_Scripts\ST_13_Trunk_Call.robot" id="s1" name="ST 13 Trunk Call">
+<robot rpa="false" generated="20191002 22:35:44.193" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite source="C:\Automation\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_13_Trunk_Call.robot" id="s1" name="ST 13 Trunk Call">
 <kw type="setup" name="Run Keywords" library="BuiltIn">
 <doc>Executes all the given keywords in a sequence.</doc>
 <arguments>
@@ -16,8 +16,8 @@
 <assign>
 <var>${Phone_did_01}</var>
 </assign>
-<msg timestamp="20190925 02:10:34.910" level="INFO">${Phone_did_01} = &lt;PhoneInterface.PhoneInterface object at 0x0000000003A4EC50&gt;</msg>
-<status status="PASS" endtime="20190925 02:10:34.910" starttime="20190925 02:10:34.910"></status>
+<msg timestamp="20191002 22:35:47.833" level="INFO">${Phone_did_01} = &lt;PhoneInterface.PhoneInterface object at 0x00000000044EEDA0&gt;</msg>
+<status status="PASS" endtime="20191002 22:35:47.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <kw name="Get Library Instance" library="BuiltIn">
 <doc>Returns the currently active instance of the specified test library.</doc>
@@ -27,34 +27,34 @@
 <assign>
 <var>${Phone_did_02}</var>
 </assign>
-<msg timestamp="20190925 02:10:34.910" level="INFO">${Phone_did_02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C5584A8&gt;</msg>
-<status status="PASS" endtime="20190925 02:10:34.910" starttime="20190925 02:10:34.910"></status>
+<msg timestamp="20191002 22:35:47.833" level="INFO">${Phone_did_02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000D29A588&gt;</msg>
+<status status="PASS" endtime="20191002 22:35:47.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${Phone_did_01}</arg>
 </arguments>
-<msg timestamp="20190925 02:10:34.910" level="INFO">${Phone_did_01} = &lt;PhoneInterface.PhoneInterface object at 0x0000000003A4EC50&gt;</msg>
-<status status="PASS" endtime="20190925 02:10:34.910" starttime="20190925 02:10:34.910"></status>
+<msg timestamp="20191002 22:35:47.833" level="INFO">${Phone_did_01} = &lt;PhoneInterface.PhoneInterface object at 0x00000000044EEDA0&gt;</msg>
+<status status="PASS" endtime="20191002 22:35:47.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${Phone_did_02}</arg>
 </arguments>
-<msg timestamp="20190925 02:10:34.910" level="INFO">${Phone_did_02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C5584A8&gt;</msg>
-<status status="PASS" endtime="20190925 02:10:34.910" starttime="20190925 02:10:34.910"></status>
+<msg timestamp="20191002 22:35:47.833" level="INFO">${Phone_did_02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000D29A588&gt;</msg>
+<status status="PASS" endtime="20191002 22:35:47.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20190925 02:10:36.910" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:34.910"></status>
+<msg timestamp="20191002 22:35:49.833" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:47.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:34.910"></status>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <kw name="Phone Sanity Run">
 <kw name="Check Phone Sanity of ${Phone_did_01}" library="PBXKeywords">
@@ -64,10 +64,10 @@
 <arg>${phone}</arg>
 <arg>sanity_check</arg>
 </arguments>
-<msg timestamp="20190925 02:10:36.910" level="INFO">IN BASE SANITY FN</msg>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:36.910"></status>
+<msg timestamp="20191002 22:35:49.833" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:49.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:36.910"></status>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:49.833"></status>
 </kw>
 <kw name="Check Phone Sanity of ${Phone_did_02}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -76,22 +76,22 @@
 <arg>${phone}</arg>
 <arg>sanity_check</arg>
 </arguments>
-<msg timestamp="20190925 02:10:36.910" level="INFO">IN BASE SANITY FN</msg>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:36.910"></status>
+<msg timestamp="20191002 22:35:49.833" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:49.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:36.910" starttime="20190925 02:10:36.910"></status>
+<status status="PASS" endtime="20191002 22:35:49.833" starttime="20191002 22:35:49.833"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20190925 02:10:38.910" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20190925 02:10:38.910" starttime="20190925 02:10:36.910"></status>
+<msg timestamp="20191002 22:35:51.833" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191002 22:35:51.833" starttime="20191002 22:35:49.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:38.910" starttime="20190925 02:10:36.910"></status>
+<status status="PASS" endtime="20191002 22:35:51.833" starttime="20191002 22:35:49.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:38.910" starttime="20190925 02:10:34.910"></status>
+<status status="PASS" endtime="20191002 22:35:51.833" starttime="20191002 22:35:47.833"></status>
 </kw>
 <test id="s1-t1" name="Trunk call between USerA to UserB">
 <kw name="Log" library="BuiltIn">
@@ -99,8 +99,8 @@
 <arguments>
 <arg>STEP - 1 : Make call Phone_did_01 to Phone_did_02</arg>
 </arguments>
-<msg timestamp="20190925 02:10:38.910" level="INFO">STEP - 1 : Make call Phone_did_01 to Phone_did_02</msg>
-<status status="PASS" endtime="20190925 02:10:38.910" starttime="20190925 02:10:38.910"></status>
+<msg timestamp="20191002 22:35:51.833" level="INFO">STEP - 1 : Make call Phone_did_01 to Phone_did_02</msg>
+<status status="PASS" endtime="20191002 22:35:51.833" starttime="20191002 22:35:51.833"></status>
 </kw>
 <kw name="Using ${Phone_did_01} I dial the digits 9" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -110,11 +110,11 @@
 <arg>input_a_number</arg>
 <arg>${number}</arg>
 </arguments>
-<msg timestamp="20190925 02:10:39.222" level="INFO">string_to_dial
+<msg timestamp="20191002 22:35:52.146" level="INFO">string_to_dial
 9</msg>
-<status status="PASS" endtime="20190925 02:10:39.222" starttime="20190925 02:10:38.910"></status>
+<status status="PASS" endtime="20191002 22:35:52.146" starttime="20191002 22:35:51.833"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:39.222" starttime="20190925 02:10:38.910"></status>
+<status status="PASS" endtime="20191002 22:35:52.146" starttime="20191002 22:35:51.833"></status>
 </kw>
 <kw name="Using ${Phone_did_01} I dial the digits ${Phone_did_02.phone_obj.phone.trunkISDN}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -124,27 +124,27 @@
 <arg>input_a_number</arg>
 <arg>${number}</arg>
 </arguments>
-<msg timestamp="20190925 02:10:41.774" level="INFO">string_to_dial
+<msg timestamp="20191002 22:35:54.693" level="INFO">string_to_dial
 8066839210</msg>
-<status status="PASS" endtime="20190925 02:10:41.774" starttime="20190925 02:10:39.222"></status>
+<status status="PASS" endtime="20191002 22:35:54.693" starttime="20191002 22:35:52.161"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:41.774" starttime="20190925 02:10:39.222"></status>
+<status status="PASS" endtime="20191002 22:35:54.693" starttime="20191002 22:35:52.161"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20190925 02:10:46.774" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190925 02:10:46.774" starttime="20190925 02:10:41.774"></status>
+<msg timestamp="20191002 22:35:59.693" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191002 22:35:59.693" starttime="20191002 22:35:54.693"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 3 : Phone_did_02 will answer the call</arg>
 </arguments>
-<msg timestamp="20190925 02:10:46.774" level="INFO">STEP - 3 : Phone_did_02 will answer the call</msg>
-<status status="PASS" endtime="20190925 02:10:46.774" starttime="20190925 02:10:46.774"></status>
+<msg timestamp="20191002 22:35:59.693" level="INFO">STEP - 3 : Phone_did_02 will answer the call</msg>
+<status status="PASS" endtime="20191002 22:35:59.693" starttime="20191002 22:35:59.693"></status>
 </kw>
 <kw name="answer the incoming call on ${Phone_did_02}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -153,25 +153,25 @@
 <arg>${phone}</arg>
 <arg>answer_the_call</arg>
 </arguments>
-<status status="PASS" endtime="20190925 02:10:47.921" starttime="20190925 02:10:46.774"></status>
+<status status="PASS" endtime="20191002 22:36:00.849" starttime="20191002 22:35:59.693"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:47.921" starttime="20190925 02:10:46.774"></status>
+<status status="PASS" endtime="20191002 22:36:00.849" starttime="20191002 22:35:59.693"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20190925 02:10:52.921" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20190925 02:10:52.921" starttime="20190925 02:10:47.921"></status>
+<msg timestamp="20191002 22:36:05.849" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191002 22:36:05.849" starttime="20191002 22:36:00.849"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 4 : Phone_did_02 End the call</arg>
 </arguments>
-<msg timestamp="20190925 02:10:52.921" level="INFO">STEP - 4 : Phone_did_02 End the call</msg>
-<status status="PASS" endtime="20190925 02:10:52.921" starttime="20190925 02:10:52.921"></status>
+<msg timestamp="20191002 22:36:05.849" level="INFO">STEP - 4 : Phone_did_02 End the call</msg>
+<status status="PASS" endtime="20191002 22:36:05.849" starttime="20191002 22:36:05.849"></status>
 </kw>
 <kw name="disconnect the call from ${Phone_did_01}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -180,27 +180,27 @@
 <arg>${phone}</arg>
 <arg>disconnect_the_call</arg>
 </arguments>
-<msg timestamp="20190925 02:10:52.921" level="INFO">Disconnecting the call</msg>
-<status status="PASS" endtime="20190925 02:10:57.086" starttime="20190925 02:10:52.921"></status>
+<msg timestamp="20191002 22:36:05.849" level="INFO">Disconnecting the call</msg>
+<status status="PASS" endtime="20191002 22:36:10.021" starttime="20191002 22:36:05.849"></status>
 </kw>
-<status status="PASS" endtime="20190925 02:10:57.086" starttime="20190925 02:10:52.921"></status>
+<status status="PASS" endtime="20191002 22:36:10.021" starttime="20191002 22:36:05.849"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>3s</arg>
 </arguments>
-<msg timestamp="20190925 02:11:00.086" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" endtime="20190925 02:11:00.086" starttime="20190925 02:10:57.086"></status>
+<msg timestamp="20191002 22:36:13.021" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191002 22:36:13.021" starttime="20191002 22:36:10.021"></status>
 </kw>
 <tags>
 <tag>ST AT Sanity</tag>
 </tags>
-<status status="PASS" endtime="20190925 02:11:00.086" critical="yes" starttime="20190925 02:10:38.910"></status>
+<status status="PASS" endtime="20191002 22:36:13.021" critical="yes" starttime="20191002 22:35:51.833"></status>
 </test>
 <doc>Trunk call between USerA to UserB
 author - Narasimha.rao@mitel.com</doc>
-<status status="PASS" endtime="20190925 02:11:00.086" starttime="20190925 02:10:31.091"></status>
+<status status="PASS" endtime="20191002 22:36:13.021" starttime="20191002 22:35:44.193"></status>
 </suite>
 <statistics>
 <total>
