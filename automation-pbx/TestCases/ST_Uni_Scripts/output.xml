@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20191015 00:16:52.794" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<robot rpa="false" generated="20191015 00:21:24.398" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
 <suite source="C:\Automation\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\Test.robot" id="s1" name="Test">
 <test id="s1-t1" name="Verify VoiceMail">
 <kw type="setup" name="Run Keywords" library="BuiltIn">
@@ -17,8 +17,8 @@
 <assign>
 <var>${Phone08}</var>
 </assign>
-<msg timestamp="20191015 00:16:58.028" level="INFO">${Phone08} = &lt;PhoneInterface.PhoneInterface object at 0x00000000042592B0&gt;</msg>
-<status status="PASS" endtime="20191015 00:16:58.028" starttime="20191015 00:16:58.028"></status>
+<msg timestamp="20191015 00:21:25.929" level="INFO">${Phone08} = &lt;PhoneInterface.PhoneInterface object at 0x00000000037692B0&gt;</msg>
+<status status="PASS" endtime="20191015 00:21:25.929" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Get Library Instance" library="BuiltIn">
 <doc>Returns the currently active instance of the specified test library.</doc>
@@ -28,34 +28,34 @@
 <assign>
 <var>${Phone04}</var>
 </assign>
-<msg timestamp="20191015 00:16:58.028" level="INFO">${Phone04} = &lt;PhoneInterface.PhoneInterface object at 0x000000000CE356A0&gt;</msg>
-<status status="PASS" endtime="20191015 00:16:58.028" starttime="20191015 00:16:58.028"></status>
+<msg timestamp="20191015 00:21:25.929" level="INFO">${Phone04} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C2C56A0&gt;</msg>
+<status status="PASS" endtime="20191015 00:21:25.929" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${Phone08}</arg>
 </arguments>
-<msg timestamp="20191015 00:16:58.028" level="INFO">${Phone08} = &lt;PhoneInterface.PhoneInterface object at 0x00000000042592B0&gt;</msg>
-<status status="PASS" endtime="20191015 00:16:58.028" starttime="20191015 00:16:58.028"></status>
+<msg timestamp="20191015 00:21:25.929" level="INFO">${Phone08} = &lt;PhoneInterface.PhoneInterface object at 0x00000000037692B0&gt;</msg>
+<status status="PASS" endtime="20191015 00:21:25.929" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${Phone04}</arg>
 </arguments>
-<msg timestamp="20191015 00:16:58.028" level="INFO">${Phone04} = &lt;PhoneInterface.PhoneInterface object at 0x000000000CE356A0&gt;</msg>
-<status status="PASS" endtime="20191015 00:16:58.028" starttime="20191015 00:16:58.028"></status>
+<msg timestamp="20191015 00:21:25.929" level="INFO">${Phone04} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C2C56A0&gt;</msg>
+<status status="PASS" endtime="20191015 00:21:25.929" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:00.042" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:00.042" starttime="20191015 00:16:58.028"></status>
+<msg timestamp="20191015 00:21:27.929" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191015 00:21:27.929" starttime="20191015 00:21:25.929"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:00.042" starttime="20191015 00:16:58.028"></status>
+<status status="PASS" endtime="20191015 00:21:27.929" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Phone Sanity Run">
 <kw name="Check Phone Sanity of ${Phone08}" library="PBXKeywords">
@@ -65,36 +65,36 @@
 <arg>${phone}</arg>
 <arg>sanity_check</arg>
 </arguments>
-<msg timestamp="20191015 00:17:00.619" level="INFO">Running ssh cmd: "cli -c getdm callstackdm.sessionCount" on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.291" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.291" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.338" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.338" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.353" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.385" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.432" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.463" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.510" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.541" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:01.588" level="INFO">Running kbd socket cmd "'K_'" on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:03.619" level="INFO">Running kbd socket cmd "'K-'" on phone 10.211.46.42</msg>
-<msg timestamp="20191015 00:17:04.619" level="INFO">pphone 10.211.46.42 is idle</msg>
-<msg timestamp="20191015 00:17:04.619" level="INFO">"callstackdm.sessionCount" matched returning " 0"
+<msg timestamp="20191015 00:21:28.773" level="INFO">Running ssh cmd: "cli -c getdm callstackdm.sessionCount" on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.523" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.523" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.538" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.569" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.616" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.632" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.648" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.663" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.679" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.694" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:29.710" level="INFO">Running kbd socket cmd "'K_'" on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:31.726" level="INFO">Running kbd socket cmd "'K-'" on phone 10.211.46.42</msg>
+<msg timestamp="20191015 00:21:32.741" level="INFO">pphone 10.211.46.42 is idle</msg>
+<msg timestamp="20191015 00:21:32.741" level="INFO">"callstackdm.sessionCount" matched returning " 0"
 Skipping empty softkey sk25
 
 Text Call VM not found
 Skipping empty softkey sk25
 
 Text Open not found</msg>
-<msg timestamp="20191015 00:17:04.619" level="INFO">C:\Python27\lib\site-packages\paramiko\kex_ecdh_nist.py:39: CryptographyDeprecationWarning: encode_point has been deprecated on EllipticCurvePublicNumbers and will be removed in a future version. Please use EllipticCurvePublicKey.public_bytes to obtain both compressed and uncompressed point encoding.
+<msg timestamp="20191015 00:21:32.741" level="INFO">C:\Python27\lib\site-packages\paramiko\kex_ecdh_nist.py:39: CryptographyDeprecationWarning: encode_point has been deprecated on EllipticCurvePublicNumbers and will be removed in a future version. Please use EllipticCurvePublicKey.public_bytes to obtain both compressed and uncompressed point encoding.
   m.add_string(self.Q_C.public_numbers().encode_point())
 C:\Python27\lib\site-packages\paramiko\kex_ecdh_nist.py:96: CryptographyDeprecationWarning: Support for unsafe construction of public numbers from encoded data will be removed in a future version. Please use EllipticCurvePublicKey.from_encoded_point
   self.curve, Q_S_bytes
 C:\Python27\lib\site-packages\paramiko\kex_ecdh_nist.py:111: CryptographyDeprecationWarning: encode_point has been deprecated on EllipticCurvePublicNumbers and will be removed in a future version. Please use EllipticCurvePublicKey.public_bytes to obtain both compressed and uncompressed point encoding.
   hm.add_string(self.Q_C.public_numbers().encode_point())</msg>
-<status status="PASS" endtime="20191015 00:17:04.619" starttime="20191015 00:17:00.042"></status>
+<status status="PASS" endtime="20191015 00:21:32.741" starttime="20191015 00:21:27.929"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:04.619" starttime="20191015 00:17:00.042"></status>
+<status status="PASS" endtime="20191015 00:21:32.741" starttime="20191015 00:21:27.929"></status>
 </kw>
 <kw name="Check Phone Sanity of ${Phone04}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -103,50 +103,50 @@ C:\Python27\lib\site-packages\paramiko\kex_ecdh_nist.py:111: CryptographyDepreca
 <arg>${phone}</arg>
 <arg>sanity_check</arg>
 </arguments>
-<msg timestamp="20191015 00:17:04.994" level="INFO">Running ssh cmd: "cli -c getdm callstackdm.sessionCount" on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.635" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.635" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.666" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.697" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.728" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.744" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.775" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.807" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.853" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.900" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:05.947" level="INFO">Running kbd socket cmd "'K_'" on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:07.947" level="INFO">Running kbd socket cmd "'K-'" on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:08.963" level="INFO">pphone 10.211.46.36 is idle</msg>
-<msg timestamp="20191015 00:17:08.963" level="INFO">"callstackdm.sessionCount" matched returning " 0"
+<msg timestamp="20191015 00:21:33.101" level="INFO">Running ssh cmd: "cli -c getdm callstackdm.sessionCount" on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.601" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.601" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.632" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.648" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.679" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.710" level="INFO">Running socket cmd: getsk sk0 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.726" level="INFO">Running socket cmd: getsk sk1 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.741" level="INFO">Running socket cmd: getsk sk2 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.773" level="INFO">Running socket cmd: getsk sk3 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.819" level="INFO">Running socket cmd: getsk sk4 on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:33.851" level="INFO">Running kbd socket cmd "'K_'" on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:35.866" level="INFO">Running kbd socket cmd "'K-'" on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:36.882" level="INFO">pphone 10.211.46.36 is idle</msg>
+<msg timestamp="20191015 00:21:36.882" level="INFO">"callstackdm.sessionCount" matched returning " 0"
 Skipping empty softkey sk25
 
 Text Call VM not found
 Skipping empty softkey sk25
 
 Text Open not found</msg>
-<status status="PASS" endtime="20191015 00:17:08.963" starttime="20191015 00:17:04.619"></status>
+<status status="PASS" endtime="20191015 00:21:36.882" starttime="20191015 00:21:32.741"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:08.963" starttime="20191015 00:17:04.619"></status>
+<status status="PASS" endtime="20191015 00:21:36.882" starttime="20191015 00:21:32.741"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:10.963" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:10.963" starttime="20191015 00:17:08.963"></status>
+<msg timestamp="20191015 00:21:38.882" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191015 00:21:38.882" starttime="20191015 00:21:36.882"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:10.963" starttime="20191015 00:17:00.042"></status>
+<status status="PASS" endtime="20191015 00:21:38.882" starttime="20191015 00:21:27.929"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:10.963" starttime="20191015 00:16:58.028"></status>
+<status status="PASS" endtime="20191015 00:21:38.882" starttime="20191015 00:21:25.929"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 1: Verify the Voice Mail Count</arg>
 </arguments>
-<msg timestamp="20191015 00:17:10.963" level="INFO">STEP - 1: Verify the Voice Mail Count</msg>
-<status status="PASS" endtime="20191015 00:17:10.963" starttime="20191015 00:17:10.963"></status>
+<msg timestamp="20191015 00:21:38.882" level="INFO">STEP - 1: Verify the Voice Mail Count</msg>
+<status status="PASS" endtime="20191015 00:21:38.882" starttime="20191015 00:21:38.882"></status>
 </kw>
 <kw name="Get Unread Voice Mail Count from ${Phone04}" library="PBXKeywords">
 <assign>
@@ -161,29 +161,29 @@ Text Open not found</msg>
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20191015 00:17:11.338" level="INFO">Running ssh cmd: "cli -c getdm numVoiceMailMsgs" on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:12.025" level="INFO">"numVoiceMailMsgs" matched returning " 16"
-VM count is : 16</msg>
-<msg timestamp="20191015 00:17:12.025" level="INFO">${result} = 16</msg>
-<status status="PASS" endtime="20191015 00:17:12.025" starttime="20191015 00:17:10.963"></status>
+<msg timestamp="20191015 00:21:39.226" level="INFO">Running ssh cmd: "cli -c getdm numVoiceMailMsgs" on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:21:39.757" level="INFO">"numVoiceMailMsgs" matched returning " 17"
+VM count is : 17</msg>
+<msg timestamp="20191015 00:21:39.757" level="INFO">${result} = 17</msg>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:38.882"></status>
 </kw>
-<msg timestamp="20191015 00:17:12.025" level="INFO">${before_vm_send} = 16</msg>
-<status status="PASS" endtime="20191015 00:17:12.025" starttime="20191015 00:17:10.963"></status>
+<msg timestamp="20191015 00:21:39.757" level="INFO">${before_vm_send} = 17</msg>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:38.882"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${before_vm_send}</arg>
 </arguments>
-<status status="PASS" endtime="20191015 00:17:12.025" starttime="20191015 00:17:12.025"></status>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:39.757"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 2: Make call Phone08 to Phone04</arg>
 </arguments>
-<msg timestamp="20191015 00:17:12.025" level="INFO">STEP - 2: Make call Phone08 to Phone04</msg>
-<status status="PASS" endtime="20191015 00:17:12.025" starttime="20191015 00:17:12.025"></status>
+<msg timestamp="20191015 00:21:39.757" level="INFO">STEP - 2: Make call Phone08 to Phone04</msg>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:39.757"></status>
 </kw>
 <kw name="Using ${Phone08} I dial the digits ${Phone04.phone_obj.phone.extensionNumber}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -193,27 +193,27 @@ VM count is : 16</msg>
 <arg>input_a_number</arg>
 <arg>${number}</arg>
 </arguments>
-<msg timestamp="20191015 00:17:12.041" level="WARN">ip4xx dialing 41709</msg>
-<msg timestamp="20191015 00:17:12.041" level="INFO">Running kbd socket cmd "41709" on phone 10.211.46.42</msg>
-<status status="PASS" endtime="20191015 00:17:12.041" starttime="20191015 00:17:12.041"></status>
+<msg timestamp="20191015 00:21:39.757" level="WARN">ip4xx dialing 41709</msg>
+<msg timestamp="20191015 00:21:39.757" level="INFO">Running kbd socket cmd "41709" on phone 10.211.46.42</msg>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:39.757"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:12.041" starttime="20191015 00:17:12.025"></status>
+<status status="PASS" endtime="20191015 00:21:39.757" starttime="20191015 00:21:39.757"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:17.041" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:17.041" starttime="20191015 00:17:12.041"></status>
+<msg timestamp="20191015 00:21:44.757" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191015 00:21:44.757" starttime="20191015 00:21:39.757"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 3: Click on Voice Mail Button</arg>
 </arguments>
-<msg timestamp="20191015 00:17:17.041" level="INFO">STEP - 3: Click on Voice Mail Button</msg>
-<status status="PASS" endtime="20191015 00:17:17.041" starttime="20191015 00:17:17.041"></status>
+<msg timestamp="20191015 00:21:44.757" level="INFO">STEP - 3: Click on Voice Mail Button</msg>
+<status status="PASS" endtime="20191015 00:21:44.757" starttime="20191015 00:21:44.757"></status>
 </kw>
 <kw name="press key Calltovm from ${Phone04}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -223,26 +223,26 @@ VM count is : 16</msg>
 <arg>press_key</arg>
 <arg>${hard_key}</arg>
 </arguments>
-<msg timestamp="20191015 00:17:17.041" level="INFO">Running kbd socket cmd "b" on phone 10.211.46.36</msg>
-<status status="PASS" endtime="20191015 00:17:18.057" starttime="20191015 00:17:17.041"></status>
+<msg timestamp="20191015 00:21:44.757" level="INFO">Running kbd socket cmd "b" on phone 10.211.46.36</msg>
+<status status="PASS" endtime="20191015 00:21:45.757" starttime="20191015 00:21:44.757"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:18.057" starttime="20191015 00:17:17.041"></status>
+<status status="PASS" endtime="20191015 00:21:45.757" starttime="20191015 00:21:44.757"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>20s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:38.057" level="INFO">Slept 20 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:38.057" starttime="20191015 00:17:18.057"></status>
+<msg timestamp="20191015 00:22:05.757" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" endtime="20191015 00:22:05.757" starttime="20191015 00:21:45.757"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 4: Phone08 Send a Voice Mail</arg>
 </arguments>
-<msg timestamp="20191015 00:17:38.057" level="INFO">STEP - 4: Phone08 Send a Voice Mail</msg>
-<status status="PASS" endtime="20191015 00:17:38.057" starttime="20191015 00:17:38.057"></status>
+<msg timestamp="20191015 00:22:05.757" level="INFO">STEP - 4: Phone08 Send a Voice Mail</msg>
+<status status="PASS" endtime="20191015 00:22:05.757" starttime="20191015 00:22:05.757"></status>
 </kw>
 <kw name="Using ${Phone08} I dial the digits #" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -252,19 +252,19 @@ VM count is : 16</msg>
 <arg>input_a_number</arg>
 <arg>${number}</arg>
 </arguments>
-<msg timestamp="20191015 00:17:38.057" level="WARN">ip4xx dialing #</msg>
-<msg timestamp="20191015 00:17:38.057" level="INFO">Running kbd socket cmd "#" on phone 10.211.46.42</msg>
-<status status="PASS" endtime="20191015 00:17:38.057" starttime="20191015 00:17:38.057"></status>
+<msg timestamp="20191015 00:22:05.757" level="WARN">ip4xx dialing #</msg>
+<msg timestamp="20191015 00:22:05.757" level="INFO">Running kbd socket cmd "#" on phone 10.211.46.42</msg>
+<status status="PASS" endtime="20191015 00:22:05.757" starttime="20191015 00:22:05.757"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:38.057" starttime="20191015 00:17:38.057"></status>
+<status status="PASS" endtime="20191015 00:22:05.757" starttime="20191015 00:22:05.757"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:43.057" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:43.057" starttime="20191015 00:17:38.057"></status>
+<msg timestamp="20191015 00:22:10.757" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191015 00:22:10.757" starttime="20191015 00:22:05.757"></status>
 </kw>
 <kw name="Using ${Phone08} I dial the digits #" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -274,27 +274,27 @@ VM count is : 16</msg>
 <arg>input_a_number</arg>
 <arg>${number}</arg>
 </arguments>
-<msg timestamp="20191015 00:17:43.057" level="WARN">ip4xx dialing #</msg>
-<msg timestamp="20191015 00:17:43.057" level="INFO">Running kbd socket cmd "#" on phone 10.211.46.42</msg>
-<status status="PASS" endtime="20191015 00:17:43.057" starttime="20191015 00:17:43.057"></status>
+<msg timestamp="20191015 00:22:10.757" level="WARN">ip4xx dialing #</msg>
+<msg timestamp="20191015 00:22:10.757" level="INFO">Running kbd socket cmd "#" on phone 10.211.46.42</msg>
+<status status="PASS" endtime="20191015 00:22:10.757" starttime="20191015 00:22:10.757"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:43.057" starttime="20191015 00:17:43.057"></status>
+<status status="PASS" endtime="20191015 00:22:10.757" starttime="20191015 00:22:10.757"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:48.057" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:48.057" starttime="20191015 00:17:43.057"></status>
+<msg timestamp="20191015 00:22:15.757" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191015 00:22:15.757" starttime="20191015 00:22:10.757"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>STEP - 5 : Verify the Voice Main Count</arg>
 </arguments>
-<msg timestamp="20191015 00:17:48.057" level="INFO">STEP - 5 : Verify the Voice Main Count</msg>
-<status status="PASS" endtime="20191015 00:17:48.057" starttime="20191015 00:17:48.057"></status>
+<msg timestamp="20191015 00:22:15.757" level="INFO">STEP - 5 : Verify the Voice Main Count</msg>
+<status status="PASS" endtime="20191015 00:22:15.757" starttime="20191015 00:22:15.757"></status>
 </kw>
 <kw name="Get Unread Voice Mail Count from ${Phone04}" library="PBXKeywords">
 <assign>
@@ -309,21 +309,21 @@ VM count is : 16</msg>
 <assign>
 <var>${result}</var>
 </assign>
-<msg timestamp="20191015 00:17:48.416" level="INFO">Running ssh cmd: "cli -c getdm numVoiceMailMsgs" on phone 10.211.46.36</msg>
-<msg timestamp="20191015 00:17:48.963" level="INFO">"numVoiceMailMsgs" matched returning " 17"
-VM count is : 17</msg>
-<msg timestamp="20191015 00:17:48.963" level="INFO">${result} = 17</msg>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.057"></status>
+<msg timestamp="20191015 00:22:16.179" level="INFO">Running ssh cmd: "cli -c getdm numVoiceMailMsgs" on phone 10.211.46.36</msg>
+<msg timestamp="20191015 00:22:16.710" level="INFO">"numVoiceMailMsgs" matched returning " 18"
+VM count is : 18</msg>
+<msg timestamp="20191015 00:22:16.710" level="INFO">${result} = 18</msg>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:15.757"></status>
 </kw>
-<msg timestamp="20191015 00:17:48.963" level="INFO">${after_vm_send} = 17</msg>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.057"></status>
+<msg timestamp="20191015 00:22:16.710" level="INFO">${after_vm_send} = 18</msg>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:15.757"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${after_vm_send}</arg>
 </arguments>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.963"></status>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:16.710"></status>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <doc>Returns the given values which can then be assigned to a variables.</doc>
@@ -333,8 +333,8 @@ VM count is : 17</msg>
 <assign>
 <var>${count}</var>
 </assign>
-<msg timestamp="20191015 00:17:48.963" level="INFO">${count} = 1</msg>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.963"></status>
+<msg timestamp="20191015 00:22:16.710" level="INFO">${count} = 1</msg>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:16.710"></status>
 </kw>
 <kw name="verify count ${Phone08} ${before_vm_send} ${after_vm_send} ${count}" library="PBXKeywords">
 <kw name="Call Method" library="BuiltIn">
@@ -346,18 +346,18 @@ VM count is : 17</msg>
 <arg>${num2}</arg>
 <arg>${count}</arg>
 </arguments>
-<msg timestamp="20191015 00:17:48.963" level="INFO">Count is Verified</msg>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.963"></status>
+<msg timestamp="20191015 00:22:16.710" level="INFO">Count is Verified</msg>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:16.710"></status>
 </kw>
-<status status="PASS" endtime="20191015 00:17:48.963" starttime="20191015 00:17:48.963"></status>
+<status status="PASS" endtime="20191015 00:22:16.710" starttime="20191015 00:22:16.710"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20191015 00:17:53.963" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20191015 00:17:53.963" starttime="20191015 00:17:48.963"></status>
+<msg timestamp="20191015 00:22:21.710" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191015 00:22:21.710" starttime="20191015 00:22:16.710"></status>
 </kw>
 <kw type="teardown" name="Run Keyword Unless" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
@@ -365,16 +365,16 @@ VM count is : 17</msg>
 <arg>'${TEST STATUS}'=='PASS'</arg>
 <arg>Phone Sanity Run</arg>
 </arguments>
-<status status="PASS" endtime="20191015 00:17:53.963" starttime="20191015 00:17:53.963"></status>
+<status status="PASS" endtime="20191015 00:22:21.710" starttime="20191015 00:22:21.710"></status>
 </kw>
 <tags>
 <tag>ST Sanity</tag>
 </tags>
-<status status="PASS" endtime="20191015 00:17:53.963" critical="yes" starttime="20191015 00:16:58.028"></status>
+<status status="PASS" endtime="20191015 00:22:21.710" critical="yes" starttime="20191015 00:21:25.929"></status>
 </test>
 <doc>Phone Automation : Verify VoiceMail
 author - Narasimha.rao@mitel.com</doc>
-<status status="PASS" endtime="20191015 00:17:53.963" starttime="20191015 00:16:52.794"></status>
+<status status="PASS" endtime="20191015 00:22:21.710" starttime="20191015 00:21:24.398"></status>
 </suite>
 <statistics>
 <total>
@@ -389,8 +389,8 @@ author - Narasimha.rao@mitel.com</doc>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20191015 00:17:12.041" level="WARN">ip4xx dialing 41709</msg>
-<msg timestamp="20191015 00:17:38.057" level="WARN">ip4xx dialing #</msg>
-<msg timestamp="20191015 00:17:43.057" level="WARN">ip4xx dialing #</msg>
+<msg timestamp="20191015 00:21:39.757" level="WARN">ip4xx dialing 41709</msg>
+<msg timestamp="20191015 00:22:05.757" level="WARN">ip4xx dialing #</msg>
+<msg timestamp="20191015 00:22:10.757" level="WARN">ip4xx dialing #</msg>
 </errors>
 </robot>
