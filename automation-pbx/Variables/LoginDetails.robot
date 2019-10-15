@@ -23,7 +23,8 @@ ${startcmd}               ./startstts.sh
 &{Phone07}  phoneModel=Mitel6920  ipAddress=10.211.46.57  phoneName=Test Nara  extensionNumber=41916   trunkISDN=918066839208  authCode=123456
 &{Phone02}  phoneModel=Mitel6930  ipAddress=10.211.46.46  phoneName=Automation 6930  extensionNumber=98066839208   trunkISDN=918066839208  authCode=123456
 &{Phone01}  phoneModel=Mitel6920  ipAddress=10.211.46.189  phoneName=Automation 6920  extensionNumber=41815   trunkISDN=14087138008  authCode=123456
-&{Phone04}  phoneModel=phone_4xx  ip=10.211.46.190  phoneName=Simha  extension=41141  phone_model=p8cg  PPhone_mac=0010492E192C  hq_rsa=hq_rsa  vm_password=123456  did=14087138009
+&{Phone04}  phoneModel=phone_4xx  ip=10.211.46.36  phoneName=Narasimha MIVC  extension=41709  phone_model=p8cg  PPhone_mac=00104933729A  hq_rsa=hq_rsa  vm_password=12345  did=14087138009
+&{Phone08}  phoneModel=phone_4xx  ip=10.211.46.42  phoneName=Nara 6930  extension=41821  phone_model=p8cg  PPhone_mac=0010493f1919  hq_rsa=hq_rsa  vm_password=1234  did=14087138009
 
 #This is used for New user addition
 #&{Phone001}  ip=10.198.17.5  extension=2468  phone_type=p8cg  PPhone_mac=001049454A7C  first_name=autotestETJ2LwjB  last_name=Auto  vm_password=123456  did=1 (408) 495-2468  email=auto1@maha.com

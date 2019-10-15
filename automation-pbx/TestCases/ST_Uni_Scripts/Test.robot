@@ -37,8 +37,8 @@ Verify VoiceMail
 	BuiltIn.sleep   5s
 	Using ${Phone08} I dial the digits #
 	BuiltIn.sleep   5s
-	press key BottomKey1 from ${Phone08}
-	BuiltIn.sleep   10s
+	#press key BottomKey1 from ${Phone08}
+	#BuiltIn.sleep   10s
 
 	Log          STEP - 5 : Verify the Voice Main Count
     ${after_vm_send} =  Get Unread Voice Mail Count from ${Phone04}
@@ -47,26 +47,6 @@ Verify VoiceMail
     ${count}     set variable  1
     verify count ${Phone08} ${before_vm_send} ${after_vm_send} ${count}
     BuiltIn.sleep   5s
-
-    Log          STEP - 6 : Login to Voice Mail, Play and Delete
-    press key VoiceMail from ${Phone04}
-    BuiltIn.sleep   5s
-    Using ${Phone04} I dial the digits ${Phone04.phone_obj.phone.authCode}
-    BuiltIn.sleep   2s
-    press key vmlogin from ${Phone04}
-    BuiltIn.sleep   10s
-    press key BottomKey1 from ${Phone04}
-    BuiltIn.sleep   15s
-    press key vmdelete from ${Phone04}
-    BuiltIn.sleep   2s
-    press key Quit from ${Phone04}
-    BuiltIn.sleep   20s
-
-    Log          STEP - 7 : Verify the Voice Main Count
-    ${after_vm_delete} =  Get Unread Voice Mail Count from ${Phone04}
-    log to console  ${after_vm_delete}
-
-    verify count ${Phone08} ${after_vm_delete} ${after_vm_send} ${count}
 
 *** Keywords ***
 Test case PreCondition
