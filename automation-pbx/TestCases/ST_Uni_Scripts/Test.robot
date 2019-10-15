@@ -30,17 +30,15 @@ Verify VoiceMail
 
 	Log          STEP - 3: Click on Voice Mail Button
     press key Calltovm from ${Phone04}
-	BuiltIn.sleep  20s
+	BuiltIn.sleep  10s
 
     Log          STEP - 4: Phone08 Send a Voice Mail
 	Using ${Phone08} I dial the digits #
 	BuiltIn.sleep   5s
 	Using ${Phone08} I dial the digits #
 	BuiltIn.sleep   5s
-	#press key BottomKey1 from ${Phone08}
-	#BuiltIn.sleep   10s
-
-	Log          STEP - 5 : Verify the Voice Main Count
+   
+   Log          STEP - 5 : Verify the Voice Main Count
     ${after_vm_send} =  Get Unread Voice Mail Count from ${Phone04}
     log to console  ${after_vm_send}
 
