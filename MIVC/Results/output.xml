@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191010 02:32:43.234" generator="Robot 3.1.2 (Python 2.7.14 on win32)">
+<suite id="s1" name="ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call">
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_01_Basic_Extension_Call.robot" id="s1-s1" name="ST 01 Basic Extension Call">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone05</arg>
+</arguments>
+<assign>
+<var>${Phone05}</var>
+</assign>
+<msg timestamp="20191010 02:32:46.707" level="INFO">${Phone05} = &lt;PhoneInterface.PhoneInterface object at 0x00000000036DA5F8&gt;</msg>
+<status status="PASS" endtime="20191010 02:32:46.707" starttime="20191010 02:32:46.705"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone07</arg>
+</arguments>
+<assign>
+<var>${Phone07}</var>
+</assign>
+<msg timestamp="20191010 02:32:46.707" level="INFO">${Phone07} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C0B9FD0&gt;</msg>
+<status status="PASS" endtime="20191010 02:32:46.708" starttime="20191010 02:32:46.707"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone05}</arg>
+</arguments>
+<msg timestamp="20191010 02:32:46.708" level="INFO">${Phone05} = &lt;PhoneInterface.PhoneInterface object at 0x00000000036DA5F8&gt;</msg>
+<status status="PASS" endtime="20191010 02:32:46.708" starttime="20191010 02:32:46.708"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone07}</arg>
+</arguments>
+<msg timestamp="20191010 02:32:46.709" level="INFO">${Phone07} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C0B9FD0&gt;</msg>
+<status status="PASS" endtime="20191010 02:32:46.709" starttime="20191010 02:32:46.709"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:32:48.710" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:32:48.710" starttime="20191010 02:32:46.709"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:48.710" starttime="20191010 02:32:46.705"></status>
+</kw>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone05}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:32:48.712" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:32:48.712" starttime="20191010 02:32:48.711"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:48.712" starttime="20191010 02:32:48.711"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone07}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:32:48.713" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:32:48.713" starttime="20191010 02:32:48.713"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:48.713" starttime="20191010 02:32:48.712"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:32:50.715" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:32:50.715" starttime="20191010 02:32:48.714"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:50.715" starttime="20191010 02:32:48.710"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:50.715" starttime="20191010 02:32:46.704"></status>
+</kw>
+<test id="s1-s1-t1" name="Basic call between USerA to UserB">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 1 : Make call Phone05 to Phone07</arg>
+</arguments>
+<msg timestamp="20191010 02:32:50.717" level="INFO">STEP - 1 : Make call Phone05 to Phone07</msg>
+<status status="PASS" endtime="20191010 02:32:50.717" starttime="20191010 02:32:50.716"></status>
+</kw>
+<kw name="Using ${Phone05} I dial the digits ${Phone07.phone_obj.phone.extensionNumber}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone_1}</arg>
+<arg>input_a_number</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20191010 02:32:51.952" level="INFO">string_to_dial
+41916</msg>
+<status status="PASS" endtime="20191010 02:32:51.952" starttime="20191010 02:32:50.719"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:51.953" starttime="20191010 02:32:50.717"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191010 02:32:54.953" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191010 02:32:54.953" starttime="20191010 02:32:51.953"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 3 : Phone07 will answer the call</arg>
+</arguments>
+<msg timestamp="20191010 02:32:54.954" level="INFO">STEP - 3 : Phone07 will answer the call</msg>
+<status status="PASS" endtime="20191010 02:32:54.954" starttime="20191010 02:32:54.953"></status>
+</kw>
+<kw name="answer the incoming call on ${Phone07}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>answer_the_call</arg>
+</arguments>
+<status status="PASS" endtime="20191010 02:32:56.072" starttime="20191010 02:32:54.954"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:32:56.073" starttime="20191010 02:32:54.954"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:01.073" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:01.073" starttime="20191010 02:32:56.073"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 5 : Phone07 End the call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:01.074" level="INFO">STEP - 5 : Phone07 End the call</msg>
+<status status="PASS" endtime="20191010 02:33:01.074" starttime="20191010 02:33:01.073"></status>
+</kw>
+<kw name="disconnect the call from ${Phone05}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>disconnect_the_call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:01.077" level="INFO">Disconnecting the call</msg>
+<status status="PASS" endtime="20191010 02:33:05.193" starttime="20191010 02:33:01.076"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:05.193" starttime="20191010 02:33:01.074"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:08.194" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:08.194" starttime="20191010 02:33:05.193"></status>
+</kw>
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="PASS" endtime="20191010 02:33:08.194" critical="yes" starttime="20191010 02:32:50.715"></status>
+</test>
+<doc>Basic call between USerA to UserB
+author - Narasimha.rao@mitel.com</doc>
+<status status="PASS" endtime="20191010 02:33:08.195" starttime="20191010 02:32:43.269"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_02_Blind_Transfer.robot" id="s1-s2" name="ST 02 Blind Transfer">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:33:11.713" level="INFO">${Phone01} = &lt;PhoneInterface.PhoneInterface object at 0x00000000033E0438&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.713" starttime="20191010 02:33:11.712"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone02</arg>
+</arguments>
+<assign>
+<var>${Phone02}</var>
+</assign>
+<msg timestamp="20191010 02:33:11.713" level="INFO">${Phone02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C27A198&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.713" starttime="20191010 02:33:11.713"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone03</arg>
+</arguments>
+<assign>
+<var>${Phone03}</var>
+</assign>
+<msg timestamp="20191010 02:33:11.714" level="INFO">${Phone03} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C3374A8&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.714" starttime="20191010 02:33:11.714"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone01}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:11.715" level="INFO">${Phone01} = &lt;PhoneInterface.PhoneInterface object at 0x00000000033E0438&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.715" starttime="20191010 02:33:11.714"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone02}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:11.716" level="INFO">${Phone02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C27A198&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.716" starttime="20191010 02:33:11.715"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone03}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:11.716" level="INFO">${Phone03} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C3374A8&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:11.716" starttime="20191010 02:33:11.716"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:13.717" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:13.717" starttime="20191010 02:33:11.717"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:13.717" starttime="20191010 02:33:11.712"></status>
+</kw>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone01}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:13.719" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:13.719" starttime="20191010 02:33:13.718"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:13.719" starttime="20191010 02:33:13.718"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:13.720" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:13.720" starttime="20191010 02:33:13.720"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:13.720" starttime="20191010 02:33:13.719"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone03}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:13.721" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:13.721" starttime="20191010 02:33:13.721"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:13.721" starttime="20191010 02:33:13.720"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:15.722" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:15.722" starttime="20191010 02:33:13.722"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:15.722" starttime="20191010 02:33:13.717"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:15.722" starttime="20191010 02:33:11.711"></status>
+</kw>
+<test id="s1-s2-t1" name="Two way Blind Transfer">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 1 : Make call Phone01 to Phone02</arg>
+</arguments>
+<msg timestamp="20191010 02:33:15.724" level="INFO">STEP - 1 : Make call Phone01 to Phone02</msg>
+<status status="PASS" endtime="20191010 02:33:15.724" starttime="20191010 02:33:15.723"></status>
+</kw>
+<kw name="Using ${Phone01} I dial the digits ${Phone02.phone_obj.phone.extensionNumber}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone_1}</arg>
+<arg>input_a_number</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:18.266" level="INFO">string_to_dial
+98066839208</msg>
+<status status="PASS" endtime="20191010 02:33:18.266" starttime="20191010 02:33:15.725"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:18.266" starttime="20191010 02:33:15.724"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:22.267" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:22.267" starttime="20191010 02:33:18.267"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 2 : Phone02 will answer the call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:22.268" level="INFO">STEP - 2 : Phone02 will answer the call</msg>
+<status status="PASS" endtime="20191010 02:33:22.268" starttime="20191010 02:33:22.268"></status>
+</kw>
+<kw name="answer the incoming call on ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>answer_the_call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:32.945" level="FAIL">Calling method 'answer_the_call' failed: func "answer_the_call" - err: "func "answer_the_call" - err: "verifyLineNotificaionWhenInConnected - Mismatch in Line status. Expected 5 from 98066839208
+   at PhoneHandler.HardPhone.verifyNotificationsWhenInConnected()
+   at PhoneHandler.HardPhone.answerTheCall()"!"!</msg>
+<status status="FAIL" endtime="20191010 02:33:32.945" starttime="20191010 02:33:22.269"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:33:32.945" starttime="20191010 02:33:22.268"></status>
+</kw>
+<kw type="teardown" name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone01}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:32.948" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:32.948" starttime="20191010 02:33:32.947"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:32.948" starttime="20191010 02:33:32.947"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:32.949" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:32.949" starttime="20191010 02:33:32.949"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:32.949" starttime="20191010 02:33:32.948"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone03}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:32.951" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:32.951" starttime="20191010 02:33:32.950"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:32.951" starttime="20191010 02:33:32.950"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:34.951" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:34.951" starttime="20191010 02:33:32.951"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:34.951" starttime="20191010 02:33:32.946"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:34.951" starttime="20191010 02:33:32.946"></status>
+</kw>
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:33:34.951" critical="yes" starttime="20191010 02:33:15.722">Calling method 'answer_the_call' failed: func "answer_the_call" - err: "func "answer_the_call" - err: "verifyLineNotificaionWhenInConnected - Mismatch in Line status. Expected 5 from 98066839208
+   at PhoneHandler.HardPhone.verifyNotificationsWhenInConnected()
+   at PhoneHandler.HardPhone.answerTheCall()"!"!</status>
+</test>
+<doc>Two way Blind Transfer
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:33:34.952" starttime="20191010 02:33:08.198"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_03_Consult_Transfer.robot" id="s1-s3" name="ST 03 Consult Transfer">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:33:38.507" level="INFO">${Phone01} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C45C5C0&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.507" starttime="20191010 02:33:38.506"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone02</arg>
+</arguments>
+<assign>
+<var>${Phone02}</var>
+</assign>
+<msg timestamp="20191010 02:33:38.507" level="INFO">${Phone02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C5486D8&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.507" starttime="20191010 02:33:38.507"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone03</arg>
+</arguments>
+<assign>
+<var>${Phone03}</var>
+</assign>
+<msg timestamp="20191010 02:33:38.508" level="INFO">${Phone03} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C620358&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.508" starttime="20191010 02:33:38.508"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone01}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:38.509" level="INFO">${Phone01} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C45C5C0&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.509" starttime="20191010 02:33:38.508"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone02}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:38.509" level="INFO">${Phone02} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C5486D8&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.509" starttime="20191010 02:33:38.509"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${Phone03}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:38.510" level="INFO">${Phone03} = &lt;PhoneInterface.PhoneInterface object at 0x000000000C620358&gt;</msg>
+<status status="PASS" endtime="20191010 02:33:38.510" starttime="20191010 02:33:38.510"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:40.512" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:40.512" starttime="20191010 02:33:38.510"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:40.512" starttime="20191010 02:33:38.506"></status>
+</kw>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone01}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:40.514" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:40.514" starttime="20191010 02:33:40.514"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:40.514" starttime="20191010 02:33:40.513"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:40.516" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:40.516" starttime="20191010 02:33:40.515"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:40.516" starttime="20191010 02:33:40.515"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone03}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:40.517" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:40.518" starttime="20191010 02:33:40.517"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:40.518" starttime="20191010 02:33:40.517"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:42.519" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:42.519" starttime="20191010 02:33:40.519"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:42.519" starttime="20191010 02:33:40.512"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:42.519" starttime="20191010 02:33:38.505"></status>
+</kw>
+<test id="s1-s3-t1" name="Two way Consult Transfer">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 1 : Make call Phone01 to Phone02</arg>
+</arguments>
+<msg timestamp="20191010 02:33:42.521" level="INFO">STEP - 1 : Make call Phone01 to Phone02</msg>
+<status status="PASS" endtime="20191010 02:33:42.521" starttime="20191010 02:33:42.520"></status>
+</kw>
+<kw name="Using ${Phone01} I dial the digits ${Phone02.phone_obj.phone.extensionNumber}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone_1}</arg>
+<arg>input_a_number</arg>
+<arg>${number}</arg>
+</arguments>
+<msg timestamp="20191010 02:33:45.060" level="INFO">string_to_dial
+98066839208</msg>
+<status status="PASS" endtime="20191010 02:33:45.060" starttime="20191010 02:33:42.522"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:45.061" starttime="20191010 02:33:42.521"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20191010 02:33:49.061" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" endtime="20191010 02:33:49.061" starttime="20191010 02:33:45.061"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>STEP - 2 : Phone02 will answer the call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:49.062" level="INFO">STEP - 2 : Phone02 will answer the call</msg>
+<status status="PASS" endtime="20191010 02:33:49.062" starttime="20191010 02:33:49.061"></status>
+</kw>
+<kw name="answer the incoming call on ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>answer_the_call</arg>
+</arguments>
+<msg timestamp="20191010 02:33:59.685" level="FAIL">Calling method 'answer_the_call' failed: func "answer_the_call" - err: "func "answer_the_call" - err: "verifyLineNotificaionWhenInConnected - Mismatch in Line status. Expected 5 from 98066839208
+   at PhoneHandler.HardPhone.verifyNotificationsWhenInConnected()
+   at PhoneHandler.HardPhone.answerTheCall()"!"!</msg>
+<status status="FAIL" endtime="20191010 02:33:59.685" starttime="20191010 02:33:49.063"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:33:59.685" starttime="20191010 02:33:49.062"></status>
+</kw>
+<kw type="teardown" name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone01}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:59.689" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:59.689" starttime="20191010 02:33:59.688"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:59.689" starttime="20191010 02:33:59.688"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone02}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:59.690" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:59.690" starttime="20191010 02:33:59.690"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:59.691" starttime="20191010 02:33:59.689"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone03}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:33:59.692" level="INFO">IN BASE SANITY FN</msg>
+<status status="PASS" endtime="20191010 02:33:59.692" starttime="20191010 02:33:59.691"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:33:59.692" starttime="20191010 02:33:59.691"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:34:01.693" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:34:01.693" starttime="20191010 02:33:59.692"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:01.693" starttime="20191010 02:33:59.687"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:01.693" starttime="20191010 02:33:59.686"></status>
+</kw>
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.693" critical="yes" starttime="20191010 02:33:42.519">Calling method 'answer_the_call' failed: func "answer_the_call" - err: "func "answer_the_call" - err: "verifyLineNotificaionWhenInConnected - Mismatch in Line status. Expected 5 from 98066839208
+   at PhoneHandler.HardPhone.verifyNotificationsWhenInConnected()
+   at PhoneHandler.HardPhone.answerTheCall()"!"!</status>
+</test>
+<doc>Two way Consult Transfer
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.695" starttime="20191010 02:33:34.955"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_04_Call_History_Directory.robot" id="s1-s4" name="ST 04 Call History Directory">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone04</arg>
+</arguments>
+<assign>
+<var>${Phone04}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.755" level="INFO">${Phone04} = &lt;PhoneInterface.PhoneInterface object at 0x0000000003346240&gt;</msg>
+<status status="PASS" endtime="20191010 02:34:01.755" starttime="20191010 02:34:01.755"></status>
+</kw>
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone02</arg>
+</arguments>
+<assign>
+<var>${Phone02}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.756" level="FAIL">No library 'Phone02' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.756" starttime="20191010 02:34:01.755"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.756" starttime="20191010 02:34:01.754"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.756" starttime="20191010 02:34:01.754"></status>
+</kw>
+<test id="s1-s4-t1" name="Call from History and Directory">
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.757" critical="yes" starttime="20191010 02:34:01.756">Parent suite setup failed:
+No library 'Phone02' found.</status>
+</test>
+<doc>Call from History and Directory
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.757" starttime="20191010 02:34:01.698">Suite setup failed:
+No library 'Phone02' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_05_Three_way_Blind_Conference.robot" id="s1-s5" name="ST 05 Three way Blind Conference">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.802" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.802" starttime="20191010 02:34:01.801"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.802" starttime="20191010 02:34:01.801"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.802" starttime="20191010 02:34:01.800"></status>
+</kw>
+<test id="s1-s5-t1" name="Four way Blind Conference">
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.803" critical="yes" starttime="20191010 02:34:01.802">Parent suite setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>Four way Blind Conference
+author - Narasimha.Rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.803" starttime="20191010 02:34:01.760">Suite setup failed:
+No library 'Phone01' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_06_Three_way_Consult_Conference.robot" id="s1-s6" name="ST 06 Three way Consult Conference">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.844" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.844" starttime="20191010 02:34:01.844"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.845" starttime="20191010 02:34:01.843"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.845" starttime="20191010 02:34:01.843"></status>
+</kw>
+<test id="s1-s6-t1" name="Four way Consult Conference">
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.845" critical="yes" starttime="20191010 02:34:01.845">Parent suite setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>Four way Consult Conference
+author - Narasimha.Rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.846" starttime="20191010 02:34:01.806">Suite setup failed:
+No library 'Phone01' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_07_Park_UnPark.robot" id="s1-s7" name="ST 07 Park UnPark">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.883" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.883" starttime="20191010 02:34:01.883"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.883" starttime="20191010 02:34:01.882"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.884" starttime="20191010 02:34:01.882"></status>
+</kw>
+<test id="s1-s7-t1" name="Park and UnPark">
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.884" critical="yes" starttime="20191010 02:34:01.884">Parent suite setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>Park and UnPark
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.885" starttime="20191010 02:34:01.849">Suite setup failed:
+No library 'Phone01' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_08_Mute_Hold.robot" id="s1-s8" name="ST 08 Mute Hold">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.917" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.917" starttime="20191010 02:34:01.916"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.917" starttime="20191010 02:34:01.916"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.917" starttime="20191010 02:34:01.915"></status>
+</kw>
+<test id="s1-s8-t1" name="Mute and Hold">
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:01.918" critical="yes" starttime="20191010 02:34:01.917">Parent suite setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>Mute and Hold
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.918" starttime="20191010 02:34:01.887">Suite setup failed:
+No library 'Phone01' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_09_PickupCall.robot" id="s1-s9" name="ST 09 PickupCall">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:01.965" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:01.965" starttime="20191010 02:34:01.965"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.966" starttime="20191010 02:34:01.964"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:01.966" starttime="20191010 02:34:01.964"></status>
+</kw>
+<test id="s1-s9-t1" name="PickUP Call">
+<status status="FAIL" endtime="20191010 02:34:01.966" critical="yes" starttime="20191010 02:34:01.966">Parent suite setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>PickUP Call
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:01.967" starttime="20191010 02:34:01.921">Suite setup failed:
+No library 'Phone01' found.</status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_10_D2_Server_Status.robot" id="s1-s10" name="ST 10 D2 Server Status">
+<test id="s1-s10-t1" name="01 verify server status">
+<kw name="In D2 ${D2IP} I login with ${D2User} and ${D2Password}" library="PBXKeywords">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>username=${D2User}</arg>
+<arg>password=${D2Password}</arg>
+<arg>IP=${D2IP}</arg>
+<arg>URL=${url}</arg>
+</arguments>
+<assign>
+<var>&amp;{D2loginCredentials}</var>
+</assign>
+<msg timestamp="20191010 02:34:02.309" level="INFO">&amp;{D2loginCredentials} = { username=admin | password=changeme | IP=10.211.44.90 | URL=http://10.211.44.90:5478/director/login }</msg>
+<status status="PASS" endtime="20191010 02:34:02.309" starttime="20191010 02:34:02.308"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Director Client Login</arg>
+<arg>&amp;{D2loginCredentials}</arg>
+</arguments>
+<kw name="Director Client Login" library="PBXComponent">
+<doc>This function will login to D@ portal
+:param params:
+:return:</doc>
+<arguments>
+<arg>&amp;{D2loginCredentials}</arg>
+</arguments>
+<msg timestamp="20191010 02:34:02.961" level="INFO">D2API constructor</msg>
+<status status="PASS" endtime="20191010 02:34:02.961" starttime="20191010 02:34:02.310"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:02.961" starttime="20191010 02:34:02.310"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:02.961" starttime="20191010 02:34:02.307"></status>
+</kw>
+<kw name="In D2 I verify server status ${InService} is set for ${HQ} and ${HQIP}" library="PBXKeywords">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>status=${status}</arg>
+<arg>appliance=${appliance}</arg>
+<arg>applianceIP=${applianceIP}</arg>
+</arguments>
+<assign>
+<var>&amp;{D2switchstatus}</var>
+</assign>
+<msg timestamp="20191010 02:34:02.963" level="INFO">&amp;{D2switchstatus} = { status=In Service | appliance=WinHQ | applianceIP=[u'10.211.44.90'] }</msg>
+<status status="PASS" endtime="20191010 02:34:02.964" starttime="20191010 02:34:02.962"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>director verify server status</arg>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Director Verify Server Status" library="PBXComponent">
+<doc>Verification of switch status in D2 page
+:param params:
+:return: status</doc>
+<arguments>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<msg timestamp="20191010 02:34:03.015" level="INFO">Appliance : WinHQ with IP 10.211.44.90 status is In Service</msg>
+<status status="PASS" endtime="20191010 02:34:03.015" starttime="20191010 02:34:02.964"></status>
+</kw>
+<msg timestamp="20191010 02:34:03.015" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20191010 02:34:03.015" starttime="20191010 02:34:02.964"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20191010 02:34:03.016" starttime="20191010 02:34:03.015"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:03.016" starttime="20191010 02:34:02.962"></status>
+</kw>
+<kw name="In D2 I verify server status ${InService} is set for ${LDVS} and ${LDVSIP}" library="PBXKeywords">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>status=${status}</arg>
+<arg>appliance=${appliance}</arg>
+<arg>applianceIP=${applianceIP}</arg>
+</arguments>
+<assign>
+<var>&amp;{D2switchstatus}</var>
+</assign>
+<msg timestamp="20191010 02:34:03.018" level="INFO">&amp;{D2switchstatus} = { status=In Service | appliance=LinuxDVS | applianceIP=[u'10.211.44.92'] }</msg>
+<status status="PASS" endtime="20191010 02:34:03.018" starttime="20191010 02:34:03.017"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>director verify server status</arg>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Director Verify Server Status" library="PBXComponent">
+<doc>Verification of switch status in D2 page
+:param params:
+:return: status</doc>
+<arguments>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<msg timestamp="20191010 02:34:03.074" level="INFO">Appliance : LinuxDVS with IP 10.211.44.92 status is In Service</msg>
+<status status="PASS" endtime="20191010 02:34:03.074" starttime="20191010 02:34:03.019"></status>
+</kw>
+<msg timestamp="20191010 02:34:03.074" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20191010 02:34:03.074" starttime="20191010 02:34:03.018"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20191010 02:34:03.075" starttime="20191010 02:34:03.075"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:03.075" starttime="20191010 02:34:03.016"></status>
+</kw>
+<kw name="In D2 I verify server status ${InService} is set for ${UCBConf} and ${UCBConfIP}" library="PBXKeywords">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>status=${status}</arg>
+<arg>appliance=${appliance}</arg>
+<arg>applianceIP=${applianceIP}</arg>
+</arguments>
+<assign>
+<var>&amp;{D2switchstatus}</var>
+</assign>
+<msg timestamp="20191010 02:34:03.077" level="INFO">&amp;{D2switchstatus} = { status=In Service | appliance=vCollab | applianceIP=[u'10.211.44.65'] }</msg>
+<status status="PASS" endtime="20191010 02:34:03.077" starttime="20191010 02:34:03.076"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>director verify server status</arg>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<kw name="Director Verify Server Status" library="PBXComponent">
+<doc>Verification of switch status in D2 page
+:param params:
+:return: status</doc>
+<arguments>
+<arg>&amp;{D2switchstatus}</arg>
+</arguments>
+<msg timestamp="20191010 02:34:03.132" level="INFO">Appliance : vCollab with IP 10.211.44.65 status is In Service</msg>
+<status status="PASS" endtime="20191010 02:34:03.132" starttime="20191010 02:34:03.078"></status>
+</kw>
+<msg timestamp="20191010 02:34:03.132" level="INFO">${result} = True</msg>
+<status status="PASS" endtime="20191010 02:34:03.132" starttime="20191010 02:34:03.077"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result}</arg>
+</arguments>
+<status status="PASS" endtime="20191010 02:34:03.133" starttime="20191010 02:34:03.133"></status>
+</kw>
+<status status="PASS" endtime="20191010 02:34:03.133" starttime="20191010 02:34:03.075"></status>
+</kw>
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="PASS" endtime="20191010 02:34:03.133" critical="yes" starttime="20191010 02:34:02.307"></status>
+</test>
+<doc>verify server status
+dev-Maha
+Contact : Narasimha.rao@mitel.com</doc>
+<status status="PASS" endtime="20191010 02:34:03.134" starttime="20191010 02:34:01.970"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_11_Verify_VoiceMail.robot" id="s1-s11" name="ST 11 Verify VoiceMail">
+<test id="s1-s11-t1" name="Verify VoiceMail">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:03.192" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:03.192" starttime="20191010 02:34:03.191"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:03.192" starttime="20191010 02:34:03.191"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:03.192" starttime="20191010 02:34:03.190"></status>
+</kw>
+<kw type="teardown" name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>'${TEST STATUS}'=='PASS'</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Phone Sanity Run">
+<kw name="Check Phone Sanity of ${Phone01}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:34:03.195" level="FAIL">Object '{u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}}' does not have method 'sanity_check'.</msg>
+<status status="FAIL" endtime="20191010 02:34:03.195" starttime="20191010 02:34:03.194"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:03.195" starttime="20191010 02:34:03.194"></status>
+</kw>
+<kw name="Check Phone Sanity of ${Phone03}" library="PBXKeywords">
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>sanity_check</arg>
+</arguments>
+<msg timestamp="20191010 02:34:03.196" level="FAIL">Object '{u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}}' does not have method 'sanity_check'.</msg>
+<status status="FAIL" endtime="20191010 02:34:03.197" starttime="20191010 02:34:03.196"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:03.197" starttime="20191010 02:34:03.195"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191010 02:34:05.197" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191010 02:34:05.197" starttime="20191010 02:34:03.197"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.197" starttime="20191010 02:34:03.193"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.197" starttime="20191010 02:34:03.193">Several failures occurred:
+
+1) Object '{u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}}' does not have method 'sanity_check'.
+
+2) Object '{u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}}' does not have method 'sanity_check'.</status>
+</kw>
+<tags>
+<tag>ST Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:05.198" critical="yes" starttime="20191010 02:34:03.189">Setup failed:
+No library 'Phone01' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) Object '{u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}}' does not have method 'sanity_check'.
+
+2) Object '{u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}}' does not have method 'sanity_check'.</status>
+</test>
+<doc>Phone Automation : Verify VoiceMail
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:05.198" starttime="20191010 02:34:03.137"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_12_Dial_Voicemail_extn.robot" id="s1-s12" name="ST 12 Dial Voicemail extn">
+<test id="s1-s12-t1" name="Dial VoiceMail Extn">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone01</arg>
+</arguments>
+<assign>
+<var>${Phone01}</var>
+</assign>
+<msg timestamp="20191010 02:34:05.243" level="FAIL">No library 'Phone01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:05.243" starttime="20191010 02:34:05.242"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.243" starttime="20191010 02:34:05.242"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.243" starttime="20191010 02:34:05.241"></status>
+</kw>
+<tags>
+<tag>DemoPhones</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:05.243" critical="yes" starttime="20191010 02:34:05.241">Setup failed:
+No library 'Phone01' found.</status>
+</test>
+<doc>Dial VoiceMail Extn
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:05.244" starttime="20191010 02:34:05.201"></status>
+</suite>
+<suite source="C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_13_Trunk_Call.robot" id="s1-s13" name="ST 13 Trunk Call">
+<kw type="setup" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Test case PreCondition</arg>
+<arg>Phone Sanity Run</arg>
+</arguments>
+<kw name="Test case PreCondition">
+<kw name="Get Library Instance" library="BuiltIn">
+<doc>Returns the currently active instance of the specified test library.</doc>
+<arguments>
+<arg>Phone_did_01</arg>
+</arguments>
+<assign>
+<var>${Phone_did_01}</var>
+</assign>
+<msg timestamp="20191010 02:34:05.277" level="FAIL">No library 'Phone_did_01' found.</msg>
+<status status="FAIL" endtime="20191010 02:34:05.277" starttime="20191010 02:34:05.276"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.277" starttime="20191010 02:34:05.276"></status>
+</kw>
+<status status="FAIL" endtime="20191010 02:34:05.278" starttime="20191010 02:34:05.275"></status>
+</kw>
+<test id="s1-s13-t1" name="Trunk call between USerA to UserB">
+<tags>
+<tag>ST AT Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20191010 02:34:05.278" critical="yes" starttime="20191010 02:34:05.278">Parent suite setup failed:
+No library 'Phone_did_01' found.</status>
+</test>
+<doc>Trunk call between USerA to UserB
+author - Narasimha.rao@mitel.com</doc>
+<status status="FAIL" endtime="20191010 02:34:05.279" starttime="20191010 02:34:05.246">Suite setup failed:
+No library 'Phone_did_01' found.</status>
+</suite>
+<status status="FAIL" endtime="20191010 02:34:05.283" starttime="20191010 02:32:43.237"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="11" pass="2">Critical Tests</stat>
+<stat fail="11" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="8" pass="2">DemoPhones</stat>
+<stat fail="1" pass="0">ST AT Sanity</stat>
+<stat fail="1" pass="0">ST Sanity</stat>
+</tag>
+<suite>
+<stat fail="11" id="s1" name="ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call" pass="2">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call</stat>
+<stat fail="0" id="s1-s1" name="ST 01 Basic Extension Call" pass="1">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 01 Basic Extension Call</stat>
+<stat fail="1" id="s1-s2" name="ST 02 Blind Transfer" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 02 Blind Transfer</stat>
+<stat fail="1" id="s1-s3" name="ST 03 Consult Transfer" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 03 Consult Transfer</stat>
+<stat fail="1" id="s1-s4" name="ST 04 Call History Directory" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 04 Call History Directory</stat>
+<stat fail="1" id="s1-s5" name="ST 05 Three way Blind Conference" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 05 Three way Blind Conference</stat>
+<stat fail="1" id="s1-s6" name="ST 06 Three way Consult Conference" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 06 Three way Consult Conference</stat>
+<stat fail="1" id="s1-s7" name="ST 07 Park UnPark" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 07 Park UnPark</stat>
+<stat fail="1" id="s1-s8" name="ST 08 Mute Hold" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 08 Mute Hold</stat>
+<stat fail="1" id="s1-s9" name="ST 09 PickupCall" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 09 PickupCall</stat>
+<stat fail="0" id="s1-s10" name="ST 10 D2 Server Status" pass="1">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 10 D2 Server Status</stat>
+<stat fail="1" id="s1-s11" name="ST 11 Verify VoiceMail" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 11 Verify VoiceMail</stat>
+<stat fail="1" id="s1-s12" name="ST 12 Dial Voicemail extn" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 12 Dial Voicemail extn</stat>
+<stat fail="1" id="s1-s13" name="ST 13 Trunk Call" pass="0">ST 01 Basic Extension Call &amp; ST 02 Blind Transfer &amp; ST 03 Consult Transfer &amp; ST 04 Call History Directory &amp; ST 05 Three way Blind Conference &amp; ST 06 Three way Consult Conference &amp; ST 07 Park UnPark &amp; ST 08 Mute Hold &amp; ST 09 PickupCall &amp; ST 10 D2 Server Status &amp; ST 11 Verify VoiceMail &amp; ST 12 Dial Voicemail extn &amp; ST 13 Trunk Call.ST 13 Trunk Call</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20191010 02:34:01.749" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_04_Call_History_Directory.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.PathHelper.GetFullPathName()
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.782" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_05_Three_way_Blind_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.785" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_05_Three_way_Blind_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.789" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_05_Three_way_Blind_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.825" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_06_Three_way_Consult_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.829" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_06_Three_way_Consult_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.832" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_06_Three_way_Consult_Conference.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.870" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_07_Park_UnPark.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.874" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_07_Park_UnPark.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.878" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_07_Park_UnPark.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.906" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_08_Mute_Hold.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.911" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_08_Mute_Hold.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.946" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_09_PickupCall.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:01.953" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_09_PickupCall.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'98066839208', u'trunkISDN': u'918066839208', u'authCode': u'123456', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:03.181" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_11_Verify_VoiceMail.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:03.185" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_11_Verify_VoiceMail.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6940', u'ipAddress': u'10.211.46.56', u'phoneName': u'Nara 6940', u'extensionNumber': u'41000', u'trunkISDN': u'14087138016', u'authCode': u'123456', 'button_map': {'volume up': 62, 'mute': 109, 'vm': 86, 'redial': 87, '#': 35, 'end': 108, '*': 42, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, '9': 57, '8': 56, 'volume down': 60, 'handsfree': 102, 'hold': 111, 'settings': 104, 'hookswitch': 75, 'directory': 100, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:05.228" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_12_Dial_Voicemail_extn.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', u'authCode': u'123456', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:05.267" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_13_Trunk_Call.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6920', u'ipAddress': u'10.211.46.189', u'phoneName': u'Automation 6920', u'extensionNumber': u'41815', u'trunkISDN': u'14087138008', 'button_map': {'volume up': 62, 'volume down': 60, '9': 57, 'left line 6': 58, 'right': 82, 'mute': 109, 'vm': 86, 'down': 68, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 1': 43, 'left': 76, 'redial': 87, 'handsfree': 102, '#': 35, 'hold': 111, 'end': 108, 'center': 72, 'settings': 104, '*': 42, 'up': 85, 'hookswitch': 75, '1': 49, '0': 48, '3': 51, '2': 50, '5': 53, '4': 52, '7': 55, '6': 54, 'directory': 100, '8': 56, 'softkey 3': 37, 'softkey 1': 33, 'softkey 2': 36, 'history': 103}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+<msg timestamp="20191010 02:34:05.271" level="ERROR">Error in file 'C:\Jenkins\workspace\MIVC-Automation\automation-pbx\TestCases\ST_Uni_Scripts\ST_13_Trunk_Call.robot': Initializing test library 'PhoneInterface' with arguments [ {u'phoneModel': u'Mitel6930', u'ipAddress': u'10.211.46.46', u'phoneName': u'Automation 6930', u'extensionNumber': u'41814', u'trunkISDN': u'8066839210', 'button_map': {'mute': 109, 'down': 68, '*': 42, '0': 48, '2': 50, '4': 52, '6': 54, '8': 56, 'handsfree': 102, 'softkey 4': 38, 'left line 2': 44, 'left line 3': 45, 'left line 4': 46, 'left line 5': 47, 'left line 6': 58, 'hold': 111, 'settings': 104, 'right line 1': 117, 'right line 2': 119, 'right line 3': 115, 'right line 4': 114, 'up': 85, 'right line 6': 121, 'hookswitch': 75, 'history': 103, 'volume up': 62, 'right': 82, 'vm': 86, 'right line 5': 120, 'redial': 87, '#': 35, 'end': 108, '1': 49, '3': 51, '5': 53, '7': 55, '9': 57, 'softkey 5': 40, 'softkey 1': 33, 'softkey 2': 36, 'softkey 3': 37, 'volume down': 60, 'center': 72, 'left line 1': 43, 'directory': 100, 'left': 76}} ] failed: PathTooLongException: The specified path, file name, or both are too long. The fully qualified file name must be less than 260 characters, and the directory name must be less than 248 characters.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at Logger.Logger.Initialize()
+Traceback (most recent call last):
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\PhoneInterface.py", line 37, in __init__
+    self.phone_obj = Phone_69xx(phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\phone_69xx.py", line 31, in __init__
+    Phone6xxxInterface.__init__(self, phone_info)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 63, in __init__
+    self.add_reference_to_dll(self.atap_dll_name)
+  File "C:\Jenkins\workspace\MIVC-Automation\Framework\phone_wrappers\phone_6xxx\mitel_phone_base.py", line 94, in add_reference_to_dll
+    Logger.Logger.Initialize()</msg>
+</errors>
+</robot>
