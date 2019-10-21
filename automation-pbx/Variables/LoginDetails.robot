@@ -7,7 +7,15 @@ ${file_to_be_update}	LoginDetails.robot
 #BOSS PORTAL INFO
 ${D2IP}                         10.211.44.90
 
+#Auto-Attendant details
 
+${AAExtn}             41875
+${AADID}			 98066839210
+${AAName}            Nara-HG
+
+#Hunt grp details
+${HGExtn}             41876
+${HGName}            Nara-HG
 
 #${AA_DID}                  1 (408) 495-2416
 #${Call_AA_DID}             14084952416
