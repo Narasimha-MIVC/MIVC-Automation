@@ -30,7 +30,7 @@ Verify VoiceMail
 
 	Log          STEP - 3: Click on Voice Mail Button
     press key Calltovm from ${Phone04}
-	BuiltIn.sleep  20s
+	BuiltIn.sleep  5s
 
     Log          STEP - 4: Phone08 Send a Voice Mail
 	Using ${Phone08} I dial the digits #

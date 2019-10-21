@@ -306,6 +306,9 @@ quit voice mail from ${phone}
 Using ${phone_1} I dial the digits ${number}
     call method    ${phone_1}    input_a_number    ${number}
 
+Using ${phone_1} dial_digits ${number}
+	call method ${phone_1} dial_digits ${number}
+
 verify led ${led_name} state ${led_state} of ${phone}
     call method    ${phone}     verify_led_state   ${led_name}       ${led_state}
 

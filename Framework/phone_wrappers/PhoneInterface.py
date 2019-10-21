@@ -2108,7 +2108,7 @@ if __name__ == "__main__":
     # phone_2.verify_notifications_in_ring()
     # phone_2.answer_the_call()
     # phone_2.press_offhook()
-    # phone_2.verify_phone_display(phone_1.phone_obj.phone.extensionNumber)
+    phone_2.verify_phone_display(phone_1.phone_obj.phone.extensionNumber)
     # time.sleep(5)
     # phone_2.disconnect_the_call()
 
